@@ -72,7 +72,7 @@
 
   body {
     @apply text-foreground antialiased;
-    background-color:  var(--color-tango-black);
+    background-color:  transparent;
     position: relative;
     min-height: 100dvh;
     margin: 0;
@@ -105,7 +105,7 @@
     background-blend-mode: screen, screen, overlay;
     
     /* Vahşiliği buradan tamamen öldürüyoruz. 0.05 - 0.08 arası gerçek kağıt lifidir. */
-    opacity: 0.2; 
+    opacity: 0.08; 
     filter: contrast(1.1) brightness(1.1);
   }
 

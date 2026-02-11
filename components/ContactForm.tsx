@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
+import { usePathname } from 'next/navigation';
 import { sendGTMEvent } from '@next/third-parties/google';
 
 
@@ -16,6 +17,7 @@ export default function ContactForm({
     variant = "standard",
     showConsent = true
 }: ContactFormProps) {
+    const pathname = usePathname();
     const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
     const [phoneError, setPhoneError] = useState("");
     const [formData, setFormData] = useState({
@@ -29,7 +31,7 @@ export default function ContactForm({
         return phoneNumber ? phoneNumber.isValid() : false;
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         setPhoneError("");
 
@@ -53,7 +55,7 @@ export default function ContactForm({
                 event: 'form_submit_success',
                 form_variant: variant, // 'minimal' mi 'standard' mı?
                 user_level: formData.level, // Öğrenci adayının seviyesi ne?
-                page_location: window.location.pathname // Hangi sayfadaki formdan geldi?
+                page_location: pathname // Hangi sayfadaki formdan geldi?
             });
 
             setStatus("success");
