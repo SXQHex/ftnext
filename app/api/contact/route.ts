@@ -1,13 +1,22 @@
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from "next/server";
 
-// Supabase Bağlantısı
-const supabase = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_ANON_KEY!
-);
+
+// Sabitleri dışarıda tanımla ama client'ı içerde veya güvenli oluştur
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+
+
 
 export async function POST(req: Request) {
+    if(!supabaseUrl || !supabaseAnonKey) {
+        console.error("Supabase ayarları eksik!");
+        return NextResponse.json({ error: "Server Configuration Error" }, { status: 500 });
+    }
+
+    // Supabase Bağlantısı
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    
     const body = await req.json();
     const { name, phone, level } = body;
 
