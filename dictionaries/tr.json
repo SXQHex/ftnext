@@ -1,0 +1,307 @@
+{
+    "seo": {
+        "title": "Fethiye Tango Kulübü | Arjantin Tango ve Sosyal Yaşam",
+        "description": "Fethiye'nin en köklü Arjantin Tango topluluğu. Uzman eğitmenler eşliğinde dans dersleri, haftalık milongalar ve uluslararası atölyeler."
+    },
+    "navigation": {
+        "home": "Ana Sayfa",
+        "program": "Program",
+        "trainers": "Eğitmenler",
+        "atolye": "Atölye",
+        "blog": "Blog",
+        "contact": "İletişim",
+        "cta": "Ücretsiz Tanışma Dersi",
+        "login": "Üye Girişi"
+    },
+    "footer": {
+        "slogan": "Güçlü Teknik, Samimi Topluluk. 20 yıllık tutku hikayesi.",
+        "linksTitle": "Navigasyon",
+        "contactTitle": "İletişim",
+        "socialTitle": "Bize Ulaşın",
+        "direction": "Yol Tarifi Al →",
+        "address": "Foça, 1304. Sk. No:22 (Tenis Kulübü) Fethiye",
+        "copyright": "FETHİYE TANGO KULÜBÜ.",
+        "privacy": "GİZLİLİK",
+        "kvkk": "KVKK"
+    },
+    "home": {
+        "hero": {
+            "badge": "Fethiye'nin En Büyük Tango Ailesi",
+            "title": "Dansın Ötesinde",
+            "subtitle": "Bir Sosyal Yaşam",
+            "description": "Fethiye Tango Kulübü, sadece bir dans kursu değil; dostlukların kurulduğu, kültürün paylaşıldığı ve her adımda hayatın kutlandığı bir topluluktur.",
+            "ctaStart": "Hemen Başla",
+            "ctaEvents": "Etkinlikleri Gör",
+            "stats": {
+                "members": "Üye",
+                "milongas": "Milonga",
+                "years": "Yıl"
+            }
+        },
+        "features": {
+            "badge": "Kulüp Deneyimi",
+            "title": "Sadece Dans Değil,",
+            "subtitle": "Bir Yaşam Biçimi",
+            "description": "Fethiye'nin ruhunu Arjantin'in tutkusuyla birleştiriyoruz. Topluluğumuzun sunduğu ayrıcalıkları keşfedin.",
+            "items": [
+                {
+                    "title": "Uluslararası Atölyeler",
+                    "description": "Dünyaca ünlü maestrolar ile tekniğinizi zirveye taşıyın.",
+                    "seoTitle": "Profesyonel Tango Atölyeleri | Fethiye Tango"
+                },
+                {
+                    "title": "Milonga Geceleri",
+                    "description": "Arjantin ruhunu Fethiye'de yaşayın.",
+                    "seoTitle": "Milonga Geceleri ve Etkinlikler"
+                },
+                {
+                    "title": "Sosyal Ortam",
+                    "description": "Dansın ötesinde dostluklar.",
+                    "seoTitle": "Tango Sosyal Ortamı ve Dostluklar"
+                },
+                {
+                    "title": "Merkezi Lokasyon",
+                    "description": "Fethiye'nin kalbinde ulaşım kolaylığı.",
+                    "seoTitle": "Stüdyo Konumu ve Ulaşım"
+                },
+                {
+                    "title": "Her Seviye",
+                    "description": "İlk adımdan profesyonelliğe.",
+                    "seoTitle": "Her Seviye İçin Tango Dersleri"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Piste Çıkmaya",
+            "subtitle": "Hazır mısınız?",
+            "description": "Fethiye'nin en köklü dans topluluğuna katılın. Hiç dans etmemiş olsanız bile, ilk adımınızda yanınızdayız.",
+            "button": "Hemen Bilgi Alın",
+            "response": "Genellikle 5 dakika içinde yanıtlıyoruz."
+        }
+    },
+    "program": {
+        "eyebrow": "HAFTALIK AKIŞ",
+        "title": "DERS PROGRAMI",
+        "schedule": [
+            {
+                "eyebrow": "Pazartesi • 21.00",
+                "title": "Deneme & Temel Teknik",
+                "description": "60 dakikalık yoğun ders, mentörlü pratik ve eşleştirme.",
+                "items": [
+                    "Video breakdown + notlar",
+                    "Hızlı ilerleme önerileri",
+                    "Kontenjan 16 kişi"
+                ]
+            },
+            {
+                "eyebrow": "Cumartesi • 21.00",
+                "title": "Fethiye Milonga",
+                "description": "DJ setleri, yerel üreticilerden ikramlar ve sosyal dans.",
+                "items": [
+                    "Misafir eşleştirmesi",
+                    "Fotoğraf çekimli anı kütüphanesi",
+                    "Gün batımı söyleşileri"
+                ]
+            }
+        ],
+        "button": "Yerini Ayırt",
+        "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. \"{title}\" etkinliği için bilgi almak ve yer ayırtmak istiyorum."
+    },
+    "trainers": {
+        "eyebrow": "EĞİTMENLER",
+        "title": "KULÜP KADROMUZ",
+        "sidebar": {
+            "name": "ERKİN",
+            "surname": "KUNBUK",
+            "role": "Kurucu & Baş Eğitmen"
+        },
+        "vision": [
+            {
+                "label": "Gelenek",
+                "text": "Buenos Aires ekolünden süzülen, kurallara bağlı özgün stil."
+            },
+            {
+                "label": "Metot",
+                "text": "Kinesiyoloji temelli, bilimsel ve esnek eğitim yaklaşımı."
+            },
+            {
+                "label": "Misyon",
+                "text": "Fethiye Tango Kulübü ile nitelikli gelişim ve sosyal dinamizm."
+            }
+        ],
+        "journey": {
+            "eyebrow": "Yolculuk",
+            "title": "2005’TEN BU YANA, <br /> ADIMLARDAN ÇOK <span class=\"text-tango-red\">RUHUN YOLCULUĞUNA</span>",
+            "description": "Müzik ve dansla çocuk yaşta tanışan <span class=\"text-white font-semibold\">Erkin KUNBUK</span> için tango; bir hobiden öte, bir ifade biçimi. 2006’dan bu yana yüzlerce dansçıya rehberlik eden Kunbuk, kendi stilini \"geleneğe sadık bir özgürlük\" üzerine inşa etti."
+        },
+        "career": {
+            "eyebrow": "Kariyer Durakları & Altın Çağ",
+            "primeEra": {
+                "date": "2005 — 2012",
+                "badge": "Prime Era",
+                "title": "Antalya'dan Buenos Aires'e: <br /> <span class=\"text-tango-gold\">Küresel Vizyon</span>",
+                "quote": "\"Türkiye ve Arjantin Tango’nun kalbi Buenos Aires’te ustalarla geçen yıller ve uluslararası arenada yankı uyandıran organizasyonlar.\"",
+                "text": [
+                    "AÜ ve Tango Siete’nin kurucu ortağı olarak Antalya’da Arjantin Tango’nun modern temellerini atan <span class=\"text-white font-bold\">Erkin KUNBUK</span>; bu dönemde yüzlerce dansçı yetiştirmekle kalmadı, Buenos Aires’te geleneksel ekolün en büyük ustalarıyla çalışarak özgün stilini yarattı.",
+                    "Uluslararası organizasyonlarda <span class=\"font-bold text-tango-gold\">Eğitmen ve DJ</span> olarak sahne alarak, Arjantin Tango’yu kitlelerle buluşturan küresel bir figür haline geldi."
+                ]
+            },
+            "timeline": [
+                {
+                    "year": "2014 - 2021",
+                    "title": "Fethiye: Adaptasyon ve Derinleşme",
+                    "desc": "Fethiye’ye yerleşim ile birlikte butik eğitim metodolojisinin olgunlaştırılması ve bireysel teknik çalışmalarına odaklanılması."
+                },
+                {
+                    "year": "2022 - 2024",
+                    "title": "Kültürel Miras & İş Birliği",
+                    "desc": "Bülent Baştürk’ün kurduğu 'Fethiye Tango Kültürü' oluşumuna dahil olarak yerel topluluğun gelişimine liderlik etti; gelenekle moderni birleştiren bayrak devri."
+                },
+                {
+                    "year": "2025 - GÜNÜMÜZ",
+                    "title": "Fethiye Tango Kulübü",
+                    "desc": "100’lerce öğrencinin mirası ve 20 yıllık tecrübenin kurumsallaşması. Tangonun doğru metodoloji ile yaygınlaştırıldığı yeni merkez."
+                }
+            ]
+        }
+    },
+    "atolye": {
+        "eyebrow": "ATÖLYELER",
+        "title": "KOLEKTİF LABORATUVAR",
+        "themes": [
+            {
+                "title": "VÜCUT FARKINDALIĞI",
+                "lead": "Solunum, pivot ve yerle temas üzerine düşük tempolu drill setleri. Kendi dengeni bulmadan partner dengesini kuramazsın. Eksenini yerçekimiyle optimize etmeyi, boşa harcanan enerjiyi minimalize etmeyi ve bedenin biyomekaniğini tango özelinde yeniden keşfetmeyi hedefliyoruz."
+            },
+            {
+                "title": "İLETİŞİM & NİYET",
+                "lead": "Lider/takipçi rolleri yerine ortak kompozisyon yaratmaya odaklanan varyasyonlar. Dansın içindeki diyaloğu keşfedin. Niyetin (intent) harekete nasıl dönüştüğünü, partnerin bu niyeti nasıl okuduğunu ve manipülasyon yerine gerçek bir bağlantının nasıl kurulduğunu pratik ediyoruz."
+            },
+            {
+                "title": "MÜZİKALİTE LABORATUVARI",
+                "lead": "Canlı bandoneon kayıtlarıyla katman katman ritim çözümleme. Müziği sadece duymayın, içinde nefes alın. Melodi ve ritim arasındaki çatışmayı, frazeolojiyi ve Arjantin Tangosu'nun altın çağındaki orkestraların karakteristik dokularını dansımıza nasıl yedireceğimizi inceliyoruz."
+            }
+        ],
+        "whatsappMessages": {
+            "book": "Merhaba, \"{title}\" başlıklı atölye çalışması için yer ayırtmak istiyorum.",
+            "bookGeneral": "Merhaba, atölye çalışması için yer ayırtmak istiyorum.",
+            "ask": "Merhaba, \"{title}\" başlıklı atölye programı hakkında detaylı bilgi alabilir miyim?",
+            "askGeneral": "Merhaba, atölye programı hakkında detaylı bilgi alabilir miyim?"
+        }
+    },
+    "contact": {
+        "eyebrow": "İletişim & Kayıt",
+        "title": "PİSTE İLK ADIM",
+        "intro": {
+            "line1": "Karmaşayı geride bırak.",
+            "line2": "Abrazo seni bekliyor."
+        },
+        "form": {
+            "nameLabel": "Adınız ve Soyadınız",
+            "namePlaceholder": "Ahmet Yılmaz",
+            "phoneLabel": "Telefon",
+            "phonePlaceholder": "05xx xxx xx xx",
+            "phoneError": "Lütfen geçerli bir numara giriniz.",
+            "levelLabel": "Deneyim Düzeyi",
+            "levels": {
+                "zero": "Hiç dans etmedim",
+                "beginner": "Başlangıç Seviye",
+                "intermediate": "Orta / İleri Seviye"
+            },
+            "consent": "İletişim izinlerini ve KVKK metnini kabul ediyorum.",
+            "submit": "Kaydı Tamamla",
+            "submitting": "Gönderiliyor...",
+            "successTitle": "Kaydın Bize Ulaştı!",
+            "successMessage": "Sizi en kısa sürede arayacağız. Eğer sormak istediğiniz bir sorunuz varsa hemen WhatsApp'tan yazabilirsiniz.",
+            "whatsappConfirm": "WhatsApp ile Yazın",
+            "whatsappMessage": "Merhaba, iletişim formunu doldurdum, bir sorum olacaktı...",
+            "error": {
+                "system": "Hata:",
+                "alert": "Bir sorun oluştu. Lütfen WhatsApp üzerinden ulaşın.",
+                "submit": "Gönderim başarısız"
+            }
+        },
+        "sidebar": {
+            "studioLabel": "Stüdyo",
+            "studioName": "Çalış, Fethiye",
+            "studioAddress": "Tenis Kulübü Salonu",
+            "features": [
+                "Klimalı",
+                "Otopark"
+            ],
+            "whatsappButtonTitle": "+90 544 641 5745",
+            "whatsappButtonLabel": "Hemen Mesaj Gönder"
+        }
+    },
+    "blog": {
+        "eyebrow": "ARŞİV",
+        "title": "TANGO GÜNCESİ",
+        "readingTime": "dk okuma",
+        "cta": {
+            "small": {
+                "text": "Bu duyguyu sadece okumakla kalma, bizzat yaşa.",
+                "button": "[ Ücretsiz Deneme Dersine Katıl ]"
+            },
+            "large": {
+                "title": "Kendi Hikayeni Pistte Yaz",
+                "highlight": "Pistte Yaz",
+                "description": "Şimdi ilk adımını atma zamanı. Fethiye'nin en tutkulu topluluğuna katıl.",
+                "button": "Hemen Başla"
+            }
+        }
+    },
+    "trialForm": {
+        "header": {
+            "label": "Katılım",
+            "title": "Pist Seni <br /> <span class=\"text-tango-red\">Bekliyor</span>"
+        },
+        "form": {
+            "nameLabel": "Ad Soyad",
+            "namePlaceholder": "Adınız Soyadınız",
+            "phoneLabel": "WhatsApp / Telefon",
+            "phonePlaceholder": "05...",
+            "phoneError": "Geçerli bir numara giriniz (Örn: 05xx...)",
+            "levelLabel": "Seviye",
+            "levels": {
+                "zero": "Hiç dans etmedim",
+                "beginner": "Başlangıç Seviye",
+                "intermediate": "Orta / İleri Seviye"
+            },
+            "submit": "Hemen Başla",
+            "initiate": "İşleniyor...",
+            "successTitle": "Harika Karar!",
+            "successMessage": "Kaydın alındı. Hemen yerini kesinleştirmek ister misin?",
+            "whatsappConfirm": "WhatsApp ile Onayla",
+            "whatsappMessage": "Merhaba, ücretsiz tanışma dersi için form doldurdum: {name}",
+            "consent": "İletişim izinlerini ve KVKK metnini kabul ediyorum."
+        },
+        "error": {
+            "system": "Sistem hatası:",
+            "alert": "Kayıt sırasında bir sorun oluştu. Lütfen doğrudan WhatsApp'tan ulaşın.",
+            "submit": "Gönderim başarısız"
+        }
+    },
+    "ui": {
+        "readMore": "Okumaya Başla →",
+        "seeDetails": "Detayları Gör →",
+        "readFullArticle": "Yazının Tamamını Oku",
+        "bookSpot": "Yerini Ayırt",
+        "close": "[ Kapat ]"
+    },
+    "login": {
+        "title": "Tekrar Hoş Geldiniz",
+        "description": "Fethiye Tango Kulübü hesabınıza giriş yapın.",
+        "emailLabel": "E-posta",
+        "passwordLabel": "Şifre",
+        "forgotPassword": "Şifrenizi mi unuttunuz?",
+        "submit": "Giriş Yap",
+        "orContinueWith": "Veya şununla devam edin",
+        "noAccount": "Hesabınız yok mu?",
+        "signUp": "Kaydolun",
+        "terms": "Devam ederek, {terms} ve {privacy} sözleşmelerini kabul etmiş olursunuz.",
+        "termsLink": "Hizmet Şartları",
+        "privacyLink": "Gizlilik Politikası",
+        "backToHome": "Anasayfaya Dön",
+        "orContact": "Hesabınız yok mu? Bizimle iletişime geçin."
+    }
+}

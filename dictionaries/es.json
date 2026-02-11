@@ -1,0 +1,306 @@
+{
+    "seo": {
+        "title": "Fethiye Tango Club | Tango Argentino y Vida Social",
+        "description": "La comunidad de Tango Argentino más establecida de Fethiye. Clases de baile con expertos, milongas semanales y seminarios internacionales."
+    },
+    "navigation": {
+        "home": "Inicio",
+        "program": "Programa",
+        "trainers": "Profesores",
+        "atolye": "Seminarios",
+        "blog": "Blog",
+        "contact": "Contacto",
+        "cta": "Clase de Prueba Gratis",
+        "login": "Acceso Miembros"
+    },
+    "footer": {
+        "slogan": "Técnica sólida, comunidad genuina. 20 años de pasión.",
+        "linksTitle": "Navegación",
+        "contactTitle": "Contacto",
+        "socialTitle": "Contactanos",
+        "direction": "Cómo llegar →",
+        "address": "Foça, 1304. Sk. No:22 (Fethiye Tennis Club)",
+        "copyright": "FETHIYE TANGO CLUB.",
+        "privacy": "PRIVACIDAD",
+        "kvkk": "TÉRMINOS"
+    },
+    "home": {
+        "hero": {
+            "badge": "La familia de tango más grande de Fethiye",
+            "title": "Más que un baile",
+            "subtitle": "Una vida social",
+            "description": "Fethiye Tango Club no es solo un curso de baile; es una comunidad donde se forman amistades, se comparte la cultura y se celebra la vida en cada paso.",
+            "ctaStart": "Empezá ahora",
+            "ctaEvents": "Ver eventos",
+            "stats": {
+                "members": "Miembros",
+                "milongas": "Milongas",
+                "years": "Años"
+            }
+        },
+        "features": {
+            "badge": "Experiencia de Club",
+            "title": "No solo baile,",
+            "subtitle": "Un estilo de vida",
+            "description": "Combinamos el espíritu de Fethiye con la pasión de Argentina. Descubrí los privilegios que ofrece nuestra comunidad.",
+            "items": [
+                {
+                    "title": "Seminarios Internacionales",
+                    "description": "Llevá tu técnica al máximo con maestros de renombre mundial.",
+                    "seoTitle": "Seminarios de Tango Profesionales"
+                },
+                {
+                    "title": "Noches de Milonga",
+                    "description": "Viví el espíritu argentino en Fethiye.",
+                    "seoTitle": "Milongas y eventos"
+                },
+                {
+                    "title": "Entorno Social",
+                    "description": "Amistades más allá de la pista.",
+                    "seoTitle": "Ambiente social de tango"
+                },
+                {
+                    "title": "Ubicación Central",
+                    "description": "Fácil acceso en el corazón de Fethiye.",
+                    "seoTitle": "Ubicación del estudio"
+                },
+                {
+                    "title": "Todos los niveles",
+                    "description": "Desde el primer paso hasta el profesionalismo.",
+                    "seoTitle": "Clases de tango para todos los niveles"
+                }
+            ]
+        },
+        "cta": {
+            "title": "¿Estás listo",
+            "subtitle": "para salir a la pista?",
+            "description": "Súmate a la comunidad de baile con más trayectoria de Fethiye. Aunque nunca hayas bailado, te acompañamos en tu primer paso.",
+            "button": "Pedí información ahora",
+            "response": "Solemos responder en 5 minutes."
+        }
+    },
+    "program": {
+        "eyebrow": "CRONOGRAMA SEMANAL",
+        "title": "HORARIOS DE CLASES",
+        "schedule": [
+            {
+                "eyebrow": "Lunes • 21.00",
+                "title": "Prueba y Técnica Básica",
+                "description": "Clase intensiva de 60 minutos, práctica guiada y armado de parejas.",
+                "items": [
+                    "Análisis de video + notas",
+                    "Sugerencias de progreso rápido",
+                    "Cupo para 16 personas"
+                ]
+            },
+            {
+                "eyebrow": "Sábado • 21.00",
+                "title": "Milonga de Fethiye",
+                "description": "DJ sets, comida típica local y baile social.",
+                "items": [
+                    "Emparejamiento de invitados",
+                    "Biblioteca de recuerdos con fotos",
+                    "Charlas al atardecer"
+                ]
+            }
+        ],
+        "button": "Reservá tu lugar",
+        "whatsappMessage": "¡Hola! Te escribo desde la web de Fethiye Tango. Quisiera información y reservar un lugar para el evento \"{title}\"."
+    },
+    "trainers": {
+        "eyebrow": "PROFESORES",
+        "title": "NUESTRO EQUIPO DEL CLUB",
+        "sidebar": {
+            "name": "ERKÍN",
+            "surname": "KUNBUK",
+            "role": "Fundador y Profesor Principal"
+        },
+        "vision": [
+            {
+                "label": "Tradición",
+                "text": "Estilo único filtrado de la escuela de Buenos Aires, fiel a las reglas."
+            },
+            {
+                "label": "Método",
+                "text": "Enfoque educativo científico y flexible basado en la kinesiología."
+            },
+            {
+                "label": "Misión",
+                "text": "Desarrollo de calidad y dinamismo social con Fethiye Tango Club."
+            }
+        ],
+        "journey": {
+            "eyebrow": "El Camino",
+            "title": "DESDE 2005, <br /> NO SOLO PASOS, <span class=\"text-tango-red\">UN VIAJE DEL ALMA</span>",
+            "description": "Para <span class=\"text-white font-semibold\">Erkin KUNBUK</span>, que conoció la música y el baile desde chico, el tango es más que un hobby; es una forma de expresión."
+        },
+        "career": {
+            "eyebrow": "Hitos de Carrera y Edad de Oro",
+            "primeEra": {
+                "date": "2005 — 2012",
+                "badge": "Prime Era",
+                "title": "De Antalya a Buenos Aires: <br /> <span class=\"text-tango-gold\">Visión Global</span>",
+                "quote": "\"Años pasados con maestros en Buenos Aires, el corazón del tango, и organizaciones de nivel internacional.\"",
+                "text": [
+                    "Sentando las bases modernas del Tango Argentino en Antalya como cofundador de AÜ y Tango Siete, Erkin KUNBUK creó su propio estilo trabajando con los grandes maestros de la escuela tradicional en Buenos Aires."
+                ]
+            },
+            "timeline": [
+                {
+                    "year": "2014 - 2021",
+                    "title": "Fethiye: Adaptación и Profundización",
+                    "desc": "Maduración de la metodología de enseñanza personalizada и enfoque en técnica individual al radicarse en Fethiye."
+                },
+                {
+                    "year": "2022 - 2024",
+                    "title": "Herencia Cultural и Colaboración",
+                    "desc": "Lideró el desarrollo de la comunidad local uniéndose a la formación 'Fethiye Tango Culture'."
+                },
+                {
+                    "year": "2025 - ACTUALIDAD",
+                    "title": "Fethiye Tango Club",
+                    "desc": "Institucionalización de 20 años de experiencia и el legado de cientos de alumnos."
+                }
+            ]
+        }
+    },
+    "atolye": {
+        "eyebrow": "TALLERES",
+        "title": "LABORATORIO COLECTIVO",
+        "themes": [
+            {
+                "title": "CONCIENCIA CORPORAL",
+                "lead": "Ejercicios de baja intensidad sobre respiración, pivotes и contacto con el piso. Buscamos optimizar el eje con la gravedad и redescubrir la biomecánica aplicada al tango."
+            },
+            {
+                "title": "COMUNICACIÓN E INTENCIÓN",
+                "lead": "Variaciones enfocadas en crear una composición común. Practicamos cómo la intención se convierte en movimiento."
+            },
+            {
+                "title": "LABORATORIO DE MUSICALIDAD",
+                "lead": "Análisis rítmico por capas con grabaciones de bandoneón en vivo. Estudiamos el conflicto entre melodía и ritmo."
+            }
+        ],
+        "whatsappMessages": {
+            "book": "Hola, quisiera reservar un lugar para el taller \"{title}\".",
+            "bookGeneral": "Hola, quisiera reservar un lugar para el taller.",
+            "ask": "¿Me darías información detallada sobre el programa del taller \"{title}\"?",
+            "askGeneral": "¿Me darías información detallada sobre el programa de talleres?"
+        }
+    },
+    "contact": {
+        "eyebrow": "Contacto и Registro",
+        "title": "EL PRIMER PASO",
+        "intro": {
+            "line1": "Dejá atrás el caos.",
+            "line2": "El abrazo te espera."
+        },
+        "form": {
+            "nameLabel": "Nombre Completo",
+            "namePlaceholder": "Juan Pérez",
+            "phoneLabel": "Teléfono",
+            "phonePlaceholder": "+54 9 xxx xxx xxxx",
+            "phoneError": "Ingresá un número válido.",
+            "levelLabel": "Nivel de experiencia",
+            "levels": {
+                "zero": "Nunca bailé antes",
+                "beginner": "Nivel Principiante",
+                "intermediate": "Intermedio / Avanzado"
+            },
+            "consent": "Acepto los permisos de comunicación и términos de privacidad.",
+            "submit": "Completar Registro",
+            "submitting": "Enviando...",
+            "successTitle": "¡Registro recibido!",
+            "successMessage": "Te llamaremos lo antes posible. Si tenés alguna pregunta, podés escribirnos por WhatsApp ahora mismo.",
+            "whatsappConfirm": "Enviar WhatsApp",
+            "whatsappMessage": "Hola, completé el formulario de contacto, tenía una consulta...",
+            "error": {
+                "system": "Error:",
+                "alert": "Hubo un problema. Por favor contactanos por WhatsApp.",
+                "submit": "Error de envío"
+            }
+        },
+        "sidebar": {
+            "studioLabel": "Estudio",
+            "studioName": "Çalış, Fethiye",
+            "studioAddress": "Salón del Tennis Club",
+            "features": [
+                "Aire Acondicionado",
+                "Estacionamiento"
+            ],
+            "whatsappButtonTitle": "+90 544 641 5745",
+            "whatsappButtonLabel": "Enviar mensaje ahora"
+        }
+    },
+    "blog": {
+        "eyebrow": "ARCHIVO",
+        "title": "CRÓNICAS DE TANGO",
+        "readingTime": "min de lectura",
+        "cta": {
+            "small": {
+                "text": "No solo leas sobre este sentimiento, vivilo vos mismo.",
+                "button": "[ Sumate a la clase de prueba gratis ]"
+            },
+            "large": {
+                "title": "Escribí tu propia historia en la pista",
+                "highlight": "en la pista",
+                "description": "Es hora de dar tu primer paso. Súmate a la comunidad más apasionada de Fethiye.",
+                "button": "Empezá ahora"
+            }
+        }
+    },
+    "trialForm": {
+        "header": {
+            "label": "Sumate",
+            "title": "La Pista <br /> <span class=\"text-tango-red\">Te Espera</span>"
+        },
+        "form": {
+            "nameLabel": "Nombre Completo",
+            "namePlaceholder": "Tu nombre и apellido",
+            "phoneLabel": "WhatsApp / Teléfono",
+            "phonePlaceholder": "05...",
+            "phoneError": "Ingresá un número válido (ej. 05xx...)",
+            "levelLabel": "Nivel",
+            "levels": {
+                "zero": "Nunca bailé antes",
+                "beginner": "Nivel Principiante",
+                "intermediate": "Nivel Intermedio / Avanzado"
+            },
+            "submit": "Sumarme ahora",
+            "submitting": "Procesando...",
+            "successTitle": "¡Gran decisión!",
+            "successMessage": "Recibimos tu registro. ¿Querés confirmar tu lugar ahora mismo?",
+            "whatsappConfirm": "Confirmar por WhatsApp",
+            "whatsappMessage": "Hola, completé el formulario para la clase de prueba: {name}",
+            "consent": "Acepto los permisos de comunicación и términos de privacidad."
+        },
+        "error": {
+            "system": "Error del sistema:",
+            "alert": "Hubo un problema con el registro. Por favor contactanos directamente por WhatsApp.",
+            "submit": "Error de envío"
+        }
+    },
+    "ui": {
+        "readMore": "Seguir leyendo →",
+        "seeDetails": "Ver detalles →",
+        "readFullArticle": "Leer artículo completo",
+        "bookSpot": "Reservar mi lugar",
+        "close": "[ Cerrar ]"
+    },
+    "login": {
+        "title": "Bienvenido de nuevo",
+        "description": "Iniciá sesión en tu cuenta de Fethiye Tango Club.",
+        "emailLabel": "Correo electrónico",
+        "passwordLabel": "Contraseña",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "submit": "Iniciar sesión",
+        "orContinueWith": "O continuar con",
+        "noAccount": "¿No tenés una cuenta?",
+        "signUp": "Registrate",
+        "terms": "Al hacer clic en continuar, aceptás nuestros {terms} и {privacy}.",
+        "termsLink": "Términos de Servicio",
+        "privacyLink": "Política de Privacidad",
+        "backToHome": "Volver al inicio",
+        "orContact": "¿No tienes una cuenta? Contáctanos."
+    }
+}

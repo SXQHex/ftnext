@@ -1,0 +1,307 @@
+{
+    "seo": {
+        "title": "Fethiye Tango Club | Argentine Tango and Social Life",
+        "description": "Fethiye's most established Argentine Tango community. Dance lessons with expert instructors, weekly milongas and international workshops."
+    },
+    "navigation": {
+        "home": "Home",
+        "program": "Program",
+        "trainers": "Trainers",
+        "atolye": "Workshops",
+        "blog": "Blog",
+        "contact": "Contact",
+        "cta": "Free Trial Lesson",
+        "login": "Member Login"
+    },
+    "footer": {
+        "slogan": "Strong Technique, Sincere Community. 20 years of passion.",
+        "linksTitle": "Navigation",
+        "contactTitle": "Contact",
+        "socialTitle": "Contact Us",
+        "direction": "Get Directions →",
+        "address": "Foça, 1304. Sk. No:22 (Tennis Club) Fethiye",
+        "copyright": "FETHIYE TANGO CLUB.",
+        "privacy": "PRIVACY",
+        "kvkk": "GDPR"
+    },
+    "home": {
+        "hero": {
+            "badge": "Fethiye's Largest Tango Family",
+            "title": "Beyond Dance",
+            "subtitle": "A Social Life",
+            "description": "Fethiye Tango Club is not just a dance course; it is a community where friendships are formed, culture is shared and life is celebrated at every step.",
+            "ctaStart": "Start Now",
+            "ctaEvents": "View Events",
+            "stats": {
+                "members": "Members",
+                "milongas": "Milongas",
+                "years": "Years"
+            }
+        },
+        "features": {
+            "badge": "Club Experience",
+            "title": "Not Just Dance,",
+            "subtitle": "A Lifestyle",
+            "description": "We combine the spirit of Fethiye with the passion of Argentina. Discover the privileges offered by our community.",
+            "items": [
+                {
+                    "title": "International Workshops",
+                    "description": "Take your technique to the top with world-famous maestros.",
+                    "seoTitle": "Professional Tango Workshops"
+                },
+                {
+                    "title": "Milonga Nights",
+                    "description": "Experience the Argentine spirit in Fethiye.",
+                    "seoTitle": "Milonga Nights and Events"
+                },
+                {
+                    "title": "Social Environment",
+                    "description": "Friendships beyond dance.",
+                    "seoTitle": "Tango Social Environment"
+                },
+                {
+                    "title": "Central Location",
+                    "description": "Easy access in the heart of Fethiye.",
+                    "seoTitle": "Studio Location"
+                },
+                {
+                    "title": "All Levels",
+                    "description": "From first step to professionalism.",
+                    "seoTitle": "Tango Lessons for All Levels"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to",
+            "subtitle": "Hit the Floor?",
+            "description": "Join Fethiye's most established dance community. Even if you have never danced before, we are with you in your first step.",
+            "button": "Get Info Now",
+            "response": "We usually reply within 5 minutes."
+        }
+    },
+    "program": {
+        "eyebrow": "WEEKLY SCHEDULE",
+        "title": "CLASS SCHEDULE",
+        "schedule": [
+            {
+                "eyebrow": "Monday • 21.00",
+                "title": "Trial & Basic Technique",
+                "description": "60-minute intensive class, mentored practice and pairing.",
+                "items": [
+                    "Video breakdown + notes",
+                    "Rapid progress suggestions",
+                    "Quota 16 people"
+                ]
+            },
+            {
+                "eyebrow": "Saturday • 21.00",
+                "title": "Fethiye Milonga",
+                "description": "DJ sets, treats from local producers and social dancing.",
+                "items": [
+                    "Guest pairing",
+                    "Photo shoot memory library",
+                    "Sunset conversations"
+                ]
+            }
+        ],
+        "button": "Book Your Spot",
+        "whatsappMessage": "Hello! I am reaching out from Fethiye Tango website. I would like to get information and book a spot for the \"{title}\" event."
+    },
+    "trainers": {
+        "eyebrow": "INSTRUCTORS",
+        "title": "OUR CLUB TEAM",
+        "sidebar": {
+            "name": "ERKİN",
+            "surname": "KUNBUK",
+            "role": "Founder & Head Instructor"
+        },
+        "vision": [
+            {
+                "label": "Tradition",
+                "text": "Unique style filtered from Buenos Aires school, loyal to rules."
+            },
+            {
+                "label": "Method",
+                "text": "Kinesiology-based, scientific and flexible educational approach."
+            },
+            {
+                "label": "Mission",
+                "text": "Qualified development and social dynamism with Fethiye Tango Club."
+            }
+        ],
+        "journey": {
+            "eyebrow": "The Journey",
+            "title": "SINCE 2005, <br /> NOT JUST STEPS, <span class=\"text-tango-red\">A JOURNEY OF THE SOUL</span>",
+            "description": "For <span class=\"text-white font-semibold\">Erkin KUNBUK</span>, who met music and dance at a young age, tango is more than a hobby; it is a form of expression. Guiding hundreds of dancers since 2006, Kunbuk built his own style on \"freedom loyal to tradition\"."
+        },
+        "career": {
+            "eyebrow": "Career Stops & Golden Age",
+            "primeEra": {
+                "date": "2005 — 2012",
+                "badge": "Prime Era",
+                "title": "From Antalya to Buenos Aires: <br /> <span class=\"text-tango-gold\">Global Vision</span>",
+                "quote": "\"Years spent with masters in Buenos Aires, the heart of Turkish and Argentine Tango, and organizations echoing in the international arena.\"",
+                "text": [
+                    "Laying the modern foundations of Argentine Tango in Antalya as the co-founder of AÜ and Tango Siete, <span class=\"text-white font-bold\">Erkin KUNBUK</span> not only trained hundreds of dancers in this period but also created his unique style by working with the greatest masters of the traditional school in Buenos Aires.",
+                    "By taking the stage as an <span class=\"font-bold text-tango-gold\">Instructor and DJ</span> in international organizations, he became a global figure bringing Argentine Tango to the masses."
+                ]
+            },
+            "timeline": [
+                {
+                    "year": "2014 - 2021",
+                    "title": "Fethiye: Adaptation and Deepening",
+                    "desc": "Maturation of boutique education methodology and focusing on individual technique studies with settlement in Fethiye."
+                },
+                {
+                    "year": "2022 - 2024",
+                    "title": "Cultural Heritage & Collaboration",
+                    "desc": "Led the development of the local community by joining the 'Fethiye Tango Culture' formation founded by Bülent Baştürk; a flag handover combining tradition with modern."
+                },
+                {
+                    "year": "2025 - PRESENT",
+                    "title": "Fethiye Tango Club",
+                    "desc": "Institutionalization of 20 years of experience and the legacy of 100s of students. The new center where tango is popularized with the correct methodology."
+                }
+            ]
+        }
+    },
+    "atolye": {
+        "eyebrow": "WORKSHOPS",
+        "title": "COLLECTIVE LABORATORY",
+        "themes": [
+            {
+                "title": "BODY AWARENESS",
+                "lead": "Low-tempo drill sets on breathing, pivot and ground contact. You cannot establish partner balance without finding your own balance. We aim to optimize axis with gravity, minimize wasted energy and rediscover biomechanics of the body specifically for tango."
+            },
+            {
+                "title": "COMMUNICATION & INTENTION",
+                "lead": "Variations focusing on creating common composition instead of leader/follower roles. Discover the dialogue within the dance. We practice how intention turns into movement, how the partner reads this intention, and how a real connection is established instead of manipulation."
+            },
+            {
+                "title": "MUSICALITY LABORATORY",
+                "lead": "Layer-by-layer rhythm analysis with live bandoneon recordings. Don't just hear the music, breathe inside it. We examine the conflict between melody and rhythm, phrasing, and how to incorporate the characteristic textures of Golden Age orchestras of Argentine Tango into our dance."
+            }
+        ],
+        "whatsappMessages": {
+            "book": "Hello, I would like to book a spot for the \"{title}\" workshop.",
+            "bookGeneral": "Hello, I would like to book a spot for the workshop.",
+            "ask": "Hello, can I get detailed information about the \"{title}\" workshop program?",
+            "askGeneral": "Hello, can I get detailed information about the workshop program?"
+        }
+    },
+    "contact": {
+        "eyebrow": "Contact & Registration",
+        "title": "FIRST STEP",
+        "intro": {
+            "line1": "Leave the chaos behind.",
+            "line2": "Abrazo awaits you."
+        },
+        "form": {
+            "nameLabel": "Full Name",
+            "namePlaceholder": "John Doe",
+            "phoneLabel": "Phone",
+            "phonePlaceholder": "+90 5xx xxx xx xx",
+            "phoneError": "Please enter a valid number.",
+            "levelLabel": "Experience Level",
+            "levels": {
+                "zero": "I have never danced before",
+                "beginner": "Beginning Level",
+                "intermediate": "Intermediate / Advanced"
+            },
+            "consent": "I accept communication permissions and GDPR text.",
+            "submit": "Complete Registration",
+            "submitting": "Sending...",
+            "successTitle": "Registration Received!",
+            "successMessage": "We will call you as soon as possible. If you have any questions, you can write to us via WhatsApp immediately.",
+            "whatsappConfirm": "Message on WhatsApp",
+            "whatsappMessage": "Hello, I filled out the contact form, I have a question...",
+            "error": {
+                "system": "Error:",
+                "alert": "An error occurred. Please contact us via WhatsApp.",
+                "submit": "Submission error"
+            }
+        },
+        "sidebar": {
+            "studioLabel": "Studio",
+            "studioName": "Çalış, Fethiye",
+            "studioAddress": "Tennis Club Hall",
+            "features": [
+                "Air Conditioned",
+                "Parking"
+            ],
+            "whatsappButtonTitle": "+90 544 641 5745",
+            "whatsappButtonLabel": "Send Message Now"
+        }
+    },
+    "blog": {
+        "eyebrow": "ARCHIVE",
+        "title": "TANGO CHRONICLES",
+        "readingTime": "min read",
+        "cta": {
+            "small": {
+                "text": "Don't just read about this feeling, experience it yourself.",
+                "button": "[ Join Free Trial Lesson ]"
+            },
+            "large": {
+                "title": "Write Your Own Story on the Floor",
+                "highlight": "on the Floor",
+                "description": "It's time to take your first step. Join Fethiye's most passionate community.",
+                "button": "Start Now"
+            }
+        }
+    },
+    "trialForm": {
+        "header": {
+            "label": "Join Us",
+            "title": "The Floor <br /> <span class=\"text-tango-red\">Is Waiting</span>"
+        },
+        "form": {
+            "nameLabel": "Full Name",
+            "namePlaceholder": "Your Full Name",
+            "phoneLabel": "WhatsApp / Phone",
+            "phonePlaceholder": "05...",
+            "phoneError": "Please enter a valid number (e.g. 05xx...)",
+            "levelLabel": "Level",
+            "levels": {
+                "zero": "I have never danced before",
+                "beginner": "Beginner Level",
+                "intermediate": "Intermediate / Advanced Level"
+            },
+            "submit": "Join Now",
+            "submitting": "Processing...",
+            "successTitle": "Great Decision!",
+            "successMessage": "Your registration has been received. Would you like to confirm your spot right now?",
+            "whatsappConfirm": "Confirm via WhatsApp",
+            "whatsappMessage": "Hello, I filled out the form for the free trial lesson: {name}",
+            "consent": "I accept communication permissions and GDPR text."
+        },
+        "error": {
+            "system": "System error:",
+            "alert": "An error occurred during registration. Please reach out directly on WhatsApp.",
+            "submit": "Submission failed"
+        }
+    },
+    "ui": {
+        "readMore": "Start Reading →",
+        "seeDetails": "See Details →",
+        "readFullArticle": "Read Full Article",
+        "bookSpot": "Book Your Spot",
+        "close": "[ Close ]"
+    },
+    "login": {
+        "title": "Welcome Back",
+        "description": "Login to your Fethiye Tango Club account.",
+        "emailLabel": "Email",
+        "passwordLabel": "Password",
+        "forgotPassword": "Forgot your password?",
+        "submit": "Login",
+        "orContinueWith": "Or continue with",
+        "noAccount": "Don't have an account?",
+        "signUp": "Sign up",
+        "terms": "By clicking continue, you agree to our {terms} and {privacy}.",
+        "termsLink": "Terms of Service",
+        "privacyLink": "Privacy Policy",
+        "backToHome": "Back to Home",
+        "orContact": "Don't have an account? Contact us via {contactUs}."
+    }
+}

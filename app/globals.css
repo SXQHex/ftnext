@@ -1,26 +1,189 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+@plugin "@tailwindcss/typography";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* 1. TEMA TANIMLARI (Statik Marka Renkleri) */
+@theme {
+  --color-tango-red: #b83b2b;
+  --color-tango-black: #0a0a0a;
+  --color-tango-dark: #111111;
+  --color-tango-gray: #1a1a1a;
+  --color-tango-gold: #d4af37;
+  --color-tango-text: #f0ecea;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-slow-zoom: slow-zoom 20s ease-in-out infinite alternate;
+
+  @keyframes slow-zoom {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.25);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 2. DEĞİŞKEN MERKEZİ (Dinamik Temalandırma) */
+:root {
+  /* Light Mode Varsayılanları */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.21 0.006 285.885);
+  --primary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --border: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.705 0.015 286.067);
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark Mode Geçişi */
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.18 0.005 285.823);
+  --card-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.25 0.005 285.823);
+  --muted-foreground: oklch(0.7 0.01 285.823);
+  --accent: oklch(0.25 0.005 285.823);
+  --accent-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 0.1);
+  --ring: oklch(0.55 0.01 285.823);
+}
+
+/* 3. BASE (Sarsılmaz Altyapı) */
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+    background-color: var(--color-tango-black);
+    height: 100%;
+  }
+
+
+  body {
+    @apply text-foreground antialiased;
+    background-color:  var(--color-tango-black);
+    position: relative;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1; /* Test bittikten sonra -1 yaparsın */
+    pointer-events: none;
+    will-change: transform;
+
+    background-image: 
+      /* 1 & 2: Amber Işıltılar (Kırmızıyı Amber'e çevirdik) */
+      radial-gradient(at 0% 0%, rgba(255, 180, 0, 0.08) 0px, transparent 45%),
+      radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.1) 0px, transparent 45%),
+      
+      /* 3: EVCİLLEŞTİRİLMİŞ LİNEER ÇİZGİLER (Hata efekti) */
+      /* baseFrequency: İlk değer (0.001) yatayda genişletir, ikinci değer (0.06) dikey çizgi sıklığıdır */
+      /* Eski kodunda 0.15 olan dikey değeri 0.06'ya çekerek çizgileri seyreltip evcilleştirdik */
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 4000 4000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  
+    /* Boyutlandırma: 2000px yaparak çizgilerin çok sık tekrar etmesini ve 'dijital parazit' gibi durmasını engelledik */
+    background-size: 100% 100%, 100% 100%, 2000px 2000px;
+    background-repeat: no-repeat, no-repeat, repeat;
+    
+    /* Screen modu: Siyah zemin üzerinde sadece o ince çizgileri beyaz/gri lifler gibi gösterir */
+    background-blend-mode: screen, screen, overlay;
+    
+    /* Vahşiliği buradan tamamen öldürüyoruz. 0.05 - 0.08 arası gerçek kağıt lifidir. */
+    opacity: 0.2; 
+    filter: contrast(1.1) brightness(1.1);
+  }
+
+  /* İçerik katmanlarını dokunun üzerine ama dokudan bağımsız yerleştiriyoruz */
+  main, header, footer, section {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* KARTLAR: Kendi dokusuna sahip bağımsız elemanlar */
+  .card-base {
+    background-color: var(--color-tango-dark); /* #111111 */
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    will-change: transform, box-shadow;
+    box-shadow: 
+      0 20px 40px -10px rgba(0, 0, 0, 1),    /* Ana kütle gölgesi */
+      0 10px 20px -5px rgba(0, 0, 0, 0.9),   /* Keskinlik katmanı */
+      0 0 1px 1px rgba(255, 255, 255, 0.02);        /* Kartın dibindeki mikro gölge */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+      box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+      border-color 0.3s ease;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+  .card-base:hover {
+    /* Üzerine gelince kartonun üzerinden hafifçe yükselme efekti */
+    transform: translateY(-8px);
+    border-color: rgba(184, 59, 43, 0.3); /* Çok hafif Tango kırmızısı ışıltısı */
+    z-index: 2; /* Hover sırasında kartın diğer içeriklerin üzerine çıkmasını sağlamak için */
+    box-shadow: 
+      0 40px 30px -15px rgba(0, 0, 0, 1),
+      0 15px 30px 5px rgba(184, 59, 43, 0.2),
+      0 0 15px rgba(184, 59, 43, 0.05); /* Kart yükseldiği için dip gölgeyi yumuşattık */
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
+
+/* 4. COMPONENTS (Özel Bileşenler) */
+@layer components {
+  .tango-article {
+    /* max-w-none zorunludur, aksi halde prose 65ch'da kilitler */
+    @apply prose prose-invert max-w-none w-full;
+
+    /* Font boyutu ve satır aralığı: Editoryal derinlik için artırıldı */
+    @apply prose-p:text-xl md:prose-p:text-2xl prose-p:leading-relaxed prose-p:text-tango-text/80 prose-p:mb-10;
+
+    /* Başlıklar: Senin sitenin ruhu (İtalik & Black) */
+    @apply prose-h2:text-4xl md:prose-h2:text-6xl prose-h2:mt-24 prose-h2:mb-12 prose-h2:tracking-tighter;
+    @apply prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:mt-16;
+
+    /* Vurgular */
+    @apply prose-strong:text-tango-gold prose-strong:font-black;
+    @apply prose-blockquote:border-l-tango-red prose-blockquote:italic prose-blockquote:text-2xl;
+    @apply prose-img:rounded-[40px] prose-img:border prose-img:border-white/5;
+  }
+}
+
+/* 5. TAILWIND v4 MAPPING */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
 }
