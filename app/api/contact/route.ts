@@ -2,10 +2,31 @@ import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-    const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    const supabaseUrl = process.env.SUPABASE_URL
+    const supabaseKey = process.env.SUPABASE_ANON_KEY
+    const telegramToken = process.env.TELEGRAM_TOKEN
+    const telegramChatId = process.env.TELEGRAM_CHAT_ID
+    
     if (!supabaseUrl || !supabaseKey) {
-        return new Response('Missing Supabase environment variables', { status: 500 })
+        console.error('Missing Supabase env vars:', { 
+            hasUrl: !!supabaseUrl, 
+            hasKey: !!supabaseKey 
+        })
+        return NextResponse.json(
+            { success: false, error: 'Missing Supabase configuration' }, 
+            { status: 500 }
+        )
+    }
+
+    if (!telegramToken || !telegramChatId) {
+        console.error('Missing Telegram env vars:', { 
+            hasToken: !!telegramToken, 
+            hasChatId: !!telegramChatId 
+        })
+        return NextResponse.json(
+            { success: false, error: 'Missing Telegram configuration' }, 
+            { status: 500 }
+        )
     }
     const supabase = createClient(supabaseUrl, supabaseKey)
     const body = await req.json();
@@ -22,11 +43,11 @@ export async function POST(req: Request) {
         // B. TELEGRAM'A BİLDİR
         const message = `🔥 *YENİ ADAY DÜŞTÜ!* 🔥\n━━━━━━━━━━━━━━\n👤 *Ad:* ${name}\n📱 *Tel:* ${phone}\n💃 *Seviye:* ${level}\n━━━━━━━━━━━━━━\n_Veri Supabase'e güvenle kaydedildi._`;
 
-        await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`, {
+        await fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                chat_id: process.env.TELEGRAM_CHAT_ID,
+                chat_id: telegramChatId,
                 text: message,
                 parse_mode: "Markdown",
             }),
@@ -35,6 +56,10 @@ export async function POST(req: Request) {
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error("Sistem Hatası:", error);
-        return NextResponse.json({ success: false }, { status: 500 });
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+        return NextResponse.json(
+            { success: false, error: errorMessage }, 
+            { status: 500 }
+        );
     }
 }
