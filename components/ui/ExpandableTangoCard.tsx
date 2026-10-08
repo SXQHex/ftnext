@@ -99,16 +99,17 @@ export function ExpandableTangoCard({ item, isBlog = false, lang = "tr", labels,
                         {isExpanded && (
                             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="pt-6">
                                 <button
+                                    type="button"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         if (isBlog && item.slug) router.push(`/${lang}/blog/${item.slug}`);
-                                        else window.open(CONTACT_INFO.getWaLink(waMessageTemplate?.replace("{title}", item.title) || `${item.title} için bilgi istiyorum.`));
+                                        else window.open(CONTACT_INFO.getWaLink(waMessageTemplate?.replace("{title}", item.title) || `${item.title} için bilgi istiyorum.`), "_blank", "noopener,noreferrer");
                                     }}
                                     className="w-full py-4 rounded-2xl bg-tango-gold text-tango-black text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all"
                                 >
                                     {isBlog ? uiLabels.readFullArticle : uiLabels.bookSpot}
                                 </button>
-                                <button onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }} className="w-full mt-4 text-[10px] text-tango-text/40 hover:text-tango-gold transition-colors uppercase font-black tracking-[0.3em]">
+                                <button type="button" onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }} className="w-full mt-4 text-[10px] text-tango-text/40 hover:text-tango-gold transition-colors uppercase font-black tracking-[0.3em]">
                                     {uiLabels.close}
                                 </button>
                             </motion.div>
