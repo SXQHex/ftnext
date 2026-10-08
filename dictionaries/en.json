@@ -205,7 +205,7 @@
             "beginner": "Beginner",
             "intermediate": "Intermediate / Advanced"
         },
-        "consent": "I agree to be contacted and to the processing of the information I provide.",
+        "consent": "I expressly consent to the processing of my personal data for handling my contact or registration request.",
         "submitting": "Sending...",
         "systemError": "Something went wrong. Please contact us via WhatsApp."
     },
