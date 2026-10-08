@@ -14,12 +14,7 @@ keywords: >-
   tango nedir, neden tango yapılır, tangonun faydaları, fethiye tango kursu,
   arjantin tango, milonga nedir
 originSlug: tango-nedir
-slugs:
-  tr: tango-nedir
-  en: what-is-tango-why-tango-comprehensive-guide-2026
-  ru: chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g
-  uk: shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026
-  es: que-es-el-tango-por-que-tango-guia-integral-2026
+slug: tango-nedir
 ---
 
 Tango denildiğinde akla gelen ilk görüntüler genellikle kırmızı bir gül, sert bakışlar, siyah bir takım elbise ve dramatik bacak hareketleridir. Ancak bu Hollywood klişeleri, tangonun gerçekte ne olduğunun sadece çok sığ ve bazen yanıltıcı bir yüzeyini temsil eder. Tango; aslında bir dans olmaktan çok, bir **iletişim dili**, biyolojik bir ihtiyaç ve modern dünyanın gürültüsünde bir **duygusal meditasyondur**. 
