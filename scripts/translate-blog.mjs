@@ -99,7 +99,6 @@ async function translatePost(fileName) {
         const translatedData = { ...sourceData, originSlug };
         if (sourceData.title) translatedData.title = await translateText(sourceData.title, lang);
         if (sourceData.excerpt) translatedData.excerpt = await translateText(sourceData.excerpt, lang);
-        if (sourceData.date) translatedData.date = await translateText(sourceData.date, lang);
 
         if (sourceData.metaTitle) translatedData.metaTitle = await translateText(sourceData.metaTitle, lang);
         if (sourceData.metaDescription) translatedData.metaDescription = await translateText(sourceData.metaDescription, lang);
