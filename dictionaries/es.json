@@ -192,21 +192,21 @@
         "seoDescription": "Explora los talleres de Fethiye Tango sobre conciencia corporal, comunicación con la pareja, intención y musicalidad para profundizar en el Tango Argentino."
     },
     "formCommon": {
-        "nameLabel": "Tu nombre y apellido",
-        "namePlaceholder": "Juan Carlos Rodríguez",
+        "nameLabel": "Nombre y apellidos",
+        "namePlaceholder": "Ana García",
         "phoneLabel": "Teléfono / WhatsApp",
-        "phonePlaceholder": "05xx xxx xx xx o +380 xx xxx xxxx",
-        "phoneHint": "Para números fuera de Turquía, añade el código de país (+) antes del número.",
-        "phoneError": "Por favor ingresa un número de teléfono válido.",
-        "levelLabel": "Nivel de Experiencia",
+        "phonePlaceholder": "05xx xxx xx xx o +90 5xx xxx xx xx",
+        "phoneHint": "Si usas un número de otro país, añade el prefijo internacional (+) antes del número.",
+        "phoneError": "Introduce un número de teléfono válido.",
+        "levelLabel": "Nivel de experiencia",
         "levels": {
-            "zero": "Nunca he bailado",
+            "zero": "Nunca he bailado tango",
             "beginner": "Principiante",
             "intermediate": "Intermedio / Avanzado"
         },
-        "consent": "Acepto los permisos de comunicación y el texto de la RGPD.",
+        "consent": "Acepto que me contacten y que traten los datos que proporciono.",
         "submitting": "Enviando...",
-        "systemError": "Ha ocurrido un error. Por favor, contáctanos a través de WhatsApp."
+        "systemError": "Ha ocurrido un error. Escríbenos por WhatsApp para que podamos ayudarte."
     },
     "contactForm": {
         "submit": "Obtenga información",
@@ -218,21 +218,21 @@
     "registrationForm": {
         "partnerLabel": "¿Tienes pareja de tango?",
         "partnerOptions": {
-            "no": "No, no tengo pareja.",
-            "yes": "Sí, tengo pareja."
+            "no": "No, voy por mi cuenta",
+            "yes": "Sí, tengo pareja"
         },
-        "partnerNameLabel": "Nombre de la Pareja",
-        "partnerNamePlaceholder": "María José",
-        "submit": "Completar Registro",
-        "successTitle": "¡Registro recibido!",
-        "successMessage": "Te llamaremos lo antes posible. Si tenés alguna pregunta, podés escribirnos por WhatsApp ahora mismo.",
-        "whatsappConfirm": "Enviar WhatsApp",
-        "whatsappMessage": "Hola, soy {name} y he completado el formulario de registro; tengo una pregunta..."
+        "partnerNameLabel": "Nombre de tu pareja",
+        "partnerNamePlaceholder": "Ana García",
+        "submit": "Enviar inscripción",
+        "successTitle": "¡Hemos recibido tu inscripción!",
+        "successMessage": "Gracias. Hemos recibido tus datos y te llamaremos lo antes posible. Si tienes alguna pregunta, escríbenos por WhatsApp.",
+        "whatsappConfirm": "Escribir por WhatsApp",
+        "whatsappMessage": "Hola, soy {name}. Acabo de enviar mi inscripción y quería consultar algunos detalles."
     },
     "registrationPage": {
         "eyebrow": "Inscripción",
-        "title": "Formulario de Inscripción",
-        "seoDescription": "Completa tu inscripción en Fethiye Tango Club indicando tu nivel y la información de tu pareja."
+        "title": "Formulario de inscripción",
+        "seoDescription": "Inscríbete en las clases de Fethiye Tango y cuéntanos tu nivel de experiencia y si vienes con pareja para que podamos orientarte mejor."
     },
     "contact": {
         "eyebrow": "Contacto и Registro",
