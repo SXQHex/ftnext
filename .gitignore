@@ -24,7 +24,7 @@
 # Generated files
 # =========================================================
 /posts-manifest.json
-/app/[lang]/blog/posts-manifest.json
+/app/\[lang\]/blog/posts-manifest.json
 *.tsbuildinfo
 
 # =========================================================
