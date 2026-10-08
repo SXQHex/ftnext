@@ -27,7 +27,7 @@ interface FeatureProps {
 // BentoCard Bileşeni: Özellik Kartı
 // Geliştirilmiş okunabilirlik ve etkileşim için yeniden tasarlandı
 // Daha iyi performans ve erişilebilirlik için optimize edildi
-export function BentoCard({ feature, index, cardClassName }: FeatureProps & { cardClassName?: string }) {
+export function BentoCard({ feature, index }: FeatureProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
