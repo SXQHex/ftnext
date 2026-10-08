@@ -53,7 +53,7 @@ export function ExpandableTangoCard({ item, isBlog = false, lang = "tr", labels,
         return () => { document.removeEventListener("mousedown", handleOutsideClick); document.removeEventListener("keydown", handleEsc); };
     }, [isExpanded]);
 
-    const description = isBlog ? item.excerpt : item.lead;
+    const description = (isBlog ? item.excerpt : item.lead) ?? "";
     const truncated = description.length > 88 ? description.substring(0, 88) + "..." : description;
 
     return (
