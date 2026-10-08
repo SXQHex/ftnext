@@ -5,12 +5,35 @@ import { CONTACT_INFO } from "@/lib/constants";
 import Link from "next/link";
 import Image from "next/image";
 import { Card } from "./card";
+import { useRouter } from "next/navigation";
+
+type CardItem = {
+    title: string;
+    excerpt?: string;
+    lead?: string;
+    image?: string;
+    category?: string;
+    slug?: string;
+};
+
+type CardLabels = {
+    readMore?: string;
+    seeDetails?: string;
+    readFullArticle?: string;
+    bookSpot?: string;
+    close?: string;
+};
 
 interface CardProps {
-    item: any; index?: number; isBlog?: boolean; lang?: string; labels?: any; waMessageTemplate?: string;
+    item: CardItem;
+    isBlog?: boolean;
+    lang?: string;
+    labels?: CardLabels;
+    waMessageTemplate?: string;
 }
 
-export function ExpandableTangoCard({ item, index = 0, isBlog = false, lang = "tr", labels, waMessageTemplate }: CardProps) {
+export function ExpandableTangoCard({ item, isBlog = false, lang = "tr", labels, waMessageTemplate }: CardProps) {
+    const router = useRouter();
     const [isExpanded, setIsExpanded] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);
     const uiLabels = {
@@ -78,7 +101,7 @@ export function ExpandableTangoCard({ item, index = 0, isBlog = false, lang = "t
                                 <button
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        if (isBlog) window.location.href = `/${lang}/blog/${item.slug}`;
+                                        if (isBlog && item.slug) router.push(`/${lang}/blog/${item.slug}`);
                                         else window.open(CONTACT_INFO.getWaLink(waMessageTemplate?.replace("{title}", item.title) || `${item.title} için bilgi istiyorum.`));
                                     }}
                                     className="w-full py-4 rounded-2xl bg-tango-gold text-tango-black text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all"
