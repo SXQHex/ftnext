@@ -7,12 +7,7 @@ excerpt: >-
   fascinante mundo del tango.
 image: /images/workshop-atolye.webp
 originSlug: ilk-adim
-slugs:
-  tr: ilk-adim
-  en: first-step-to-tango-why-should-you-start-now
-  ru: pervyi-shag-k-tango-pochemu-stoit-nachat-seichas
-  uk: pershyy-krok-do-tango-chomu-varto-pochaty-zaraz
-  es: primer-paso-al-tango-por-que-deberia-empezar-ahora
+slug: primer-paso-al-tango-por-que-deberia-empezar-ahora
 ---
 Nuestras vidas muchas veces están llenas de sueños que decimos "lo haré algún día". “Un día empezaré a hacer deporte”, “un día tocaré ese instrumento” y el más sonado: “Un día aprenderé tango”. Pero ese famoso "un día" nunca aparece en el calendario. Sin embargo, el tango no se trata sólo de inscribirse en un curso de baile; Es un viaje de descubrimiento de uno mismo, de la música y de los demás en una dimensión completamente diferente. Mientras las melodías de la milonga se elevan al atardecer de Fethiye, examinemos por qué no debes esperar más, a través de la anatomía física y espiritual del tango. 
 
