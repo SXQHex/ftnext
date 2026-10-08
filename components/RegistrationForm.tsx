@@ -42,7 +42,7 @@ interface RegistrationFormProps {
     whatsappNumber?: string;
 }
 
-type Mode = "tek" | "partnerli";
+type Mode = 0 | 1;
 type Level = "zero" | "beginner" | "intermediate";
 type Status = "idle" | "loading" | "success";
 
@@ -58,12 +58,13 @@ export default function RegistrationForm({
     const [status, setStatus] = useState<Status>("idle");
     const [phoneError, setPhoneError] = useState("");
     const [submitError, setSubmitError] = useState("");
-    const [mode, setMode] = useState<Mode>("tek");
+    const [mode, setMode] = useState<Mode>(0);
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         level: "zero" as Level,
         partnerName: "",
+        consent: false,
     });
 
     const levelOptions: { value: Level; label: string }[] = [
@@ -98,7 +99,8 @@ export default function RegistrationForm({
                     phone: formData.phone,
                     level: formData.level,
                     mode,
-                    partnerName: mode === "partnerli" ? formData.partnerName : "",
+                    partnerName: mode === 1 ? formData.partnerName : "",
+                    consent: formData.consent,
                 }),
             });
             const data = await res.json().catch(() => ({}));
@@ -119,8 +121,8 @@ export default function RegistrationForm({
     }
 
     function resetForm() {
-        setFormData({ name: "", phone: "", level: "zero", partnerName: "" });
-        setMode("tek");
+        setFormData({ name: "", phone: "", level: "zero", partnerName: "", consent: false });
+        setMode(0);
         setStatus("idle");
         setPhoneError("");
         setSubmitError("");
@@ -248,7 +250,7 @@ export default function RegistrationForm({
                 <div className="grid grid-cols-2 gap-3">
                     <label
                         className={`cursor-pointer text-center rounded-xl border p-3.5 text-sm font-black uppercase tracking-widest transition-all ${
-                            mode === "tek"
+                            mode === 0
                                 ? "bg-tango-gold text-black border-tango-gold"
                                 : "border-white/10 text-tango-text/70 hover:border-white/30"
                         }`}
@@ -256,16 +258,16 @@ export default function RegistrationForm({
                         <input
                             type="radio"
                             name="mode"
-                            value="tek"
+                            value="0"
                             checked={mode === "tek"}
-                            onChange={() => setMode("tek")}
+                            onChange={() => setMode(0)}
                             className="sr-only"
                         />
                         {dict.partnerOptions.no}
                     </label>
                     <label
                         className={`cursor-pointer text-center rounded-xl border p-3.5 text-sm font-black uppercase tracking-widest transition-all ${
-                            mode === "partnerli"
+                            mode === 1
                                 ? "bg-tango-gold text-black border-tango-gold"
                                 : "border-white/10 text-tango-text/70 hover:border-white/30"
                         }`}
@@ -273,9 +275,9 @@ export default function RegistrationForm({
                         <input
                             type="radio"
                             name="mode"
-                            value="partnerli"
+                            value="1"
                             checked={mode === "partnerli"}
-                            onChange={() => setMode("partnerli")}
+                            onChange={() => setMode(1)}
                             className="sr-only"
                         />
                         {dict.partnerOptions.yes}
@@ -303,7 +305,13 @@ export default function RegistrationForm({
             {/* KVKK / Onay */}
             {dict.consent && (
                 <label className="flex items-center gap-3 text-[12px] text-tango-text/60 cursor-pointer group py-2">
-                    <input type="checkbox" required className="accent-tango-red w-4 h-4" />
+                    <input
+                        type="checkbox"
+                        required
+                        checked={formData.consent}
+                        onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
+                        className="accent-tango-red w-4 h-4"
+                    />
                     <span className="group-hover:text-tango-text transition-colors leading-tight">{dict.consent}</span>
                 </label>
             )}
