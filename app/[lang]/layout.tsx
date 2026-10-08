@@ -7,7 +7,6 @@ import JsonLd from "@/components/JsonLd";
 import { Inter, Playfair_Display } from "next/font/google";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
-import { I18nProvider } from "@/components/I18nContext";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 // Fontları Tailwind 4 değişkenleri gibi kullanmak için tanımlıyoruz
