@@ -5,7 +5,7 @@ excerpt: >-
   Ese primer paso que pospones es en realidad el comienzo de una nueva vida, no
   un baile. Descubra por qué hoy es el mejor momento para adentrarse en el
   fascinante mundo del tango.
-image: /images/blog/tango-ilk-adim.jpg
+image: /images/workshop-atolye.webp
 originSlug: ilk-adim
 slugs:
   tr: ilk-adim
