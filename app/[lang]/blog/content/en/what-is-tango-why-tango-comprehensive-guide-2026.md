@@ -5,7 +5,7 @@ excerpt: >-
   What is tango? Is it just a dance or a language of communication? Discover
   everything from tango's benefits for brain health to its social impact in
   Fethiye.
-image: /images/blog/tango-nedir-neden-yapilir.jpg
+image: /images/milonga.webp
 metaTitle: What is Tango? Benefits and Anatomy | Fethiye Tango
 metaDescription: >-
   Discover the origins of tango, its technical structure and why it has become a
@@ -30,7 +30,7 @@ In this article, we will not only give a technical answer to the question "What 
 
 Technically, tango is an improvisational social dance that was born in the cosmopolitan port neighborhoods of Buenos Aires and Montevideo in the late 19th century. However, this academic definition is never enough to explain the spirit of tango. Tango is a silent partnership between two people around a single center of gravity, surrendering to the flow of music. 
 
-Unlike other partner dances (such as Salsa, Bachata or Waltz), tango does not have a predetermined "basic sequence of steps" that are always performed in the same way. Tango is a dynamic process, every second of which is created in the moment, where the leader conveys his intention to his partner and the follower interprets this intention with his own aesthetics. The most important physical bond of this process is hidden in that special hugging technique we call [Abrazo's Anatomy](/blog/abrazo-anatomy). You can't dance the tango when your mind is somewhere else; You have to be right there in the moment to feel every muscle movement of your partner. 
+Unlike other partner dances (such as Salsa, Bachata or Waltz), tango does not have a predetermined "basic sequence of steps" that are always performed in the same way. Tango is a dynamic process, every second of which is created in the moment, where the leader conveys his intention to his partner and the follower interprets this intention with his own aesthetics. The most important physical bond of this process is hidden in that special hugging technique we call [Abrazo's Anatomy](/en/blog/abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug). You can't dance the tango when your mind is somewhere else; You have to be right there in the moment to feel every muscle movement of your partner. 
 
 ## 2. Why Tango? Need of Modern Man 
 
@@ -82,7 +82,7 @@ There are often similar fears in the minds of those who decide to learn tango. L
 
 1. **"I have no sense of rhythm":** Rhythm is not an emotion, it is a training. Everyone's heart beats with a certain rhythm and every walk has a tempo. If you can walk, you can tango. 
 2. **"Is it possible after this age?":** Most of the most respected dancers of tango are those who started this dance after the age of 50. Tango loves the depth of maturity rather than the flexibility of youth. 
-3. **"I don't have a spouse/partner":** You don't need a partner to social tango. In classes and milongas, partners are constantly changed so that everyone can dance and communicate with everyone else. If you are ready, you can start immediately by taking a look at our [First Step to Tango](/blog/tango-first-adim) guide. 
+3. **"I don't have a spouse/partner":** You don't need a partner to social tango. In classes and milongas, partners are constantly changed so that everyone can dance and communicate with everyone else. If you are ready, you can start immediately by taking a look at our [First Step to Tango](/en/blog/first-step-to-tango-why-should-you-start-now) guide. 
 
 ## Conclusion: Life is as Much as a Song 
 
