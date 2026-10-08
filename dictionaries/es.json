@@ -291,7 +291,8 @@
         "description": "Podemos utilizar tecnologías opcionales de análisis y marketing para mejorar el sitio. Puede cambiar su elección en cualquier momento.",
         "accept": "Aceptar",
         "reject": "Rechazar",
-        "privacy": "Política de privacidad"
+        "privacy": "Política de privacidad",
+        "manage": "Gestionar preferencias"
     },
     "login": {
         "title": "Bienvenido de nuevo",
