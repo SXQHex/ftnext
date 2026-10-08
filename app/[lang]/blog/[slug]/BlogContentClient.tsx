@@ -29,7 +29,7 @@ export default function BlogContentClient({
     slug: string;
 }) {
     const { openModal } = useModal();
-    const [activeId, setActiveId] = useState<string>("");
+    const [activeId, setActiveId] = useState<string>(() => headings[0]?.id ?? "");
     const containerRef = useRef<HTMLDivElement>(null);
 
     const { scrollYProgress } = useScroll({
@@ -46,8 +46,6 @@ export default function BlogContentClient({
         );
 
         if (headingElements.length === 0) return;
-
-        setActiveId(headingElements[0].id);
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -100,7 +98,7 @@ export default function BlogContentClient({
                         <motion.div style={{ scaleY }} className="absolute top-0 left-0 w-full bg-tango-gold origin-top h-full" />
                     </div>
                     <nav className="flex flex-col gap-6">
-                        {headings.map((h, index) => (
+                        {headings.map((h) => (
                             <a
                                 key={h.id}
                                 href={`#${h.id}`}
