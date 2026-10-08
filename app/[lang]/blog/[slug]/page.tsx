@@ -1,18 +1,18 @@
 import { getPostBySlug, getAllPosts } from '../data-access';
-import { Metadata } from 'next';
+import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
 import BlogContentClient from './BlogContentClient';
 import Image from 'next/image';
 import { i18n, Locale } from "@/i18n-config";
 import { getDictionary } from '@/get-dictionary';
-import {  } from "../data-access";
 
 type Props = {
     params: Promise<{ slug: string, lang: Locale }>;
 };
 
-import JsonLd from '@/components/JsonLd';
+import JsonLd from "@/components/JsonLd";
+import { getBlogPostMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
     const params: { lang: string; slug: string }[] = [];
@@ -30,36 +30,10 @@ export async function generateStaticParams() {
     return params;
   }
 
-export async function generateMetadata({
-    params,
+export function generateMetadata({
+  params,
 }: Props): Promise<Metadata> {
-    const { slug, lang } = await params;
-    const dict = await getDictionary(lang);
-    const post = await getPostBySlug(lang, slug, dict.blog.readingTime);
-
-    if (!post) return {};
-
-    // Hreflang alternates: Her dil için o dildeki slug'ı kullanarak link oluşturuyoruz.
-    const languages: Record<string, string> = {};
-    Object.entries(post.slugs).forEach(([locale, s]) => {
-        languages[locale] = `/${locale}/blog/${s}`;
-    });
-
-    return {
-        title: post.title,
-        description: post.excerpt,
-        alternates: {
-            canonical: `/${lang}/blog/${slug}`,
-            languages: languages,
-        },
-        openGraph: {
-            title: post.title,
-            description: post.excerpt,
-            url: `https://fethiyetango.com/${lang}/blog/${slug}`,
-            images: [post.image],
-            type: 'article',
-        },
-    };
+  return getBlogPostMetadata(params);
 }
 
 export default async function BlogPostPage({ params }: Props) {
