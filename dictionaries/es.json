@@ -205,7 +205,7 @@
             "beginner": "Principiante",
             "intermediate": "Intermedio / Avanzado"
         },
-        "consent": "Acepto que me contacten y que traten los datos que proporciono.",
+        "consent": "Doy mi consentimiento expreso para el tratamiento de mis datos personales con el fin de gestionar mi solicitud de contacto o registro.",
         "submitting": "Enviando...",
         "systemError": "Ha ocurrido un error. Escríbenos por WhatsApp para que podamos ayudarte."
     },
