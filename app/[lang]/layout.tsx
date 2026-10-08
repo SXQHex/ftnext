@@ -7,7 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import { Inter, Playfair_Display } from "next/font/google";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
-import { GoogleTagManager } from '@next/third-parties/google'
+import AnalyticsConsent from "@/components/AnalyticsConsent";
 
 // Fontları Tailwind 4 değişkenleri gibi kullanmak için tanımlıyoruz
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -74,10 +74,16 @@ export default async function RootLayout({
   
   return (
     <html lang={lang} data-scroll-behavior="smooth">
-      <GoogleTagManager gtmId="GTM-MS6D5LZQ" />
       <body
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-tango-red selection:text-white`}
       >
+        <AnalyticsConsent
+          dict={{
+            ...dict.cookieConsent,
+            privacyHref: "/" + lang + "/gizlilik",
+          }}
+          gtmId="GTM-MS6D5LZQ"
+        />
           <ModalProvider dict={{
             header: dict.trialFormHeader,
             form: {
