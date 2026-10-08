@@ -57,7 +57,7 @@ export const getAllPosts = cache(async (lang: string, readingTimeLabel: string =
         })
     );
 
-    return posts.sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
+    return posts.sort((a, b) => b.date.localeCompare(a.date));
 });
 
 /**
