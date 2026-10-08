@@ -62,7 +62,7 @@ export default async function JsonLd({ lang, type = 'DanceSchool', data }: JsonL
                 'https://www.facebook.com/profile.php?id=61583589983881',
             ],
         };
-    } else if (type === 'Article' && data) {
+    } else if (type === 'Article' && data && 'title' in data) {
         jsonLd = {
             '@context': 'https://schema.org',
             '@type': 'Article',
@@ -88,7 +88,7 @@ export default async function JsonLd({ lang, type = 'DanceSchool', data }: JsonL
                 },
             },
         };
-    } else if (type === 'BreadcrumbList' && data) {
+    } else if (type === 'BreadcrumbList' && data && 'items' in data) {
         jsonLd = {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
