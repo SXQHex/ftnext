@@ -205,7 +205,7 @@
             "beginner": "Başlangıç Seviye",
             "intermediate": "Orta / İleri Seviye"
         },
-        "consent": "İletişim izinlerini ve KVKK metnini kabul ediyorum.",
+        "consent": "Kişisel verilerimin iletişim ve kayıt talebimin yürütülmesi amacıyla işlenmesine açık rıza veriyorum.",
         "submitting": "Gönderiliyor...",
         "systemError": "Bir sorun oluştu. Lütfen WhatsApp üzerinden ulaşın."
     },
