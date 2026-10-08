@@ -156,7 +156,7 @@ export default function RegistrationForm({
                 {waText && dict.whatsappConfirm && (
                     <button
                         type="button"
-                        onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${waText}`, "_blank")}
+                        onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${waText}`, "_blank", "noopener,noreferrer")}
                         className="bg-tango-dark border border-white/10 hover:border-white/20 text-white px-7 py-4 rounded-2xl text-sm flex items-center justify-center gap-3 font-bold transition-all group"
                     >
                         <div className="flex items-center justify-center size-8 bg-white/10 rounded-lg group-hover:scale-110 transition-transform">
