@@ -125,7 +125,7 @@ export default function ContactForm({
                     </p>
                 </div>
                 <button
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${waText}`, "_blank")}
+                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${waText}`, "_blank", "noopener,noreferrer")}
                     className={`flex items-center gap-2 font-bold transition-all group ${isMinimal
                         ? "text-tango-red text-xs uppercase tracking-widest hover:brightness-125"
                         : "bg-tango-dark border border-white/10 hover:border-white/20 text-white px-7 py-4 rounded-2xl text-sm"
