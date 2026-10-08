@@ -216,7 +216,7 @@
         "whatsappMessage": "Привіт, я {name}, заповнив форму контакту, у мене є питання..."
     },
     "registrationForm": {
-        "partnerLabel": "Чи маєте ви танцювального партнера?",
+        "partnerLabel": "Ви прийдете з партнером?",
         "partnerOptions": {
             "no": "Ні, я буду без партнера",
             "yes": "Так, я буду з партнером"
@@ -224,10 +224,11 @@
         "partnerNameLabel": "Ім’я партнера",
         "partnerNamePlaceholder": "Олена Шевченко",
         "submit": "Записатися на заняття",
-        "successTitle": "Заявку прийнято!",
+        "successTitle": "Дякуємо за заявку!",
         "successMessage": "Дякуємо! Ми отримали вашу заявку та найближчим часом зателефонуємо вам. Якщо маєте запитання, напишіть нам у WhatsApp.",
-        "whatsappConfirm": "Написати у WhatsApp",
-        "whatsappMessage": "Вітаю! Мене звати {name}. Хочу уточнити кілька деталей щодо запису на заняття."
+        "whatsappConfirm": "Написати нам у WhatsApp",
+        "whatsappMessage": "Вітаю! Мене звати {name}. Я щойно заповнив(ла) форму запису й хочу уточнити кілька деталей.",
+        "newRegistration": "Новий запис"
     },
     "registrationPage": {
         "eyebrow": "Запис на заняття",
