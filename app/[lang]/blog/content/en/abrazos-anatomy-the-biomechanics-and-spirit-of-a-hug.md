@@ -1,6 +1,7 @@
 ---
 title: 'Abrazo''s Anatomy: The Biomechanics and Spirit of a Hug'
 date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Abrazo is not just a grip, it is a marvel of engineering that extends from the
   spine to the fingertips. We examine this basic column of tango anatomically
