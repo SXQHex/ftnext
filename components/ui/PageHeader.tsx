@@ -17,7 +17,7 @@ export function PageHeader({ eyebrow, title, className, fullWidth = false, fitTi
 
     return (
         <header className={cn("mb-16 grid lg:grid-cols-12 gap-12 items-end", className)}>
-            <div className={cn("min-w-0", fullWidth ? "lg:col-span-12" : "lg:col-span-8", fitTitle && "container-type:inline-size")}>
+            <div className={cn("min-w-0", fullWidth ? "lg:col-span-12" : "lg:col-span-8", fitTitle && "[container-type:inline-size]")}>
                 {/* Çizgi ve Etiket Bloğu */}
                 <div className="flex items-center gap-3 mb-4">
                     <span className="block h-px w-12 bg-tango-red shrink-0"></span>
