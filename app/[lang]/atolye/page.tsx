@@ -23,11 +23,10 @@ export default async function AtolyePage({ params }: { params: Promise<{ lang: L
                 <PageHeader eyebrow={content.eyebrow} title={content.title} />
                 {/* Kartlar Grid */}
                 <div className="grid md:grid-cols-3 gap-8 items-start">
-                    {content.themes.map((tema: Theme, i: number) => (
+                    {content.themes.map((tema: Theme) => (
                         <ExpandableTangoCard
                             key={i}
                             item={tema}
-                            index={i}
                             lang={lang}
                             isBlog={false}
                             labels={dict.ui}
