@@ -6,16 +6,18 @@ interface PageHeaderProps {
     eyebrow: string;
     title: string;
     className?: string;
+    fullWidth?: boolean;
+    fitTitle?: boolean;
 }
 
-export function PageHeader({ eyebrow, title, className }: PageHeaderProps) {
+export function PageHeader({ eyebrow, title, className, fullWidth = false, fitTitle = false }: PageHeaderProps) {
     const titleParts = title.split(' ');
     const firstPart = titleParts[0];
     const rest = titleParts.slice(1).join(' ');
 
     return (
         <header className={cn("mb-16 grid lg:grid-cols-12 gap-12 items-end", className)}>
-            <div className="lg:col-span-8">
+            <div className={cn("min-w-0", fullWidth ? "lg:col-span-12" : "lg:col-span-8", fitTitle && "container-type:inline-size")}>
                 {/* Çizgi ve Etiket Bloğu */}
                 <div className="flex items-center gap-3 mb-4">
                     <span className="block h-px w-12 bg-tango-red shrink-0"></span>
@@ -24,9 +26,12 @@ export function PageHeader({ eyebrow, title, className }: PageHeaderProps) {
                     </span>
                 </div>
                 {/* Ana Başlık */}
-                <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-black italic tracking-tighter leading-[0.8] text-tango-text uppercase flex flex-col max-w-full">
+                <h1 className={cn(
+                    "relative font-black italic tracking-tighter leading-[0.8] text-tango-text uppercase flex flex-col max-w-full",
+                    fitTitle ? "text-[clamp(2.25rem,15cqw,8rem)]" : "text-5xl md:text-7xl lg:text-8xl",
+                )}>
                     {/* Üstteki beyaz satır */}
-                    <span className="relative z-10 block max-w-full break-words">
+                    <span className="relative z-10 block max-w-full break-normal">
                         {firstPart}
                     </span>
 
