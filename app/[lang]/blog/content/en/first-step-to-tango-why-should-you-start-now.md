@@ -1,6 +1,7 @@
 ---
 title: 'First Step to Tango: Why Should You Start Now?'
 date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   That first step you postpone is actually the beginning of a new life, not a
   dance. Discover why today is the best time to enter the fascinating world of
