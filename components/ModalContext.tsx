@@ -1,7 +1,8 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import UnifiedContactForm from "./ContactForm";
+import { usePathname } from "next/navigation";
+import UnifiedContactForm, { ContactFormDictionary } from "./ContactForm";
 import { sendGTMEvent } from '@next/third-parties/google';
 
 interface ModalContextType {
@@ -12,24 +13,34 @@ interface ModalContextType {
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
-export function ModalProvider({ children, trialFormLabels }: { children: React.ReactNode, trialFormLabels: any }) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [modalSource, setModalSource] = useState<string>("unknown");
+export interface ModalTrialFormDict {
+    header?: {
+        label?: string;
+        title?: string;
+    };
+    form?: ContactFormDictionary;
+}
+interface ModalProviderProps {
+    children: React.ReactNode;
+    dict: ModalTrialFormDict;
+}
+
+export function ModalProvider({ children, dict }: ModalProviderProps) {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const pathname = usePathname();
 
     const openModal = (source: string = "untracked_cta") => {
-        // 1. Önce State'i güncelle (Eğer UI'da ihtiyacın varsa kalsın)
-        setModalSource(source);
         setIsOpen(true);
 
-        // 2. GTM Event - İsimleri GA4 standartlarına yakın tutalım
+        // GTM Event - İsimleri GA4 standartlarına yakın tutalım
         sendGTMEvent({
             event: 'cta_open_modal',
             cta_source: source, // 'hero', 'blog_footer', 'nav'
             modal_name: 'contact_trial_form', // Daha spesifik isim
-            page_location: window.location.href // Hangi URL'de bu butona basıldı?
+            page_location: pathname // Hangi URL'de bu butona basıldı?
         });
 
-        // 3. Debug (Geliştirme aşamasında hayat kurtarır, canlıda silersin)
+        // Debug (Geliştirme aşamasında hayat kurtarır, canlıda silersin)
         if (process.env.NODE_ENV === 'development') {
             console.log(`🎯 CTA Tetiklendi: ${source}`);
         }
@@ -68,19 +79,23 @@ export function ModalProvider({ children, trialFormLabels }: { children: React.R
 
                         {/* İçerik */}
                         <div className="space-y-8">
-                            <header className="space-y-4">
-                                <div className="flex items-center gap-3">
-                                    <span className="block h-px w-8 bg-tango-red"></span>
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-tango-red">{trialFormLabels.header.label}</p>
-                                </div>
-                                <h2
-                                    className="text-3xl font-black italic uppercase tracking-tighter text-white leading-[0.9]"
-                                    dangerouslySetInnerHTML={{ __html: trialFormLabels.header.title }}
-                                />
-                            </header>
+                            {dict.header && (
+                                <header className="space-y-4">
+                                    <div className="flex items-center gap-3">
+                                        <span className="block h-px w-8 bg-tango-red"></span>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-tango-red">{dict.header?.label}</p>
+                                    </div>
+                                    <h2
+                                        className="text-3xl font-black italic uppercase tracking-tighter text-white leading-[0.9]"
+                                        dangerouslySetInnerHTML={{ __html: dict.header?.title || "" }}
+                                    />
+                                </header>
+                            )}
 
                             {/* Form Buraya Bağlandı */}
-                            <UnifiedContactForm labels={trialFormLabels} variant="minimal" showConsent={true} />
+                            {dict?.form && (
+                                <UnifiedContactForm dict={dict.form} variant="minimal" showConsent={true} />
+                            )}
                         </div>
                     </div>
                 </div>

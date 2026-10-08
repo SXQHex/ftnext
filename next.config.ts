@@ -36,21 +36,13 @@ const nextConfig: NextConfig = {
     // 5. Cache & Performans
     minimumCacheTTL: 60,
 
-    // NOT: 'qualities' standart NextConfig tipinde yoktur. 
-    // Eğer custom bir loader kullanmıyorsan bunu bileşen seviyesinde yapmalısın.
-    // Ama illa burada tutacaksan TS'i susturarak ekleyebiliriz:
-    // @ts-ignore
+    // 6. Kalite
     qualities: [70, 75, 80, 85, 90, 95, 100],
   },
 
   // Tailwind 4 ve Modern CSS optimizasyonları için
-  bundlePagesRouterDependencies: true,
   transpilePackages: ['gray-matter'],
 
-  // Webpack'i açık tutarak Turbopack'in 'panic' riskini azaltıyoruz
-  webpack: (config) => {
-    return config;
-  },
 };
 
 export default nextConfig;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "@/app/globals.css";
 import { ModalProvider } from "@/components/ModalContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -86,7 +86,13 @@ export default async function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-tango-red selection:text-white`}
       >
         <I18nProvider>
-          <ModalProvider trialFormLabels={dict.trialForm}>
+          <ModalProvider dict={{
+            header: dict.trialFormHeader,
+            form: {
+              ...dict.formCommon,
+              ...dict.contactForm,
+            }
+          }}>
             {/* Sayfa Yapısı: Header - İçerik - Footer */}
             <div className="flex min-h-screen flex-col">
               <Header navigation={dict.navigation} lang={lang} />

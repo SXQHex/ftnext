@@ -12,9 +12,9 @@
         "contact": "Контакти",
         "cta": "Безкоштовний пробний урок",
         "login": "Вхід для учасників"
-    },
+    }, 
     "footer": {
-        "slogan": "Сильна техніка, щира спільнота. 20 років історії пристрасті.",
+        "slogan": "Сильна техніка, щира спільнота. 20+ років історії пристрасті.",
         "linksTitle": "Навігація",
         "contactTitle": "Контакти",
         "socialTitle": "Зв'яжіться з нами",
@@ -188,37 +188,50 @@
             "askGeneral": "Привіт, можна отримати детальну інформацію про воршопи?"
         }
     },
+    "formCommon": {
+        "nameLabel": "Ваше ім'я та прізвище",
+        "namePlaceholder": "Олександр Шевченко",
+        "phoneLabel": "Телефон / WhatsApp",
+        "phonePlaceholder": "05xx xxx xx xx або +380 xx xxx xxxx",
+        "phoneHint": "Для номерів за межами Туреччини додайте код країни (+) перед номером.",
+        "phoneError": "Будь ласка, введіть дійсний номер телефону.",
+        "levelLabel": "Рівень досвіду",
+        "levels": {
+            "zero": "Я ніколи не танцював",
+            "beginner": "Початковий рівень",
+            "intermediate": "Середній / Просунутий рівень"
+        },
+        "consent": "Я приймаю дозволи на зв'язок та текст GDPR.",
+        "submitting": "Надсилання...",
+        "systemError": "Сталася помилка. Будь ласка, зв'яжіться з нами через WhatsApp."
+    },
+    "contactForm": {
+        "submit": "Отримати інформацію",
+        "successTitle": "Ваш запит отримано!",
+        "successMessage": "Ми зателефонуємо вам якомога швидше. Ви можете написати нам через WhatsApp, якщо у вас є запитання.",
+        "whatsappConfirm": "Напишіть через WhatsApp",
+        "whatsappMessage": "Привіт, я {name}, заповнив форму контакту, у мене є питання..."
+    },
+    "registrationForm": {
+        "partnerLabel": "У тебе є партнер для танців?",
+        "partnerOptions": {
+            "no": "Ні, у мене немає партнера",
+            "yes": "Так, у мене є партнер"
+        },
+        "partnerNameLabel": "Ім'я вашого партнера",
+        "partnerNamePlaceholder": "Ayşe Yılmaz",
+        "submit": "Завершити реєстрацію",
+        "successTitle": "Реєстрація прийнята!",
+        "successMessage": "Ми зателефонуємо вам найближчим часом. Якщо у вас є питання, можете написати нам у WhatsApp.",
+        "whatsappConfirm": "Написати у WhatsApp",
+        "whatsappMessage": "Привіт, я {name}, заповнив форму реєстрації, у мене є питання..."
+    },
     "contact": {
         "eyebrow": "Контакти та реєстрація",
         "title": "ПЕРШИЙ КРОК",
         "intro": {
             "line1": "Залиште хаос позаду.",
             "line2": "Abrazo чекає на вас."
-        },
-        "form": {
-            "nameLabel": "Повне ім'я",
-            "namePlaceholder": "Іван Іванов",
-            "phoneLabel": "Телефон",
-            "phonePlaceholder": "+90 5xx xxx xx xx",
-            "phoneError": "Введіть коректний номер.",
-            "levelLabel": "Рівень досвіду",
-            "levels": {
-                "zero": "Ніколи не танцював",
-                "beginner": "Початковий рівень",
-                "intermediate": "Середній / Просунутий"
-            },
-            "consent": "Я приймаю умови використання та політику конфіденційності.",
-            "submit": "Завершити реєстрацію",
-            "submitting": "Надсилання...",
-            "successTitle": "Реєстрація прийнята!",
-            "successMessage": "Ми зателефонуємо вам найближчим часом. Якщо у вас є питання, можете написати нам у WhatsApp.",
-            "whatsappConfirm": "Написати у WhatsApp",
-            "whatsappMessage": "Привіт, я заповнив контактну форму, у мене є питання...",
-            "error": {
-                "system": "Помилка:",
-                "alert": "Виникла помилка. Будь ласка, зв'яжіться з нами через WhatsApp.",
-                "submit": "Помилка надсилання"
-            }
         },
         "sidebar": {
             "studioLabel": "Студія",
@@ -249,36 +262,9 @@
             }
         }
     },
-    "trialForm": {
-        "header": {
-            "label": "Приєднуйтесь",
-            "title": "Паркет <br /> <span class=\"text-tango-red\">Чекає на тебе</span>"
-        },
-        "form": {
-            "nameLabel": "Повне ім'я",
-            "namePlaceholder": "Ваше повне ім'я",
-            "phoneLabel": "WhatsApp / Телефон",
-            "phonePlaceholder": "05...",
-            "phoneError": "Введіть коректний номер (напр. 05xx...)",
-            "levelLabel": "Рівень",
-            "levels": {
-                "zero": "Ніколи не танцював",
-                "beginner": "Початковий рівень",
-                "intermediate": "Середній / Просунутий рівень"
-            },
-            "submit": "Приєднатися",
-            "submitting": "Обробка...",
-            "successTitle": "Чудове рішення!",
-            "successMessage": "Ваша заявка прийнята. Хочете підтвердити участь прямо зараз?",
-            "whatsappConfirm": "Підтвердити у WhatsApp",
-            "whatsappMessage": "Привіт, я заповнив форму на пробний урок: {name}",
-            "consent": "Я приймаю умови використання та політику конфіденційності."
-        },
-        "error": {
-            "system": "Системна помилка:",
-            "alert": "Виникла помилка. Будь ласка, зв'яжіться з нами через WhatsApp.",
-            "submit": "Помилка надсилання"
-        }
+    "trialFormHeader": {
+        "label": "Приєднуйтесь",
+        "title": "Паркет <br /> <span class=\"text-tango-red\">Чекає на тебе</span>"
     },
     "ui": {
         "readMore": "Читати далі →",

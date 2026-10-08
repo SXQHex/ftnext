@@ -4,6 +4,19 @@ import { useModal } from "@/components/ModalContext";
 import { motion, useScroll, useSpring } from "motion/react";
 import BlogCTA from "@/components/BlogCTA";
 
+interface BlogCTAContent {
+    small: {
+        text: string;
+        button: string;
+    };
+    large: {
+        title: string;
+        highlight: string;
+        description: string;
+        button: string;
+    };
+}
+
 export default function BlogContentClient({
     htmlContent,
     headings,
@@ -12,7 +25,7 @@ export default function BlogContentClient({
 }: {
     htmlContent: string;
     headings: { id: string, text: string }[];
-    ctaContent: any;
+    ctaContent: BlogCTAContent;
     slug: string;
 }) {
     const { openModal } = useModal();

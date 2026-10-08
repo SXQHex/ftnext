@@ -12,9 +12,9 @@
         "contact": "Contact",
         "cta": "Free Trial Lesson",
         "login": "Member Login"
-    },
+    }, 
     "footer": {
-        "slogan": "Strong Technique, Sincere Community. 20 years of passion.",
+        "slogan": "Strong Technique, Sincere Community. 20+ years of passion.",
         "linksTitle": "Navigation",
         "contactTitle": "Contact",
         "socialTitle": "Contact Us",
@@ -189,37 +189,50 @@
             "askGeneral": "Hello, can I get detailed information about the workshop program?"
         }
     },
+    "formCommon": {
+        "nameLabel": "Name and Surname",
+        "namePlaceholder": "John Doe",
+        "phoneLabel": "Phone / WhatsApp",
+        "phonePlaceholder": "05xx xxx xx xx, +380 xx xxx xxxx",
+        "phoneHint": "For phone numbers outside Turkey, please add the country code (+) at the beginning.",
+        "phoneError": "Please enter a valid phone number.",
+        "levelLabel": "Experience Level",
+        "levels": {
+            "zero": "I have never danced before",
+            "beginner": "Beginner",
+            "intermediate": "Intermediate / Advanced"
+        },
+        "consent": "I agree to the communication permissions and the KVKK text.",
+        "submitting": "Submitting...",
+        "systemError": "An error occurred. Please reach out to us via WhatsApp."
+    },
+    "contactForm": {
+        "submit": "Get Information",
+        "successTitle": "Your Request Has Been Received!",
+        "successMessage": "We will call you as soon as possible. You can write to us via WhatsApp if you have any questions.",
+        "whatsappConfirm": "Write via WhatsApp",
+        "whatsappMessage": "Hello, I am {name}. I have filled out the contact form, I have a question..."
+    },
+    "registrationForm": {
+        "partnerLabel": "Have a Tango Partner?",
+        "partnerOptions": {
+            "no": "No, I don't have a partner",
+            "yes": "Yes, I have a partner"
+        },
+        "partnerNameLabel": "Partner's Name",
+        "partnerNamePlaceholder": "Jane Doe",
+        "submit": "Complete Registration",
+        "successTitle": "Registration Received!",
+        "successMessage": "You took a great step! We will call you as soon as possible. If you have any questions, you can write to us via WhatsApp immediately.",
+        "whatsappConfirm": "Confirm on WhatsApp",
+        "whatsappMessage": "Hello, I am {name} and I have filled out the registration form, I have a question..."
+    },
     "contact": {
         "eyebrow": "Contact & Registration",
         "title": "FIRST STEP",
         "intro": {
             "line1": "Leave the chaos behind.",
             "line2": "Abrazo awaits you."
-        },
-        "form": {
-            "nameLabel": "Full Name",
-            "namePlaceholder": "John Doe",
-            "phoneLabel": "Phone",
-            "phonePlaceholder": "+90 5xx xxx xx xx",
-            "phoneError": "Please enter a valid number.",
-            "levelLabel": "Experience Level",
-            "levels": {
-                "zero": "I have never danced before",
-                "beginner": "Beginning Level",
-                "intermediate": "Intermediate / Advanced"
-            },
-            "consent": "I accept communication permissions and GDPR text.",
-            "submit": "Complete Registration",
-            "submitting": "Sending...",
-            "successTitle": "Registration Received!",
-            "successMessage": "We will call you as soon as possible. If you have any questions, you can write to us via WhatsApp immediately.",
-            "whatsappConfirm": "Message on WhatsApp",
-            "whatsappMessage": "Hello, I filled out the contact form, I have a question...",
-            "error": {
-                "system": "Error:",
-                "alert": "An error occurred. Please contact us via WhatsApp.",
-                "submit": "Submission error"
-            }
         },
         "sidebar": {
             "studioLabel": "Studio",
@@ -250,36 +263,9 @@
             }
         }
     },
-    "trialForm": {
-        "header": {
-            "label": "Join Us",
-            "title": "The Floor <br /> <span class=\"text-tango-red\">Is Waiting</span>"
-        },
-        "form": {
-            "nameLabel": "Full Name",
-            "namePlaceholder": "Your Full Name",
-            "phoneLabel": "WhatsApp / Phone",
-            "phonePlaceholder": "05...",
-            "phoneError": "Please enter a valid number (e.g. 05xx...)",
-            "levelLabel": "Level",
-            "levels": {
-                "zero": "I have never danced before",
-                "beginner": "Beginner Level",
-                "intermediate": "Intermediate / Advanced Level"
-            },
-            "submit": "Join Now",
-            "submitting": "Processing...",
-            "successTitle": "Great Decision!",
-            "successMessage": "Your registration has been received. Would you like to confirm your spot right now?",
-            "whatsappConfirm": "Confirm via WhatsApp",
-            "whatsappMessage": "Hello, I filled out the form for the free trial lesson: {name}",
-            "consent": "I accept communication permissions and GDPR text."
-        },
-        "error": {
-            "system": "System error:",
-            "alert": "An error occurred during registration. Please reach out directly on WhatsApp.",
-            "submit": "Submission failed"
-        }
+    "trialFormHeader": {
+        "label": "Join Us",
+        "title": "The Floor <br /> <span class=\"text-tango-red\">Is Waiting</span>"
     },
     "ui": {
         "readMore": "Start Reading →",

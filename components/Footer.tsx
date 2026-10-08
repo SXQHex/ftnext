@@ -15,9 +15,20 @@ interface FooterContent {
     kvkk: string;
 }
 
+interface NavigationLinks {
+    home: string;
+    program: string;
+    trainers: string;
+    atolye: string;
+    blog: string;
+    contact: string;
+    cta: string;
+    login: string;
+}
+
 interface FooterProps {
     content: FooterContent;
-    navigation: any;
+    navigation: NavigationLinks;
     lang: string;
 }
 
@@ -105,7 +116,7 @@ export default function Footer({ content, navigation, lang }: FooterProps) {
                                 +90 544 641 5745
                             </a>
                             <a
-                                href="https://maps.google.com/?cid=17538582470492931305&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ0"
+                                href="https://maps.app.goo.gl/3veiet6RZpQvHqfe7"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group flex flex-col items-end"

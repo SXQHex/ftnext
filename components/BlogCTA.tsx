@@ -1,9 +1,17 @@
 "use client";
 import { useModal } from "./ModalContext";
 
+interface BlogCTAContent {
+    text?: string;
+    button: string;
+    title?: string;
+    highlight?: string;
+    description?: string;
+}
+
 interface BlogCTAProps {
     variant?: "small" | "large";
-    content: any;
+    content: BlogCTAContent;
 }
 
 export default function BlogCTA({ variant = "large", content }: BlogCTAProps) {
@@ -26,8 +34,8 @@ export default function BlogCTA({ variant = "large", content }: BlogCTAProps) {
     return (
         <div className="mt-20 rounded-[40px] bg-tango-dark border border-white/5 p-12 text-center shadow-2xl">
             <h3 className="mb-4 text-xl font-black italic uppercase tracking-tighter text-white">
-                {content.title.replace(content.highlight, "")}
-                <span className="text-tango-red">{content.highlight}</span>
+                {content.title && content.highlight ? content.title.replace(content.highlight, "") : content.title}
+                {content.highlight && <span className="text-tango-red">{content.highlight}</span>}
             </h3>
             <p className="mx-auto mb-8 max-w-md text-sm leading-relaxed text-tango-text">
                 {content.description}

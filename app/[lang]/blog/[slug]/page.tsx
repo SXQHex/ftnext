@@ -1,4 +1,4 @@
-import { getPostBySlug } from '../data-access';
+import { getPostBySlug, getAllPosts } from '../data-access';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
@@ -6,7 +6,7 @@ import BlogContentClient from './BlogContentClient';
 import Image from 'next/image';
 import { i18n, Locale } from "@/i18n-config";
 import { getDictionary } from '@/get-dictionary';
-import { getAllPosts } from "../data-access";
+import {  } from "../data-access";
 
 type Props = {
     params: Promise<{ slug: string, lang: Locale }>;

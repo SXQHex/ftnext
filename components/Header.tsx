@@ -41,8 +41,6 @@ export default function Header({ navigation, lang }: HeaderProps) {
         { code: 'es', label: 'ES', full: 'Español' },
     ];
 
-    const currentLang = languages.find(l => l.code === lang) || languages[0];
-
     // Dil değiştirme linkini oluşturur
     const getTargetHref = (targetLang: string) => {
         if (pathname.includes('/blog/') && routeTranslations[targetLang]) {
@@ -161,14 +159,14 @@ export default function Header({ navigation, lang }: HeaderProps) {
                         </div>
                     </div>
 
-                    <Link
+                    {/*<Link
                         href={`/${lang}/login`}
                         className="hidden sm:block"
                     >
                         <TangoButton variant="outline" size="sm">
                             {navigation.login}
                         </TangoButton>
-                    </Link>
+                    </Link> */}
 
                     <TangoButton
                         onClick={() => openModal('header_website')}
@@ -208,7 +206,7 @@ export default function Header({ navigation, lang }: HeaderProps) {
                             {link.name}
                         </Link>
                     ))}
-                    <Link
+                    {/* <Link
                         href={`/${lang}/login`}
                         onClick={() => setIsMenuOpen(false)}
                         className="w-full"
@@ -216,7 +214,7 @@ export default function Header({ navigation, lang }: HeaderProps) {
                         <TangoButton variant="outline" size="lg" className="w-full py-4 text-base">
                             {navigation.login}
                         </TangoButton>
-                    </Link>
+                    </Link> */}
                     <TangoButton
                         onClick={() => {
                             setIsMenuOpen(false);

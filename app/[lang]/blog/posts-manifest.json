@@ -1,0 +1,207 @@
+{
+  "tr": [
+    {
+      "slug": "abrazo-anatomisi",
+      "originSlug": "abrazo-anatomisi",
+      "title": "Abrazo'nun Anatomisi: Bir Sarılmanın Biyomekaniği ve Ruhu",
+      "path": "app/[lang]/blog/content/tr/abrazo-anatomisi.md",
+      "slugs": {
+        "tr": "abrazo-anatomisi",
+        "en": "abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug",
+        "ru": "anatomiya-abrazo-biomekhanika-i-dukh-obyatii",
+        "uk": "anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv",
+        "es": "anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo"
+      }
+    },
+    {
+      "slug": "ilk-adim",
+      "originSlug": "ilk-adim",
+      "title": "Tango’ya İlk Adım: Neden Şimdi Başlamalısınız?",
+      "path": "app/[lang]/blog/content/tr/ilk-adim.md",
+      "slugs": {
+        "tr": "ilk-adim",
+        "en": "first-step-to-tango-why-should-you-start-now",
+        "ru": "первыи-шаг-к-танго-почему-стоит-начать-сеичас",
+        "uk": "pershyy-krok-do-tango-chomu-varto-pochaty-zaraz",
+        "es": "primer-paso-al-tango-por-que-deberia-empezar-ahora"
+      }
+    },
+    {
+      "slug": "tango-nedir",
+      "originSlug": "tango-nedir",
+      "title": "Tango Nedir? Neden Tango Yapılır? (Kapsamlı Rehber 2026)",
+      "path": "app/[lang]/blog/content/tr/tango-nedir.md",
+      "slugs": {
+        "tr": "tango-nedir",
+        "en": "what-is-tango-why-tango-comprehensive-guide-2026",
+        "ru": "chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g",
+        "uk": "shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026",
+        "es": "que-es-el-tango-por-que-tango-guia-integral-2026"
+      }
+    }
+  ],
+  "en": [
+    {
+      "slug": "abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug",
+      "originSlug": "abrazo-anatomisi",
+      "title": "Abrazo's Anatomy: The Biomechanics and Spirit of a Hug",
+      "path": "app/[lang]/blog/content/en/abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug.md",
+      "slugs": {
+        "tr": "abrazo-anatomisi",
+        "en": "abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug",
+        "ru": "anatomiya-abrazo-biomekhanika-i-dukh-obyatii",
+        "uk": "anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv",
+        "es": "anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo"
+      }
+    },
+    {
+      "slug": "first-step-to-tango-why-should-you-start-now",
+      "originSlug": "ilk-adim",
+      "title": "First Step to Tango: Why Should You Start Now?",
+      "path": "app/[lang]/blog/content/en/first-step-to-tango-why-should-you-start-now.md",
+      "slugs": {
+        "tr": "ilk-adim",
+        "en": "first-step-to-tango-why-should-you-start-now",
+        "ru": "первыи-шаг-к-танго-почему-стоит-начать-сеичас",
+        "uk": "pershyy-krok-do-tango-chomu-varto-pochaty-zaraz",
+        "es": "primer-paso-al-tango-por-que-deberia-empezar-ahora"
+      }
+    },
+    {
+      "slug": "what-is-tango-why-tango-comprehensive-guide-2026",
+      "originSlug": "tango-nedir",
+      "title": "What is Tango? Why Tango? (Comprehensive Guide 2026)",
+      "path": "app/[lang]/blog/content/en/what-is-tango-why-tango-comprehensive-guide-2026.md",
+      "slugs": {
+        "tr": "tango-nedir",
+        "en": "what-is-tango-why-tango-comprehensive-guide-2026",
+        "ru": "chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g",
+        "uk": "shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026",
+        "es": "que-es-el-tango-por-que-tango-guia-integral-2026"
+      }
+    }
+  ],
+  "ru": [
+    {
+      "slug": "anatomiya-abrazo-biomekhanika-i-dukh-obyatii",
+      "originSlug": "abrazo-anatomisi",
+      "title": "Анатомия Абразо: биомеханика и дух объятий",
+      "path": "app/[lang]/blog/content/ru/anatomiya-abrazo-biomekhanika-i-dukh-obyatii.md",
+      "slugs": {
+        "tr": "abrazo-anatomisi",
+        "en": "abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug",
+        "ru": "anatomiya-abrazo-biomekhanika-i-dukh-obyatii",
+        "uk": "anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv",
+        "es": "anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo"
+      }
+    },
+    {
+      "slug": "chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g",
+      "originSlug": "tango-nedir",
+      "title": "Что такое Танго? Почему Танго? (Комплексное руководство 2026 г.)",
+      "path": "app/[lang]/blog/content/ru/chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g.md",
+      "slugs": {
+        "tr": "tango-nedir",
+        "en": "what-is-tango-why-tango-comprehensive-guide-2026",
+        "ru": "chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g",
+        "uk": "shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026",
+        "es": "que-es-el-tango-por-que-tango-guia-integral-2026"
+      }
+    },
+    {
+      "slug": "первыи-шаг-к-танго-почему-стоит-начать-сеичас",
+      "originSlug": "ilk-adim",
+      "title": "Первый шаг к танго: почему стоит начать сейчас?",
+      "path": "app/[lang]/blog/content/ru/первыи-шаг-к-танго-почему-стоит-начать-сеичас.md",
+      "slugs": {
+        "tr": "ilk-adim",
+        "en": "first-step-to-tango-why-should-you-start-now",
+        "ru": "первыи-шаг-к-танго-почему-стоит-начать-сеичас",
+        "uk": "pershyy-krok-do-tango-chomu-varto-pochaty-zaraz",
+        "es": "primer-paso-al-tango-por-que-deberia-empezar-ahora"
+      }
+    }
+  ],
+  "uk": [
+    {
+      "slug": "anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv",
+      "originSlug": "abrazo-anatomisi",
+      "title": "Анатомія Абразо: біомеханіка та дух обіймів",
+      "path": "app/[lang]/blog/content/uk/anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv.md",
+      "slugs": {
+        "tr": "abrazo-anatomisi",
+        "en": "abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug",
+        "ru": "anatomiya-abrazo-biomekhanika-i-dukh-obyatii",
+        "uk": "anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv",
+        "es": "anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo"
+      }
+    },
+    {
+      "slug": "pershyy-krok-do-tango-chomu-varto-pochaty-zaraz",
+      "originSlug": "ilk-adim",
+      "title": "Перший крок до танго: чому варто почати зараз?",
+      "path": "app/[lang]/blog/content/uk/pershyy-krok-do-tango-chomu-varto-pochaty-zaraz.md",
+      "slugs": {
+        "tr": "ilk-adim",
+        "en": "first-step-to-tango-why-should-you-start-now",
+        "ru": "первыи-шаг-к-танго-почему-стоит-начать-сеичас",
+        "uk": "pershyy-krok-do-tango-chomu-varto-pochaty-zaraz",
+        "es": "primer-paso-al-tango-por-que-deberia-empezar-ahora"
+      }
+    },
+    {
+      "slug": "shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026",
+      "originSlug": "tango-nedir",
+      "title": "Що таке танго? Чому Tango? (Комплексний посібник 2026)",
+      "path": "app/[lang]/blog/content/uk/shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026.md",
+      "slugs": {
+        "tr": "tango-nedir",
+        "en": "what-is-tango-why-tango-comprehensive-guide-2026",
+        "ru": "chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g",
+        "uk": "shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026",
+        "es": "que-es-el-tango-por-que-tango-guia-integral-2026"
+      }
+    }
+  ],
+  "es": [
+    {
+      "slug": "anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo",
+      "originSlug": "abrazo-anatomisi",
+      "title": "Anatomía del abrazo: la biomecánica y el espíritu de un abrazo",
+      "path": "app/[lang]/blog/content/es/anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo.md",
+      "slugs": {
+        "tr": "abrazo-anatomisi",
+        "en": "abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug",
+        "ru": "anatomiya-abrazo-biomekhanika-i-dukh-obyatii",
+        "uk": "anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv",
+        "es": "anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo"
+      }
+    },
+    {
+      "slug": "primer-paso-al-tango-por-que-deberia-empezar-ahora",
+      "originSlug": "ilk-adim",
+      "title": "Primer paso al tango: ¿por qué debería empezar ahora?",
+      "path": "app/[lang]/blog/content/es/primer-paso-al-tango-por-que-deberia-empezar-ahora.md",
+      "slugs": {
+        "tr": "ilk-adim",
+        "en": "first-step-to-tango-why-should-you-start-now",
+        "ru": "первыи-шаг-к-танго-почему-стоит-начать-сеичас",
+        "uk": "pershyy-krok-do-tango-chomu-varto-pochaty-zaraz",
+        "es": "primer-paso-al-tango-por-que-deberia-empezar-ahora"
+      }
+    },
+    {
+      "slug": "que-es-el-tango-por-que-tango-guia-integral-2026",
+      "originSlug": "tango-nedir",
+      "title": "¿Qué es el tango? ¿Por qué tango? (Guía Integral 2026)",
+      "path": "app/[lang]/blog/content/es/que-es-el-tango-por-que-tango-guia-integral-2026.md",
+      "slugs": {
+        "tr": "tango-nedir",
+        "en": "what-is-tango-why-tango-comprehensive-guide-2026",
+        "ru": "chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g",
+        "uk": "shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026",
+        "es": "que-es-el-tango-por-que-tango-guia-integral-2026"
+      }
+    }
+  ]
+}

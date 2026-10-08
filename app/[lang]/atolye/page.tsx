@@ -3,6 +3,11 @@ import { ExpandableTangoCard } from "@/components/ui/ExpandableTangoCard";
 import { i18n, type Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 
+interface Theme {
+    title: string;
+    lead: string;
+}
+
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
 }
@@ -18,7 +23,7 @@ export default async function AtolyePage({ params }: { params: Promise<{ lang: L
                 <PageHeader eyebrow={content.eyebrow} title={content.title} />
                 {/* Kartlar Grid */}
                 <div className="grid md:grid-cols-3 gap-8 items-start">
-                    {content.themes.map((tema: any, i: number) => (
+                    {content.themes.map((tema: Theme, i: number) => (
                         <ExpandableTangoCard
                             key={i}
                             item={tema}

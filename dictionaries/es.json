@@ -12,9 +12,9 @@
         "contact": "Contacto",
         "cta": "Clase de Prueba Gratis",
         "login": "Acceso Miembros"
-    },
+    }, 
     "footer": {
-        "slogan": "Técnica sólida, comunidad genuina. 20 años de pasión.",
+        "slogan": "Técnica sólida, comunidad genuina. 20+ años de pasión.",
         "linksTitle": "Navegación",
         "contactTitle": "Contacto",
         "socialTitle": "Contactanos",
@@ -188,37 +188,50 @@
             "askGeneral": "¿Me darías información detallada sobre el programa de talleres?"
         }
     },
+    "formCommon": {
+        "nameLabel": "Tu nombre y apellido",
+        "namePlaceholder": "Juan Carlos Rodríguez",
+        "phoneLabel": "Teléfono / WhatsApp",
+        "phonePlaceholder": "05xx xxx xx xx o +380 xx xxx xxxx",
+        "phoneHint": "Para números fuera de Turquía, añade el código de país (+) antes del número.",
+        "phoneError": "Por favor ingresa un número de teléfono válido.",
+        "levelLabel": "Nivel de Experiencia",
+        "levels": {
+            "zero": "Nunca he bailado",
+            "beginner": "Principiante",
+            "intermediate": "Intermedio / Avanzado"
+        },
+        "consent": "Acepto los permisos de comunicación y el texto de la RGPD.",
+        "submitting": "Enviando...",
+        "systemError": "Ha ocurrido un error. Por favor, contáctanos a través de WhatsApp."
+    },
+    "contactForm": {
+        "submit": "Obtenga información",
+        "successTitle": "¡Se ha recibido su solicitud!",
+        "successMessage": "Nos pondremos en contacto con usted lo antes posible. Puede enviarnos un mensaje por WhatsApp si tiene alguna pregunta.",
+        "whatsappConfirm": "Escribe vía WhatsApp",
+        "whatsappMessage": "Hola, soy {name}. He completado el formulario de contacto, tengo una pregunta..."
+    },
+    "registrationForm": {
+        "partnerLabel": "¿Tienes pareja de tango?",
+        "partnerOptions": {
+            "no": "No, no tengo pareja.",
+            "yes": "Sí, tengo pareja."
+        },
+        "partnerNameLabel": "Nombre de la Pareja",
+        "partnerNamePlaceholder": "María José",
+        "submit": "Completar Registro",
+        "successTitle": "¡Registro recibido!",
+        "successMessage": "Te llamaremos lo antes posible. Si tenés alguna pregunta, podés escribirnos por WhatsApp ahora mismo.",
+        "whatsappConfirm": "Enviar WhatsApp",
+        "whatsappMessage": "Hola, soy {name} y he completado el formulario de registro; tengo una pregunta..."
+    },
     "contact": {
         "eyebrow": "Contacto и Registro",
         "title": "EL PRIMER PASO",
         "intro": {
             "line1": "Dejá atrás el caos.",
             "line2": "El abrazo te espera."
-        },
-        "form": {
-            "nameLabel": "Nombre Completo",
-            "namePlaceholder": "Juan Pérez",
-            "phoneLabel": "Teléfono",
-            "phonePlaceholder": "+54 9 xxx xxx xxxx",
-            "phoneError": "Ingresá un número válido.",
-            "levelLabel": "Nivel de experiencia",
-            "levels": {
-                "zero": "Nunca bailé antes",
-                "beginner": "Nivel Principiante",
-                "intermediate": "Intermedio / Avanzado"
-            },
-            "consent": "Acepto los permisos de comunicación и términos de privacidad.",
-            "submit": "Completar Registro",
-            "submitting": "Enviando...",
-            "successTitle": "¡Registro recibido!",
-            "successMessage": "Te llamaremos lo antes posible. Si tenés alguna pregunta, podés escribirnos por WhatsApp ahora mismo.",
-            "whatsappConfirm": "Enviar WhatsApp",
-            "whatsappMessage": "Hola, completé el formulario de contacto, tenía una consulta...",
-            "error": {
-                "system": "Error:",
-                "alert": "Hubo un problema. Por favor contactanos por WhatsApp.",
-                "submit": "Error de envío"
-            }
         },
         "sidebar": {
             "studioLabel": "Estudio",
@@ -249,36 +262,9 @@
             }
         }
     },
-    "trialForm": {
-        "header": {
-            "label": "Sumate",
-            "title": "La Pista <br /> <span class=\"text-tango-red\">Te Espera</span>"
-        },
-        "form": {
-            "nameLabel": "Nombre Completo",
-            "namePlaceholder": "Tu nombre и apellido",
-            "phoneLabel": "WhatsApp / Teléfono",
-            "phonePlaceholder": "05...",
-            "phoneError": "Ingresá un número válido (ej. 05xx...)",
-            "levelLabel": "Nivel",
-            "levels": {
-                "zero": "Nunca bailé antes",
-                "beginner": "Nivel Principiante",
-                "intermediate": "Nivel Intermedio / Avanzado"
-            },
-            "submit": "Sumarme ahora",
-            "submitting": "Procesando...",
-            "successTitle": "¡Gran decisión!",
-            "successMessage": "Recibimos tu registro. ¿Querés confirmar tu lugar ahora mismo?",
-            "whatsappConfirm": "Confirmar por WhatsApp",
-            "whatsappMessage": "Hola, completé el formulario para la clase de prueba: {name}",
-            "consent": "Acepto los permisos de comunicación и términos de privacidad."
-        },
-        "error": {
-            "system": "Error del sistema:",
-            "alert": "Hubo un problema con el registro. Por favor contactanos directamente por WhatsApp.",
-            "submit": "Error de envío"
-        }
+    "trialFormHeader": {
+        "label": "Sumate",
+        "title": "La Pista <br /> <span class=\"text-tango-red\">Te Espera</span>"
     },
     "ui": {
         "readMore": "Seguir leyendo →",

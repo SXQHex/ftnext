@@ -45,7 +45,7 @@ try {
 
     // Manifesti ana dizine yaz
     fs.writeFileSync(
-        path.join(process.cwd(), 'posts-manifest.json'),
+        path.join(process.cwd(), 'app/[lang]/blog/posts-manifest.json'),
         JSON.stringify(manifest, null, 2)
     );
 
