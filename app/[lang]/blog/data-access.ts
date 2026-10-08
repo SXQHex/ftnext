@@ -24,6 +24,7 @@ export interface BlogPost {
     slugs: Record<string, string>;
     title: string;
     date: string;
+    updatedAt: string;
     excerpt: string;
     image: string;
     content: string;
