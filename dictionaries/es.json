@@ -76,7 +76,8 @@
             "subtitle": "para salir a la pista?",
             "description": "Súmate a una de las comunidades de tango con más trayectoria de Fethiye. Aunque nunca hayas bailado, te acompañamos desde el primer paso.",
             "button": "Pide información",
-            "response": "Solemos responder en 5 minutos."
+            "response": "Solemos responder en 5 minutos.",
+            "whatsappMessage": "¡Hola! Me pongo en contacto desde el sitio web de Fethiye Tango. Me gustaría recibir información."
         }
     },
     "program": {

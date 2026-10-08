@@ -76,7 +76,8 @@
             "subtitle": "Hazır mısınız?",
             "description": "Fethiye'nin en köklü dans topluluğuna katılın. Hiç dans etmemiş olsanız bile, ilk adımınızda yanınızdayız.",
             "button": "Hemen Bilgi Alın",
-            "response": "Genellikle 5 dakika içinde yanıtlıyoruz."
+            "response": "Genellikle 5 dakika içinde yanıtlıyoruz.",
+            "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. Bilgi almak istiyorum."
         }
     },
     "program": {

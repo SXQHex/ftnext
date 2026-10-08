@@ -165,7 +165,7 @@ export default function ContactForm({
         <form onSubmit={handleSubmit} className={`flex flex-col ${isMinimal ? "gap-5" : "gap-4"} w-full`}>
             {/* Ad Soyad */}
             <div className={`group flex flex-col ${isMinimal ? "space-y-1.5" : "gap-1.5"}`}>
-                <label className={labelClasses}>{dict.nameLabel}</label>
+                <label htmlFor="contact-name" className={labelClasses}>{dict.nameLabel}</label>
                 <input
                     id="contact-name"
                     required
@@ -181,7 +181,7 @@ export default function ContactForm({
 
             {/* Telefon */}
             <div className={`group flex flex-col ${isMinimal ? "space-y-1.5" : "gap-1.5"}`}>
-                <label className={`${labelClasses} ${phoneError ? 'text-tango-red' : ''}`}>{dict.phoneLabel}</label>
+                <label htmlFor="contact-phone" className={labelClasses + (phoneError ? " text-tango-red" : "")}>{dict.phoneLabel}</label>
                 <input
                     id="contact-phone"
                     required
@@ -205,7 +205,7 @@ export default function ContactForm({
 
             {/* Seviye */}
             <div className={`group flex flex-col ${isMinimal ? "space-y-1.5" : "gap-1.5"}`}>
-                <label className={labelClasses}>{dict.levelLabel}</label>
+                <label htmlFor="contact-level" className={labelClasses}>{dict.levelLabel}</label>
                 <div className="relative">
                     <select
                         id="contact-level"

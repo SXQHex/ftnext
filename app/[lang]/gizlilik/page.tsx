@@ -11,7 +11,7 @@ export default function GizlilikPage() {
                         <h2 className="text-xl font-bold text-[#efe6e3]">1. Hangi Verileri Topluyoruz?</h2>
                         <p>
                             Site üzerindeki formlar aracılığıyla ad-soyad, telefon numarası, dans deneyimi seviyesi ve kesin kayıt formunda
-                            katılım şekli ile partner adı alınabilir. Form gönderildiğinde, verilen rızanın zaman bilgisi veritabanında tutulur.
+                            katılım şekli ile partner adı alınabilir. Form gönderildiğinde, zorunlu onayın zaman bilgisi; ayrıca isteğe bağlı pazarlama izni verilmişse pazarlama izninin zaman bilgisi veritabanında tutulur.
                         </p>
                     </section>
 
@@ -20,7 +20,7 @@ export default function GizlilikPage() {
                         <p>
                             Form verisi önce sunucu tarafındaki doğrulamalardan ve IP tabanlı rate-limit kontrolünden geçer. Geçerli kayıtlar
                             Supabase veritabanına kaydedilir. Başarılı kayıt sonrasında kurum içi bildirim amacıyla Telegram üzerinden bir mesaj
-                            gönderilebilir. Ayrıca form başarı olaylarında Google Tag Manager'a yalnızca ölçüm amacıyla seviye, kayıt türü,
+                            gönderilebilir. Ayrıca form başarı olaylarında Google Tag Manager’a yalnızca ölçüm amacıyla seviye, kayıt türü,
                             form varyantı ve sayfa yolu gibi olay verileri gönderilebilir; ad ve telefon mevcut form olaylarının parçası değildir.
                         </p>
                     </section>

@@ -11,7 +11,7 @@ export default function KVKKPage() {
                         <h2 className="text-xl font-bold text-[#efe6e3]">1. Veri Sorumlusu</h2>
                         <p>
                             Bu internet sitesi ve Fethiye Tango Kulübü faaliyetleri kapsamında işlenen kişisel veriler bakımından veri sorumlusu,
-                            siteyi ve ilgili faaliyetleri yürüten Fethiye Tango Kulübü'dür. İletişim: <strong>info@fethiyetango.com</strong> ve
+                            siteyi ve ilgili faaliyetleri yürüten Fethiye Tango Kulübü’dür. İletişim: <strong>info@fethiyetango.com</strong> ve
                             <strong>+90 544 641 57 45</strong>.
                         </p>
                     </section>
@@ -20,8 +20,8 @@ export default function KVKKPage() {
                         <h2 className="text-xl font-bold text-[#efe6e3]">2. İşlenen Kişisel Veriler</h2>
                         <p>
                             İletişim formundan ad-soyad, telefon numarası ve seçtiğiniz dans deneyimi seviyesi; kesin kayıt formundan bunlara ek olarak
-                            katılım şekli ve partner adı alınabilir. Form gönderiminde rıza verildiğine ilişkin zaman bilgisi sistemde tutulur.
-                            Güvenlik ve kötüye kullanımı önleme amacıyla IP adresi veya istemci IP'sinin proxy başlıklarındaki karşılığı rate-limit
+                            katılım şekli ve partner adı alınabilir. Form gönderiminde zorunlu onaya ilişkin zaman bilgisi sistemde tutulur; isteğe bağlı pazarlama izni verilmişse bu tercihin zaman bilgisi de ayrıca tutulur.
+                            Güvenlik ve kötüye kullanımı önleme amacıyla IP adresi veya istemci IP’sinin proxy başlıklarındaki karşılığı rate-limit
                             sistemi tarafından işlenebilir.
                         </p>
                     </section>
@@ -35,7 +35,7 @@ export default function KVKKPage() {
                         </p>
                         <p>
                             Form üzerinden açık rıza alınan işleme faaliyetleri bakımından hukuki sebep ilgili kişinin açık rızasıdır. Güvenlik,
-                            kötüye kullanımı önleme ve kanunen gerekli kayıtlar bakımından Kanun'da öngörülen diğer işleme şartları ayrıca
+                            kötüye kullanımı önleme ve kanunen gerekli kayıtlar bakımından Kanun’da öngörülen diğer işleme şartları ayrıca
                             uygulanabilir. Her amaç için ayrı bir hukuki sebep esas alınır; aydınlatma metni açık rızanın yerine geçmez.
                         </p>
                     </section>
@@ -60,7 +60,7 @@ export default function KVKKPage() {
                         <p>
                             Kullanılan bazı teknoloji sağlayıcılarının altyapısı Türkiye dışında bulunabilir veya veri işleme faaliyetleri yurt dışında
                             gerçekleşebilir. Özellikle Supabase, Upstash, Telegram ve Google hizmetleri bakımından yurt dışı aktarımı söz konusu olabilir.
-                            Böyle bir aktarım, 6698 sayılı Kanun'un 9. maddesinde öngörülen şartlar ve uygun güvenceler çerçevesinde yürütülmelidir.
+                            Böyle bir aktarım, 6698 sayılı Kanun’un 9. maddesinde öngörülen şartlar ve uygun güvenceler çerçevesinde yürütülmelidir.
                             Bu metin, tek başına bir yurt dışı aktarım hukuki mekanizması oluşturmaz.
                         </p>
                     </section>
@@ -90,7 +90,7 @@ export default function KVKKPage() {
                     <section>
                         <h2 className="text-xl font-bold text-[#efe6e3]">8. KVKK Kapsamındaki Haklarınız</h2>
                         <p>
-                            Kişisel verilerinizle ilgili Kanun'un 11. maddesi kapsamındaki haklarınızı kullanabilirsiniz. Taleplerinizi
+                            Kişisel verilerinizle ilgili Kanun’un 11. maddesi kapsamındaki haklarınızı kullanabilirsiniz. Taleplerinizi
                             <strong>info@fethiyetango.com</strong> üzerinden iletebilirsiniz. Başvurular, kimlik doğrulaması ve başvurunun niteliğine
                             göre gerekli güvenlik kontrolleri yapılarak mevzuattaki usule uygun şekilde değerlendirilir.
                         </p>

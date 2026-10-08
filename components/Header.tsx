@@ -137,8 +137,12 @@ export default function Header({ navigation, lang }: HeaderProps) {
                     {/* Compact Language Selector - Desktop */}
                     <div className="relative hidden sm:block" onClick={(e) => e.stopPropagation()}>
                         <button
+                            type="button"
                             onClick={() => setIsLangOpen(!isLangOpen)}
                             className="flex items-center gap-2 group transition-all duration-300 px-3 py-2 rounded-full hover:bg-white/10 hover:scale-105 active:scale-95"
+                            aria-expanded={isLangOpen}
+                            aria-controls="language-menu"
+                            aria-haspopup="menu"
                         >
                             <svg
                                 className={`w-5 h-5 text-tango-red group-hover:text-white transition-all duration-500 ${isLangOpen ? 'rotate-360' : 'group-hover:rotate-12'}`}
@@ -152,7 +156,7 @@ export default function Header({ navigation, lang }: HeaderProps) {
                         </button>
 
                         {/* Dropdown Menu */}
-                        <div className={`
+                        <div id="language-menu" role="menu" className={`
                             absolute right-0 mt-3 w-40 bg-tango-black border border-white/10 rounded-xl overflow-hidden shadow-2xl backdrop-blur-xl transition-all duration-300
                             ${isLangOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'}
                         `}>
@@ -161,6 +165,7 @@ export default function Header({ navigation, lang }: HeaderProps) {
                                     <Link
                                         key={l.code}
                                         href={getTargetHref(l.code)}
+                                        role="menuitem"
                                         onClick={() => setIsLangOpen(false)}
                                         className={`
                                             flex items-center justify-between px-4 py-2.5 text-[11px] font-bold transition-all rounded-lg
@@ -193,9 +198,12 @@ export default function Header({ navigation, lang }: HeaderProps) {
                     </TangoButton>
 
                     <button
+                        type="button"
                         className="flex flex-col gap-1.5 lg:hidden cursor-pointer p-2"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Menü"
+                        aria-expanded={isMenuOpen}
+                        aria-controls="mobile-navigation"
                     >
                         <span className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45 w-7' : ''}`}></span>
                         <span className={`h-0.5 w-6 bg-white transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -205,7 +213,7 @@ export default function Header({ navigation, lang }: HeaderProps) {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`
+            <div id="mobile-navigation" aria-hidden={!isMenuOpen} className={`
                 absolute top-full left-0 w-full bg-tango-black/95 backdrop-blur-xl border-b border-white/10 p-8 flex flex-col gap-6 lg:hidden shadow-2xl
                 transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1)
                 ${isMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-10 invisible'}

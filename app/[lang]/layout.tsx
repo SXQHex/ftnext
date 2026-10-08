@@ -89,16 +89,17 @@ export default async function RootLayout({
             form: {
               ...dict.formCommon,
               ...dict.contactForm,
-            }
+            },
+            closeLabel: dict.ui.close,
           }}>
             {/* Sayfa Yapısı: Header - İçerik - Footer */}
             <div className="flex min-h-screen flex-col">
               <Header navigation={dict.navigation} lang={lang} />
 
               {/* Sayfaların içeriği buraya gelecek */}
-              <main className="flex-1 relative overflow-x-clip">
+              <div className="flex-1 relative overflow-x-clip">
                 {children}
-              </main>
+              </div>
 
               <Footer content={dict.footer} navigation={dict.navigation} lang={lang} />
             </div>

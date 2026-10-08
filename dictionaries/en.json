@@ -76,7 +76,8 @@
             "subtitle": "Step onto the floor?",
             "description": "Join one of Fethiye's longest-running tango communities. Even if you've never danced before, we'll be with you from your very first step.",
             "button": "Get Info Now",
-            "response": "We usually reply within 5 minutes."
+            "response": "We usually reply within 5 minutes.",
+            "whatsappMessage": "Hello! I am contacting you through the Fethiye Tango website. I would like to get some information."
         }
     },
     "program": {

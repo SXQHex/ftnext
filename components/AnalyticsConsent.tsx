@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 interface AnalyticsConsentDictionary {
@@ -14,6 +14,21 @@ interface AnalyticsConsentDictionary {
 }
 
 const CONSENT_KEY = "ftc-optional-consent";
+const CONSENT_EVENT = "ftc-optional-consent-change";
+
+function getConsentSnapshot(): "granted" | "denied" | null {
+    const value = localStorage.getItem(CONSENT_KEY);
+    return value === "granted" || value === "denied" ? value : null;
+}
+
+function subscribe(callback: () => void) {
+    window.addEventListener("storage", callback);
+    window.addEventListener(CONSENT_EVENT, callback);
+    return () => {
+        window.removeEventListener("storage", callback);
+        window.removeEventListener(CONSENT_EVENT, callback);
+    };
+}
 
 export function hasOptionalConsent() {
     return typeof window !== "undefined" && localStorage.getItem(CONSENT_KEY) === "granted";
@@ -26,20 +41,16 @@ export default function AnalyticsConsent({
     dict: AnalyticsConsentDictionary;
     gtmId: string;
 }) {
-    const [consent, setConsent] = useState<"granted" | "denied" | null>(null);
-
-    useEffect(() => {
-        const saved = localStorage.getItem(CONSENT_KEY);
-        if (saved === "granted" || saved === "denied") {
-            setConsent(saved);
-        } else {
-            setConsent(null);
-        }
-    }, []);
+    const consent = useSyncExternalStore(subscribe, getConsentSnapshot, () => null);
 
     function saveConsent(value: "granted" | "denied") {
         localStorage.setItem(CONSENT_KEY, value);
-        setConsent(value);
+        window.dispatchEvent(new Event(CONSENT_EVENT));
+    }
+
+    function resetConsent() {
+        localStorage.removeItem(CONSENT_KEY);
+        window.location.reload();
     }
 
     return (
@@ -49,7 +60,7 @@ export default function AnalyticsConsent({
             {consent !== null && (
                 <button
                     type="button"
-                    onClick={() => setConsent(null)}
+                    onClick={resetConsent}
                     className="fixed bottom-4 right-4 z-100 rounded-full border border-white/10 bg-tango-black/95 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-white/60 shadow-lg backdrop-blur-md hover:text-white"
                 >
                     {dict.manage}

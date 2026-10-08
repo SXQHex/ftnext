@@ -39,9 +39,9 @@ export default async function TrainersPage({ params }: { params: Promise<{ lang:
                         </div>
 
                         <div className="pl-4 border-l-2 border-tango-gold/40">
-                            <h1 className="text-3xl font-black uppercase italic tracking-tighter text-white leading-none">
+                            <h2 className="text-3xl font-black uppercase italic tracking-tighter text-white leading-none">
                                 {content.sidebar.name} <br /> {content.sidebar.surname}
-                            </h1>
+                            </h2>
                             <p className="text-tango-gold font-bold text-[10px] uppercase tracking-[0.4em] mt-2">
                                 {content.sidebar.role}
                             </p>

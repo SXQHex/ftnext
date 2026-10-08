@@ -7,7 +7,13 @@ import { useModal } from "@/components/ModalContext";
 import { TangoButton } from "../ui/TangoButton";
 import type { getDictionary } from "@/get-dictionary";
 
-export function HeroSection({ content }: { content: Awaited<ReturnType<typeof getDictionary>>["home"]["hero"] }) {
+export function HeroSection({
+    content,
+    lang,
+}: {
+    content: Awaited<ReturnType<typeof getDictionary>>["home"]["hero"];
+    lang: string;
+}) {
     const { openModal } = useModal();
     return (
         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center ">
@@ -81,7 +87,7 @@ export function HeroSection({ content }: { content: Awaited<ReturnType<typeof ge
                                 </span>
                             </TangoButton>
 
-                            <Link href="/program">
+                            <Link href={"/" + lang + "/program"}>
                                 <TangoButton
                                     variant="outline"
                                     size="lg"

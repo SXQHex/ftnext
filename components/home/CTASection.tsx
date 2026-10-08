@@ -28,7 +28,7 @@ export function CTASection({ content }: { content: Awaited<ReturnType<typeof get
                     className="flex justify-center -mt-8"
                 >
                     <TangoButton
-                        onClick={() => window.open(CONTACT_INFO.getWaLink("Merhaba, bilgi alabilir miyim?"), "_blank")}
+                        onClick={() => window.open(CONTACT_INFO.getWaLink(content.whatsappMessage), "_blank", "noopener,noreferrer")}
                         size="xl"
                     >
                         <Image src="/images/social/WhatsApp.svg" alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
