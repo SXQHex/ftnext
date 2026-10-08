@@ -229,6 +229,11 @@
         "whatsappConfirm": "Написати у WhatsApp",
         "whatsappMessage": "Привіт, я {name}, заповнив форму реєстрації, у мене є питання..."
     },
+    "registrationPage": {
+        "eyebrow": "Реєстрація",
+        "title": "Форма реєстрації",
+        "seoDescription": "Завершіть реєстрацію у Fethiye Tango Club, вказавши свій рівень та інформацію про партнера."
+    },
     "contact": {
         "eyebrow": "Контакти та реєстрація",
         "title": "ПЕРШИЙ КРОК",
