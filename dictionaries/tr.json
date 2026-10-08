@@ -228,7 +228,8 @@
         "successTitle": "Kaydınız Bize Ulaştı!",
         "successMessage": "Harika bir adım attınız! Sizi en kısa sürede arayacağız.",
         "whatsappConfirm": "WhatsApp ile Onayla",
-        "whatsappMessage": "Merhaba, ben {name}. Ön kayıt formunu doldurdum, detayları görüşebiliriz."
+        "whatsappMessage": "Merhaba, ben {name}. Ön kayıt formunu doldurdum, detayları görüşebiliriz.",
+        "newRegistration": "Yeni kayıt"
     },
     "registrationPage": {
         "eyebrow": "Kesin Kayıt",
