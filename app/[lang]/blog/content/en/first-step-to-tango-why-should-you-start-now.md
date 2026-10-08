@@ -7,12 +7,7 @@ excerpt: >-
   tango.
 image: /images/workshop-atolye.webp
 originSlug: ilk-adim
-slugs:
-  tr: ilk-adim
-  en: first-step-to-tango-why-should-you-start-now
-  ru: pervyi-shag-k-tango-pochemu-stoit-nachat-seichas
-  uk: pershyy-krok-do-tango-chomu-varto-pochaty-zaraz
-  es: primer-paso-al-tango-por-que-deberia-empezar-ahora
+slug: first-step-to-tango-why-should-you-start-now
 ---
 Our lives are often full of dreams that we say "I will do it one day". "One day I will start playing sports", "one day I will play that instrument" and the most popular: "One day I will learn tango." But that famous "one day" never appears on the calendar. However, tango is not just about enrolling in a dance course; It is a journey of discovering yourself, music and others in a completely different dimension. As the milonga tunes rise at Fethiye's sunset, let's examine why you should not wait any longer, through the physical and spiritual anatomy of tango. 
 
