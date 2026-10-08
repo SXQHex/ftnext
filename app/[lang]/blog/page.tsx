@@ -31,13 +31,12 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: Loc
                 <PageHeader eyebrow={content.eyebrow} title={content.title} />
                 {/* Yeni Hibrit Grid */}
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-start">
-                    {posts.map((post, i) => (
+                    {posts.map((post) => (
                         <ExpandableTangoCard
                             key={post.slug}
                             item={post}
                             isBlog={true}
                             lang={lang}
-                            index={i}
                             labels={dict.ui}
                         />
                     ))}
