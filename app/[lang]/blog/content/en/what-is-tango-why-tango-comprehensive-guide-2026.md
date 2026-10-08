@@ -15,12 +15,7 @@ keywords: >-
   What is tango, why tango is done, benefits of tango, fethiye tango course,
   argentine tango, what is milonga
 originSlug: tango-nedir
-slugs:
-  tr: tango-nedir
-  en: what-is-tango-why-tango-comprehensive-guide-2026
-  ru: chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g
-  uk: shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026
-  es: que-es-el-tango-por-que-tango-guia-integral-2026
+slug: what-is-tango-why-tango-comprehensive-guide-2026
 ---
 When tango is mentioned, the first images that come to mind are usually a red rose, stern gaze, a black suit and dramatic leg movements. But these Hollywood clichés represent only a very shallow and sometimes misleading surface of what tango really is. Tango; In fact, rather than being a dance, it is a communication language, a biological need and an emotional meditation in the noise of the modern world. 
 
