@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useModal } from "@/components/ModalContext";
 import { motion, useScroll, useSpring } from "motion/react";
 import BlogCTA from "@/components/BlogCTA";
@@ -38,36 +38,21 @@ export default function BlogContentClient({
     });
     const scaleY = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-    const handleScroll = useCallback(() => {
-        // Tüm başlıkları al ve diziye çevir
-        const h2Elements = Array.from(document.querySelectorAll(".tango-article h2[id]"));
 
-        // Scroll pozisyonuna göre "aktif" başlığı bul
-        // Ekranın tepesinden 200px aşağıyı "sınır çizgisi" kabul ediyoruz
-        const scrollOffset = 200;
-
-        const currentSection = h2Elements.reduce((selected, el) => {
-            const rect = el.getBoundingClientRect();
-
-            // Eğer başlık sınır çizgisinin üstündeyse, onu "şimdilik" seç
-            // Döngü bittiğinde en son (en aşağıda ama sınırın üstünde olan) başlık seçili kalacak
-            if (rect.top <= scrollOffset) {
-                return el;
-            }
-            return selected;
-        }, null as Element | null);
-
-        if (currentSection && currentSection.id !== activeId) {
-            setActiveId(currentSection.id);
-        }
-    }, [activeId]);
 
     useEffect(() => {
-        // Scroll dinleyicisi
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        const timer = setTimeout(handleScroll, 500);
+        const handleScroll = () => {
+            const h2Elements = Array.from(document.querySelectorAll(".tango-article h2[id]"));
+            const scrollOffset = 200;
 
-        // Link dinleyicisi (Modal için)
+            const currentSection = h2Elements.reduce((selected, el) => {
+                const rect = el.getBoundingClientRect();
+                return rect.top <= scrollOffset ? el : selected;
+            }, null as Element | null);
+
+            setActiveId(currentSection?.id ?? "");
+        };
+
         const handleLinkClick = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
             const href = target.closest('a')?.getAttribute("href");
@@ -76,7 +61,9 @@ export default function BlogContentClient({
                 openModal(`blog_detail_${slug}`);
             }
         };
+
         window.addEventListener("scroll", handleScroll, { passive: true });
+        const timer = setTimeout(handleScroll, 500);
         document.addEventListener("click", handleLinkClick);
 
         return () => {
@@ -84,7 +71,7 @@ export default function BlogContentClient({
             document.removeEventListener("click", handleLinkClick);
             clearTimeout(timer);
         };
-    }, [handleScroll, openModal, slug]);
+    }, [openModal, slug]);
     // DİKKAT: htmlContent'i buraya koyma! 
     // İçerik değişirse zaten component rerender olur ve handleScroll içindeki querySelector yeni DOM'u bulur.
 
@@ -114,8 +101,8 @@ export default function BlogContentClient({
                                 className={`text-[10px] font-black uppercase tracking-widest transition-all duration-500
                                     ${activeId === h.id ? "text-tango-gold translate-x-2" : "text-white/20"}`}
                             >
-                                <span className="mr-2 opacity-30">0{index + 1}.</span>
-                                {h.text}
+                                <span className="mr-2 opacity-30">{String(index + 1).padStart(2, "0")}.</span>
+                                {h.text.replace(/^\d+\.\s*/, "")}
                             </a>
                         ))}
                     </nav>
