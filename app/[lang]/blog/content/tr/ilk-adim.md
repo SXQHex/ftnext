@@ -1,6 +1,6 @@
 ---
 title: 'Tango’ya İlk Adım: Neden Şimdi Başlamalısınız?'
-date: 1 Şubat 2026
+date: '2026-02-01'
 excerpt: >-
   Ertelediğiniz o ilk adım aslında bir dansın değil, yeni bir hayatın
   başlangıcıdır. Tangonun büyüleyici dünyasına girmek için neden en doğru
