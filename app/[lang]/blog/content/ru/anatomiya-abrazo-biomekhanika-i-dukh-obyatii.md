@@ -7,12 +7,7 @@ excerpt: >-
   анатомически и философски.
 image: /images/blog/abrazo-anatomy.webp
 originSlug: abrazo-anatomisi
-slugs:
-  tr: abrazo-anatomisi
-  en: abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug
-  ru: anatomiya-abrazo-biomekhanika-i-dukh-obyatii
-  uk: anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv
-  es: anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo
+slug: anatomiya-abrazo-biomekhanika-i-dukh-obyatii
 ---
 Первая команда, которую слышит каждый танцор, вступая на площадку для танго: «Обними своего партнера». Однако это простое действие уступает место сложному биомеханическому взаимодействию под освещением милонги. **Абразо** — это искусство синхронизации двух независимых скелетных систем вокруг единого центра тяжести. В этой статье мы выводим абразо за рамки романтического украшения; Мы подвергнем вас настоящему «анатомическому» исследованию, начиная от расположения костей и заканчивая напряжением мышц и путешествием энергии по позвоночнику. 
 
