@@ -230,6 +230,11 @@
         "whatsappConfirm": "WhatsApp ile Onayla",
         "whatsappMessage": "Merhaba, ben {name}. Ön kayıt formunu doldurdum, detayları görüşebiliriz."
     },
+    "registrationPage": {
+        "eyebrow": "Kesin Kayıt",
+        "title": "Kayıt Formu",
+        "seoDescription": "Fethiye Tango Kulübü'ne kesin kayıt için bilgilerinizi iletin. Seviye ve partner bilgilerinizi paylaşarak kaydınızı tamamlayın."
+    },
     "contact": {
         "eyebrow": "İletişim & Kayıt",
         "title": "PİSTE İLK ADIM",
