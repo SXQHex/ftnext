@@ -2,10 +2,15 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { ExpandableTangoCard } from "@/components/ui/ExpandableTangoCard";
 import { i18n, type Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
 
 interface Theme {
     title: string;
     lead: string;
+}
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/atolye" });
 }
 
 export async function generateStaticParams() {
