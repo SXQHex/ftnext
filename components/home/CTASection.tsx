@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
+import type { getDictionary } from "@/get-dictionary";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { motion } from "motion/react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TangoButton } from "@/components/ui/TangoButton";
 import { CONTACT_INFO } from "@/lib/constants";
 
-export function CTASection({ content }: { content: any }) {
+export function CTASection({ content }: { content: Awaited<ReturnType<typeof getDictionary>>["home"]["cta"] }) {
     return (
         <section className="relative flex flex-col items-center justify-center py-32 md:py-48 overflow-hidden border-t border-white/5">
             {/* 1. Metin ve İçerik Alanı */}
@@ -30,7 +31,7 @@ export function CTASection({ content }: { content: any }) {
                         onClick={() => window.open(CONTACT_INFO.getWaLink(content.whatsappMessage || "Merhaba, bilgi alabilir miyim?"), "_blank")}
                         size="xl"
                     >
-                        <img src="/images/social/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6" />
+                        <Image src="/images/social/WhatsApp.svg" alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
                         {content.button}
                     </TangoButton>
                 </motion.div>
