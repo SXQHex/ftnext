@@ -28,7 +28,7 @@ function parseTurkishDate(dateStr: string): Date {
         }
         const fallback = new Date(dateStr);
         return isNaN(fallback.getTime()) ? new Date() : fallback;
-    } catch (e) {
+    } catch {
         return new Date();
     }
 }
