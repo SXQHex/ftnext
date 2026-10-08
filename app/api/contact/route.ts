@@ -4,6 +4,9 @@ import { NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
 import { Ratelimit } from "@upstash/ratelimit";
 
+const LEVELS = ["zero", "beginner", "intermediate"] as const;
+type Level = (typeof LEVELS)[number];
+
 const escapeHtml = (s: string) =>
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -43,12 +46,11 @@ export async function POST(req: Request) {
     if (!supabaseUrl || !supabaseKey) {
         return NextResponse.json({ success: false, error: 'Sunucu yapılandırması eksik (DB)' }, { status: 500 });
     }
-    // Telegram yoksa uyarı ver ama işlemi durdurma
     if (!telegramToken || !telegramChatId) {
         console.warn('Telegram env vars missing, lead will only be saved to DB.');
     }
 
-    let body;
+    let body: Record<string, unknown>;
     try {
         body = await req.json();
     } catch {
@@ -57,10 +59,20 @@ export async function POST(req: Request) {
 
     const name = String(body.name ?? "").trim();
     const phoneInput = String(body.phone ?? "").trim();
-    const level = String(body.level ?? "zero");
+    const levelValue = body.level;
+    const consent = body.consent;
 
-    if (name.length < 3) {
+    if (name.length < 3 || name.length > 100) {
         return NextResponse.json({ success: false, error: "Geçerli bir isim giriniz." }, { status: 400 });
+    }
+
+    if (!LEVELS.includes(levelValue as Level)) {
+        return NextResponse.json({ success: false, error: "Geçersiz seviye seçimi." }, { status: 400 });
+    }
+    const level = levelValue as Level;
+
+    if (consent !== true) {
+        return NextResponse.json({ success: false, error: "Aydınlatma ve veri işleme onayı gereklidir." }, { status: 400 });
     }
 
     // Backend Telefon Validasyonu (Güvenlik için şarttır)
@@ -100,7 +112,7 @@ export async function POST(req: Request) {
                 `━━━━━━━━━━━━━━\n<i>Veri Supabase'e güvenle kaydedildi.</i>`;
 
             try {
-                await fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+                const response = await fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -109,8 +121,11 @@ export async function POST(req: Request) {
                         parse_mode: "HTML",
                     }),
                 });
+                if (!response.ok) {
+                    console.error("Telegram HTTP error:", response.status);
+                }
             } catch (tgErr) {
-                console.error("Telegram error:", tgErr); // Supabase'e kaydedildiyse işlemi patlatma
+                console.error("Telegram error:", tgErr);
             }
         }
 
