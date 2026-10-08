@@ -1,6 +1,6 @@
 ---
 title: 'Abrazo''nun Anatomisi: Bir Sarılmanın Biyomekaniği ve Ruhu'
-date: 1 Şubat 2026
+date: '2026-02-01'
 excerpt: >-
   Abrazo sadece bir tutuş değil, omurgadan parmak uçlarına uzanan bir
   mühendislik harikasıdır. Tangonun bu temel kolonunu anatomik ve felsefi olarak
