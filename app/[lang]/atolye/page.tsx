@@ -25,7 +25,7 @@ export default async function AtolyePage({ params }: { params: Promise<{ lang: L
                 <div className="grid md:grid-cols-3 gap-8 items-start">
                     {content.themes.map((tema: Theme) => (
                         <ExpandableTangoCard
-                            key={i}
+                            key={tema.title}
                             item={tema}
                             lang={lang}
                             isBlog={false}
