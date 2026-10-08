@@ -24,14 +24,14 @@ export function PageHeader({ eyebrow, title, className }: PageHeaderProps) {
                     </span>
                 </div>
                 {/* Ana Başlık */}
-                <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-black italic tracking-tighter leading-[0.8] text-tango-text uppercase flex flex-col">
+                <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-black italic tracking-tighter leading-[0.8] text-tango-text uppercase flex flex-col max-w-full">
                     {/* Üstteki beyaz satır */}
-                    <span className="relative z-10 block">
+                    <span className="relative z-10 block max-w-full break-words">
                         {firstPart}
                     </span>
 
                     {/* Alttaki Amber/Kırmızı bindirme satırı */}
-                    <span className="relative z-20 inline-block text-transparent bg-clip-text bg-linear-to-r from-tango-gold via-tango-red to-tango-gold -mt-4.5 md:-mt-4 lg:-mt-5 pr-4 pt-4">
+                    <span className="relative z-20 block max-w-full break-words text-transparent bg-clip-text bg-linear-to-r from-tango-gold via-tango-red to-tango-gold -mt-4.5 md:-mt-4 lg:-mt-5 pr-4 pt-4">
                         {rest}
                     </span>
                 </h1>
