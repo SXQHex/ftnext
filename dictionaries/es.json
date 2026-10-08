@@ -12,7 +12,7 @@
         "contact": "Contacto",
         "cta": "Clase de Prueba Gratis",
         "login": "Acceso Miembros"
-    }, 
+    },
     "footer": {
         "slogan": "Técnica sólida, comunidad genuina. 20+ años de pasión.",
         "linksTitle": "Navegación",
@@ -105,7 +105,8 @@
             }
         ],
         "button": "Reservá tu lugar",
-        "whatsappMessage": "¡Hola! Te escribo desde la web de Fethiye Tango. Quisiera información y reservar un lugar para el evento \"{title}\"."
+        "whatsappMessage": "¡Hola! Te escribo desde la web de Fethiye Tango. Quisiera información y reservar un lugar para el evento \"{title}\".",
+        "seoDescription": "Descubre las clases semanales de Tango Argentino de Fethiye Tango Club, con fundamentos para principiantes, técnica, práctica y milongas."
     },
     "trainers": {
         "eyebrow": "PROFESORES",
@@ -162,7 +163,8 @@
                     "desc": "Institucionalización de 20 años de experiencia и el legado de cientos de alumnos."
                 }
             ]
-        }
+        },
+        "seoDescription": "Conoce a Erkin Kunbuk, fundador y director de Fethiye Tango Club, y descubre su trayectoria, método de enseñanza y enfoque basado en Buenos Aires."
     },
     "atolye": {
         "eyebrow": "TALLERES",
@@ -186,7 +188,8 @@
             "bookGeneral": "Hola, quisiera reservar un lugar para el taller.",
             "ask": "¿Me darías información detallada sobre el programa del taller \"{title}\"?",
             "askGeneral": "¿Me darías información detallada sobre el programa de talleres?"
-        }
+        },
+        "seoDescription": "Explora los talleres de Fethiye Tango sobre conciencia corporal, comunicación con la pareja, intención y musicalidad para profundizar en el Tango Argentino."
     },
     "formCommon": {
         "nameLabel": "Tu nombre y apellido",
@@ -243,7 +246,8 @@
             ],
             "whatsappButtonTitle": "+90 544 641 5745",
             "whatsappButtonLabel": "Enviar mensaje ahora"
-        }
+        },
+        "seoDescription": "Contacta con Fethiye Tango Club para clases de prueba e información de inscripción, con detalles del estudio y atención directa por WhatsApp en Fethiye."
     },
     "blog": {
         "eyebrow": "ARCHIVO",
@@ -260,7 +264,8 @@
                 "description": "Es hora de dar tu primer paso. Súmate a la comunidad más apasionada de Fethiye.",
                 "button": "Empezá ahora"
             }
-        }
+        },
+        "seoDescription": "Descubre los artículos de Fethiye Tango Club sobre Tango Argentino, abrazo, musicalidad, técnica y cultura del tango."
     },
     "trialFormHeader": {
         "label": "Sumate",
