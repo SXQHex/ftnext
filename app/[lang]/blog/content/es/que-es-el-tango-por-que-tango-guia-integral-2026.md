@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es el tango? ¿Por qué tango? (Guía Integral 2026)
-date: 1 de febrero de 2026
+date: '2026-02-01'
 excerpt: >-
   ¿Qué es el tango? ¿Es sólo una danza o un lenguaje de comunicación? Descubra
   todo, desde los beneficios del tango para la salud cerebral hasta su impacto
