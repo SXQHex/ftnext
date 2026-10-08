@@ -291,7 +291,8 @@
         "description": "We may use optional analytics and marketing technologies to improve the site. You can change your choice at any time.",
         "accept": "Accept",
         "reject": "Reject",
-        "privacy": "Privacy Policy"
+        "privacy": "Privacy Policy",
+        "manage": "Manage preferences"
     },
     "login": {
         "title": "Welcome Back",
