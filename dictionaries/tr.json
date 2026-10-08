@@ -206,6 +206,7 @@
             "intermediate": "Orta / İleri Seviye"
         },
         "consent": "Kişisel verilerimin iletişim ve kayıt talebimin yürütülmesi amacıyla işlenmesine açık rıza veriyorum.",
+        "marketingConsent": "Kampanya, etkinlik ve tanıtımlardan haberdar edilmek için iletişim bilgilerimin kullanılmasına izin veriyorum.",
         "submitting": "Gönderiliyor...",
         "systemError": "Bir sorun oluştu. Lütfen WhatsApp üzerinden ulaşın."
     },
@@ -284,6 +285,13 @@
         "readFullArticle": "Yazının Tamamını Oku",
         "bookSpot": "Yerini Ayırt",
         "close": "[ Kapat ]"
+    },
+    "cookieConsent": {
+        "title": "Çerez ve ölçüm tercihleri",
+        "description": "Siteyi geliştirmek için isteğe bağlı analiz ve pazarlama teknolojileri kullanabiliriz. Tercihinizi dilediğiniz zaman değiştirebilirsiniz.",
+        "accept": "Kabul et",
+        "reject": "Reddet",
+        "privacy": "Gizlilik Politikası"
     },
     "login": {
         "title": "Tekrar Hoş Geldiniz",
