@@ -5,7 +5,7 @@ excerpt: >-
   That first step you postpone is actually the beginning of a new life, not a
   dance. Discover why today is the best time to enter the fascinating world of
   tango.
-image: /images/blog/tango-ilk-adim.jpg
+image: /images/workshop-atolye.webp
 originSlug: ilk-adim
 slugs:
   tr: ilk-adim
