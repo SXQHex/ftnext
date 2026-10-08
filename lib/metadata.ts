@@ -66,6 +66,7 @@ export async function generatePageMetadata({
   ogImage?: string;
   type?: "website" | "article";
   publishedTime?: string;
+  modifiedTime?: string;
 }): Promise<Metadata> {
   const { lang, slug } = await params;
   const { canonical, languages } = buildAlternates(
