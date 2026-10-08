@@ -96,6 +96,7 @@ export async function generatePageMetadata({
       type,
       ...(absoluteImage ? { images: [absoluteImage] } : {}),
       ...(type === "article" && publishedTime ? { publishedTime } : {}),
+      ...(type === "article" && modifiedTime ? { modifiedTime } : {}),
     },
   };
 }
@@ -167,5 +168,6 @@ export async function getBlogPostMetadata(
     ogImage: post.image,
     type: "article",
     publishedTime: post.date,
+    modifiedTime: post.updatedAt,
   });
 }
