@@ -1,6 +1,7 @@
 ---
 title: Tango Nedir? Neden Tango Yapılır? (Kapsamlı Rehber 2026)
 date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Tango nedir? Sadece bir dans mı yoksa bir iletişim dili mi? Tangonun beyin
   sağlığına faydalarından Fethiye'deki sosyal etkisine kadar her şeyi keşfedin.
