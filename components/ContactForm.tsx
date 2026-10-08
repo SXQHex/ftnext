@@ -220,7 +220,13 @@ export default function ContactForm({
 
             {showConsent && dict.consent && (
                 <label className="flex items-center gap-3 text-[12px] text-tango-text/60 cursor-pointer group py-2">
-                    <input type="checkbox" required className="accent-tango-red w-4 h-4" />
+                    <input
+                        type="checkbox"
+                        required
+                        checked={formData.consent}
+                        onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
+                        className="accent-tango-red w-4 h-4"
+                    />
                     <span className="group-hover:text-tango-text transition-colors leading-tight">{dict.consent}</span>
                 </label>
             )}
