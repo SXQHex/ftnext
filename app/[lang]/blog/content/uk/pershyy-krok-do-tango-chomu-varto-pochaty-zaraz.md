@@ -7,12 +7,7 @@ excerpt: >-
   світ танго.
 image: /images/workshop-atolye.webp
 originSlug: ilk-adim
-slugs:
-  tr: ilk-adim
-  en: first-step-to-tango-why-should-you-start-now
-  ru: pervyi-shag-k-tango-pochemu-stoit-nachat-seichas
-  uk: pershyy-krok-do-tango-chomu-varto-pochaty-zaraz
-  es: primer-paso-al-tango-por-que-deberia-empezar-ahora
+slug: pershyy-krok-do-tango-chomu-varto-pochaty-zaraz
 ---
 Наше життя часто сповнене мрій, про які ми говоримо: «Я зроблю це одного разу». «Одного разу я почну займатися спортом», «колись я буду грати на цьому інструменті» і найпопулярніша: «Одного разу я навчуся танго». Але цей знаменитий «один день» ніколи не з’являється в календарі. Однак танго — це не просто запис на курси танців; Це подорож відкриття себе, музики та інших у зовсім іншому вимірі. Поки мелодії мілонги піднімаються на заході Фетхіє, давайте розберемося, чому вам більше не варто чекати, через фізичну та духовну анатомію танго. 
 
