@@ -16,7 +16,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
   return (
     <main className="relative w-full">
       <HeroSection content={dict.home.hero} />
-      <FeatureSection content={dict.home.features} />
+      <FeatureSection content={dict.home.features} lang={lang} />
       <CTASection content={dict.home.cta} />
     </main>
   );
