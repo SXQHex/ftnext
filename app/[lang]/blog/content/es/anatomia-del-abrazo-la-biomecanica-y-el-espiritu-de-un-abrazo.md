@@ -1,6 +1,7 @@
 ---
 title: 'Anatomía del abrazo: la biomecánica y el espíritu de un abrazo'
 date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Abrazo no es sólo un agarre, es una maravilla de la ingeniería que se extiende
   desde la columna hasta la punta de los dedos. Examinamos anatómica y
