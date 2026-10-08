@@ -56,6 +56,7 @@ export async function generatePageMetadata({
   ogImage,
   type = "website",
   publishedTime,
+  modifiedTime,
 }: {
   params: PageParams;
   section: string;
