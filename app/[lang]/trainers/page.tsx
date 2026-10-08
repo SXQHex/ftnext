@@ -110,7 +110,7 @@ export default async function TrainersPage({ params }: { params: Promise<{ lang:
 
                                 {/* DİĞER DÖNEMLER */}
                                 <div className="grid gap-2">
-                                    {content.career.timeline.map((item: any, i: number) => (
+                                    {content.career.timeline.map((item, i) => (
                                         <div
                                             key={i}
                                             className="group grid md:grid-cols-[200px_1fr] gap-10 p-8 hover:bg-white/3 rounded-[30px] transition-all border border-transparent hover:border-white/5"
