@@ -3,7 +3,12 @@ import { getAllPosts } from "./data-access";
 import { ExpandableTangoCard } from "@/components/ui/ExpandableTangoCard";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
 import JsonLd from "@/components/JsonLd";
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/blog" });
+}
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
