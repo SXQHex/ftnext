@@ -9,6 +9,7 @@ interface AnalyticsConsentDictionary {
     accept: string;
     reject: string;
     privacy: string;
+    privacyHref: string;
 }
 
 const CONSENT_KEY = "ftc-optional-consent";
@@ -56,7 +57,7 @@ export default function AnalyticsConsent({
                             <p className="mt-1 text-xs leading-relaxed text-tango-text/70">
                                 {dict.description}{" "}
                                 <a
-                                    href={dict.privacy}
+                                    href={dict.privacyHref}
                                     className="text-tango-red underline underline-offset-2"
                                 >
                                     {dict.privacy}
