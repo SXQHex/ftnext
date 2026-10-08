@@ -5,7 +5,7 @@ excerpt: >-
   Той перший крок, який ви відкладаєте, насправді є початком нового життя, а не
   танцю. Дізнайтеся, чому сьогодні найкращий час, щоб поринути у захоплюючий
   світ танго.
-image: /images/blog/tango-ilk-adim.jpg
+image: /images/workshop-atolye.webp
 originSlug: ilk-adim
 slugs:
   tr: ilk-adim
