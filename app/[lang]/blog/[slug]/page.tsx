@@ -71,6 +71,12 @@ export default async function BlogPostPage({ params }: Props) {
     if (!post) notFound();
 
     const htmlContent = await marked.parse(post.content);
+    const formattedDate = new Intl.DateTimeFormat(lang, {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+    }).format(new Date(`${post.date}T00:00:00Z`));
 
     // Başlıkları ayıklama
     const h2Regex = /^##\s+(.*$)/gm;
@@ -118,7 +124,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <div className="absolute bottom-16 left-0 w-full px-6">
                     <div className="container mx-auto max-w-5xl">
                         <div className="flex items-center gap-4 mb-6 text-[10px] font-black uppercase tracking-[0.4em] text-tango-gold">
-                            <span>{post.date}</span>
+                            <span>{formattedDate}</span>
                             <span className="h-1 w-1 rounded-full bg-tango-gold/30"></span>
                             <span>{post.readingTime}</span>
                         </div>
