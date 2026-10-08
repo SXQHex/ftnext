@@ -5,7 +5,7 @@ excerpt: >-
   Ertelediğiniz o ilk adım aslında bir dansın değil, yeni bir hayatın
   başlangıcıdır. Tangonun büyüleyici dünyasına girmek için neden en doğru
   zamanın bugün olduğunu keşfedin.
-image: /images/blog/tango-ilk-adim.jpg
+image: /images/workshop-atolye.webp
 originSlug: ilk-adim
 slugs:
   tr: ilk-adim
