@@ -37,6 +37,8 @@ export default async function RegistrationPage({ params }: PageProps) {
                 <PageHeader
                     eyebrow={dict.registrationPage.eyebrow}
                     title={dict.registrationPage.title}
+                    fullWidth
+                    fitTitle
                 />
                 <RegistrationForm dict={formDict} />
             </div>
