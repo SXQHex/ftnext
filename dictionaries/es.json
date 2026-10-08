@@ -206,6 +206,7 @@
             "intermediate": "Intermedio / Avanzado"
         },
         "consent": "Doy mi consentimiento expreso para el tratamiento de mis datos personales con el fin de gestionar mi solicitud de contacto o registro.",
+        "marketingConsent": "Autorizo el uso de mis datos de contacto para informarme sobre campañas, eventos y promociones.",
         "submitting": "Enviando...",
         "systemError": "Ha ocurrido un error. Escríbenos por WhatsApp para que podamos ayudarte."
     },
@@ -284,6 +285,13 @@
         "readFullArticle": "Leer el artículo completo",
         "bookSpot": "Reserva tu lugar",
         "close": "[ Cerrar ]"
+    },
+    "cookieConsent": {
+        "title": "Preferencias de cookies y medición",
+        "description": "Podemos utilizar tecnologías opcionales de análisis y marketing para mejorar el sitio. Puede cambiar su elección en cualquier momento.",
+        "accept": "Aceptar",
+        "reject": "Rechazar",
+        "privacy": "Política de privacidad"
     },
     "login": {
         "title": "Bienvenido de nuevo",
