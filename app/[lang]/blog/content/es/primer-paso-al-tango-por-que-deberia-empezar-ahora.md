@@ -1,6 +1,6 @@
 ---
 title: 'Primer paso al tango: ¿por qué debería empezar ahora?'
-date: 1 de febrero de 2026
+date: '2026-02-01'
 excerpt: >-
   Ese primer paso que pospones es en realidad el comienzo de una nueva vida, no
   un baile. Descubra por qué hoy es el mejor momento para adentrarse en el
