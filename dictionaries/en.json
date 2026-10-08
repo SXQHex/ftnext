@@ -230,6 +230,11 @@
         "whatsappConfirm": "Confirm on WhatsApp",
         "whatsappMessage": "Hello, I am {name} and I have filled out the registration form, I have a question..."
     },
+    "registrationPage": {
+        "eyebrow": "Registration",
+        "title": "Registration Form",
+        "seoDescription": "Complete your Fethiye Tango Club registration by sharing your level and partner information."
+    },
     "contact": {
         "eyebrow": "Contact & Registration",
         "title": "FIRST STEP",
