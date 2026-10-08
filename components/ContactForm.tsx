@@ -48,7 +48,8 @@ export default function ContactForm({
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
-        level: "zero"
+        level: "zero",
+        consent: false,
     });
 
     const validatePhone = (number: string) => {
