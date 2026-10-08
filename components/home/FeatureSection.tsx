@@ -23,7 +23,7 @@ interface Feature {
     className: string;
 }
 
-export function FeatureSection({ content }: { content: Awaited<ReturnType<typeof getDictionary>>["home"]["features"] }) {
+export function FeatureSection({ content, lang }: { content: Awaited<ReturnType<typeof getDictionary>>["home"]["features"]; lang: string }) {
     return (
         <section className="py-24 px-8 relative overflow-hidden">
             <div className="mx-auto max-w-7xl"> {/* Container yerine max-w-7xl daha garantidir */}
@@ -39,7 +39,7 @@ export function FeatureSection({ content }: { content: Awaited<ReturnType<typeof
                     {features.map((feature, index) => (
                         <BentoCard
                             key={feature.title}
-                            feature={{ ...feature, ...content.items[index] }}
+                            feature={{ ...feature, ...content.items[index], slug: `/${lang}${feature.slug}` }}
                             index={index}
                         />
                     ))}
