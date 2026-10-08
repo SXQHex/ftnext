@@ -5,8 +5,9 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { useModal } from "@/components/ModalContext";
 import { TangoButton } from "../ui/TangoButton";
+import type { getDictionary } from "@/get-dictionary";
 
-export function HeroSection({ content }: { content: any }) {
+export function HeroSection({ content }: { content: Awaited<ReturnType<typeof getDictionary>>["home"]["hero"] }) {
     const { openModal } = useModal();
     return (
         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center ">
