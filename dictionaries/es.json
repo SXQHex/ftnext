@@ -216,18 +216,19 @@
         "whatsappMessage": "Hola, soy {name}. He completado el formulario de contacto, tengo una pregunta..."
     },
     "registrationForm": {
-        "partnerLabel": "¿Tienes pareja de tango?",
+        "partnerLabel": "¿Vienes con pareja de baile?",
         "partnerOptions": {
             "no": "No, voy por mi cuenta",
-            "yes": "Sí, tengo pareja"
+            "yes": "Sí, vengo con pareja"
         },
         "partnerNameLabel": "Nombre de tu pareja",
         "partnerNamePlaceholder": "Ana García",
-        "submit": "Enviar inscripción",
+        "submit": "Inscribirme",
         "successTitle": "¡Hemos recibido tu inscripción!",
         "successMessage": "Gracias. Hemos recibido tus datos y te llamaremos lo antes posible. Si tienes alguna pregunta, escríbenos por WhatsApp.",
         "whatsappConfirm": "Escribir por WhatsApp",
-        "whatsappMessage": "Hola, soy {name}. Acabo de enviar mi inscripción y quería consultar algunos detalles."
+        "whatsappMessage": "Hola, soy {name}. Acabo de enviar mi inscripción y quería consultar algunos detalles.",
+        "newRegistration": "Nueva inscripción"
     },
     "registrationPage": {
         "eyebrow": "Inscripción",
