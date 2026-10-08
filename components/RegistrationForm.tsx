@@ -259,7 +259,7 @@ export default function RegistrationForm({
                             type="radio"
                             name="mode"
                             value="0"
-                            checked={mode === "tek"}
+                            checked={mode === 0}
                             onChange={() => setMode(0)}
                             className="sr-only"
                         />
@@ -276,7 +276,7 @@ export default function RegistrationForm({
                             type="radio"
                             name="mode"
                             value="1"
-                            checked={mode === "partnerli"}
+                            checked={mode === 1}
                             onChange={() => setMode(1)}
                             className="sr-only"
                         />
@@ -286,7 +286,7 @@ export default function RegistrationForm({
             </fieldset>
 
             {/* Partner Adı */}
-            {mode === "partnerli" && (
+            {mode === 1 && (
                 <div className="group flex flex-col gap-1.5 animate-in fade-in duration-300">
                     <label htmlFor="partnerName" className={labelClasses}>{dict.partnerNameLabel}</label>
                     <input
