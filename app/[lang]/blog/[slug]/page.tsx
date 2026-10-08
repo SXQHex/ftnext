@@ -82,6 +82,7 @@ export default async function BlogPostPage({ params }: Props) {
     const headings: { id: string; text: string }[] = [];
     const usedIds = new Set<string>();
     let match;
+
     while ((match = h2Regex.exec(post.content)) !== null) {
         const text = match[1].trim();
         const baseId = text
@@ -94,8 +95,9 @@ export default async function BlogPostPage({ params }: Props) {
 
         let id = baseId || "section";
         let suffix = 2;
+
         while (usedIds.has(id)) {
-            id = `${baseId || "section"}-${suffix++}`;
+            id = (baseId || "section") + "-" + suffix++;
         }
 
         usedIds.add(id);
@@ -103,23 +105,14 @@ export default async function BlogPostPage({ params }: Props) {
     }
 
     let processedHtml = htmlContent;
-    headings.forEach(h => {
-        const escapedText = h.text.replace(/[.*+?^$\{\}()|[\]\\]/g, "\\    const h2Regex = /^##\s+(.*$)/gm;
-    const headings: { id: string; text: string }[] = [];
-    let match;
-    while ((match = h2Regex.exec(post.content)) !== null) {
-        const text = match[1];
-        const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-        headings.push({ id, text });
-    }
 
-    let processedHtml = htmlContent;
-    headings.forEach(h => {
-        const pattern = new RegExp(`<h2>${h.text}</h2>`, 'g');
-        processedHtml = processedHtml.replace(pattern, `<h2 id="${h.id}">${h.text}</h2>`);
-    });");
+    headings.forEach((heading) => {
+        const escapedText = heading.text.replace(/[.*+?^$\{\}()|[\]\\]/g, "\\$&");
         const pattern = new RegExp("<h2>" + escapedText + "</h2>", "g");
-        processedHtml = processedHtml.replace(pattern, '<h2 id="' + h.id + '">' + h.text + "</h2>");
+        processedHtml = processedHtml.replace(
+            pattern,
+            '<h2 id="' + heading.id + '">' + heading.text + "</h2>"
+        );
     });
 
     return (
