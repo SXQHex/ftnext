@@ -45,10 +45,9 @@ export default function GizlilikPage() {
                     <section>
                         <h2 className="text-xl font-bold text-[#efe6e3]">5. Çerezler ve Ölçüm</h2>
                         <p>
-                            Site genelinde Google Tag Manager yüklenmektedir. Tag Manager konteynerinde hangi etiketlerin çalıştığına bağlı olarak
-                            çerezler veya benzeri teknik tanımlayıcılar kullanılabilir. Reklam, pazarlama veya zorunlu olmayan analitik teknolojiler
-                            açısından gerekli izin yönetimi ayrıca uygulanmalıdır; bu politika, teknik olarak çalıştırılmayan bir izin mekanizmasını
-                            varmış gibi göstermeyi amaçlamaz.
+                            Google Tag Manager, ziyaretçi isteğe bağlı çerez ve ölçüm tercihini kabul etmeden önce yüklenmez. Kabul edilmesi halinde
+                            Tag Manager konteynerinde yapılandırılan analitik veya pazarlama etiketleri çalışabilir. Ziyaretçi tercihini sonradan
+                            değiştirebilir. Zorunlu olmayan etiketler, ilgili izin olmadan çalıştırılmamalıdır.
                         </p>
                     </section>
 
