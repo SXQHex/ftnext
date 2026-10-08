@@ -2,6 +2,11 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { i18n, type Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 import Image from "next/image";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/trainers" });
+}
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
