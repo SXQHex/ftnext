@@ -83,12 +83,14 @@ export default function ContactForm({
                 throw new Error(resData.error || dict.systemError);
             }
 
-            sendGTMEvent({
-                event: 'form_submit_success',
-                form_variant: variant, // 'minimal' mi 'standard' mı?
-                user_level: formData.level, // Öğrenci adayının seviyesi ne?
-                page_location: pathname // Hangi sayfadaki formdan geldi?
-            });
+            if (hasOptionalConsent()) {
+                sendGTMEvent({
+                    event: 'form_submit_success',
+                    form_variant: variant,
+                    user_level: formData.level,
+                    page_location: pathname,
+                });
+            }
 
             setStatus("success");
         } catch (error) {
@@ -231,6 +233,17 @@ export default function ContactForm({
                         className="accent-tango-red w-4 h-4"
                     />
                     <span className="group-hover:text-tango-text transition-colors leading-tight">{dict.consent}</span>
+                </label>
+            )}
+            {dict.marketingConsent && (
+                <label className="flex items-start gap-3 text-[12px] text-tango-text/60 cursor-pointer group py-2">
+                    <input
+                        type="checkbox"
+                        checked={formData.marketingConsent}
+                        onChange={(e) => setFormData({ ...formData, marketingConsent: e.target.checked })}
+                        className="accent-tango-red mt-0.5 w-4 h-4"
+                    />
+                    <span className="group-hover:text-tango-text transition-colors leading-tight">{dict.marketingConsent}</span>
                 </label>
             )}
 
