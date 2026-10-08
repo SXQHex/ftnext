@@ -90,6 +90,12 @@ export async function POST(req: Request) {
     const partnerName = String(body.partnerName ?? "").trim();
     const levelValue = body.level;
     const consent = body.consent;
+    const marketingConsentValue = body.marketingConsent;
+    const marketingConsent = marketingConsentValue === undefined ? false : marketingConsentValue;
+
+    if (typeof marketingConsent !== "boolean") {
+        return NextResponse.json({ error: "Geçersiz iletişim tercihi." }, { status: 400 });
+    }
 
     if (modeValue !== 0 && modeValue !== 1) {
         return NextResponse.json({ error: "Geçersiz katılım şekli." }, { status: 400 });
@@ -130,6 +136,7 @@ export async function POST(req: Request) {
                 level,
                 mode,
                 partner_name: mode === 1 ? partnerName : null,
+                marketing_consent: marketingConsent,
             },
         ]);
         if (dbError) throw dbError;
