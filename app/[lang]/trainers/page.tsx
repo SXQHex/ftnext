@@ -48,7 +48,7 @@ export default async function TrainersPage({ params }: { params: Promise<{ lang:
 
                         {/* SEVİYE 1: ÖZET VE VİZYON */}
                         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {content.vision.map((item: any, i: number) => (
+                            {content.vision.map((item, i: number) => (
                                 <div
                                     key={i}
                                     className="p-8 bg-white/3 border border-white/5 rounded-3xl group hover:border-tango-gold/50 transition-all duration-500"
