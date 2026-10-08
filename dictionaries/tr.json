@@ -291,7 +291,8 @@
         "description": "Siteyi geliştirmek için isteğe bağlı analiz ve pazarlama teknolojileri kullanabiliriz. Tercihinizi dilediğiniz zaman değiştirebilirsiniz.",
         "accept": "Kabul et",
         "reject": "Reddet",
-        "privacy": "Gizlilik Politikası"
+        "privacy": "Gizlilik Politikası",
+        "manage": "Tercihleri yönet"
     },
     "login": {
         "title": "Tekrar Hoş Geldiniz",
