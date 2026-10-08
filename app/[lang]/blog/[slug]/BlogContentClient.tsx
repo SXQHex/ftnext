@@ -41,35 +41,51 @@ export default function BlogContentClient({
 
 
     useEffect(() => {
-        const handleScroll = () => {
-            const h2Elements = Array.from(document.querySelectorAll(".tango-article h2[id]"));
-            const scrollOffset = 200;
+        const headingElements = Array.from(
+            document.querySelectorAll<HTMLElement>(".tango-article h2[id]")
+        );
 
-            const currentSection = h2Elements.reduce((selected, el) => {
-                const rect = el.getBoundingClientRect();
-                return rect.top <= scrollOffset ? el : selected;
-            }, null as Element | null);
+        if (headingElements.length === 0) return;
 
-            setActiveId(currentSection?.id ?? "");
-        };
+        setActiveId(headingElements[0].id);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const visibleHeadings = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort(
+                        (a, b) =>
+                            a.boundingClientRect.top - b.boundingClientRect.top
+                    );
+
+                const activeHeading = visibleHeadings[0];
+                if (activeHeading) {
+                    setActiveId(activeHeading.target.id);
+                }
+            },
+            {
+                rootMargin: "-140px 0px -65% 0px",
+                threshold: 0,
+            }
+        );
+
+        headingElements.forEach((heading) => observer.observe(heading));
 
         const handleLinkClick = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            const href = target.closest('a')?.getAttribute("href");
+            const href = target.closest("a")?.getAttribute("href");
+
             if (href === "#open-modal") {
                 e.preventDefault();
-                openModal(`blog_detail_${slug}`);
+                openModal("blog_detail_" + slug);
             }
         };
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        const timer = setTimeout(handleScroll, 500);
         document.addEventListener("click", handleLinkClick);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            observer.disconnect();
             document.removeEventListener("click", handleLinkClick);
-            clearTimeout(timer);
         };
     }, [openModal, slug]);
     // DİKKAT: htmlContent'i buraya koyma! 
@@ -101,8 +117,7 @@ export default function BlogContentClient({
                                 className={`text-[10px] font-black uppercase tracking-widest transition-all duration-500
                                     ${activeId === h.id ? "text-tango-gold translate-x-2" : "text-white/20"}`}
                             >
-                                <span className="mr-2 opacity-30">{String(index + 1).padStart(2, "0")}.</span>
-                                {h.text.replace(/^\d+\.\s*/, "")}
+                                {h.text}
                             </a>
                         ))}
                     </nav>
