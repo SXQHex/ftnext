@@ -122,11 +122,21 @@ export async function getPageMetadata({
         "/iletisim": dict.contact.title,
       }[section];
 
+  const description = section === "/"
+    ? dict.seo.description
+    : {
+        "/program": dict.program.seoDescription,
+        "/trainers": dict.trainers.seoDescription,
+        "/atolye": dict.atolye.seoDescription,
+        "/blog": dict.blog.seoDescription,
+        "/iletisim": dict.contact.seoDescription,
+      }[section];
+
   return generatePageMetadata({
     params,
     section,
     title,
-    description: dict.seo.description,
+    description,
     ogImage,
   });
 }
