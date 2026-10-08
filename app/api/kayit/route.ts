@@ -17,35 +17,54 @@ const LEVEL_LABELS: Record<Level, string> = {
 const escapeHtml = (s: string) =>
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-// Upstash Redis istemcisini oluştur
-const redis = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL || "",
-    token: process.env.UPSTASH_REDIS_REST_TOKEN || "",
-});
+// Upstash Redis istemcisini lazily oluşturuyoruz; build sırasında env eksik olsa bile modül yüklenebilir.
+const getRatelimit = (() => {
+    let instance: Ratelimit | null = null;
 
-// Rate limit kuralı: Aynı IP'den 1 dakika içinde en fazla 5 istek (Kendi ihtiyacına göre ayarlayabilirsin)
-const ratelimit = new Ratelimit({
-    redis: redis,
-    limiter: Ratelimit.slidingWindow(5, "1 m"),
-    analytics: true,
-});
+    return () => {
+        const url = process.env.UPSTASH_REDIS_REST_URL;
+        const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+        if (!url || !token) {
+            return null;
+        }
+
+        if (!instance) {
+            instance = new Ratelimit({
+                redis: new Redis({ url, token }),
+                limiter: Ratelimit.slidingWindow(5, "1 m"),
+                prefix: "ftnext:registration",
+                timeout: 1000,
+                analytics: true,
+            });
+        }
+
+        return instance;
+    };
+})();
 
 export async function POST(req: Request) {
     // RATE LIMITING KONTROLÜ
-    // Vercel veya diğer proxy'lerin arkasındaysan doğru IP'yi almak için header'ları kontrol ediyoruz
-    const ip = req.headers.get("x-forwarded-for") ?? req.headers.get("x-real-ip") ?? "127.0.0.1";
-    
-    try {
-        const { success } = await ratelimit.limit(ip);
-        if (!success) {
-            return NextResponse.json(
-                { error: "Çok fazla kayıt isteği gönderdiniz. Lütfen biraz bekleyip tekrar deneyin." },
-                { status: 429 } // 429 Too Many Requests
-            );
+    const ip =
+        req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+        req.headers.get("x-real-ip")?.trim() ??
+        "unknown";
+    const ratelimit = getRatelimit();
+
+    if (ratelimit) {
+        try {
+            const { success } = await ratelimit.limit(ip);
+            if (!success) {
+                return NextResponse.json(
+                    { error: "Çok fazla kayıt isteği gönderdiniz. Lütfen biraz bekleyip tekrar deneyin." },
+                    { status: 429 }
+                );
+            }
+        } catch (error) {
+            console.error("Rate limit bypass:", error);
         }
-    } catch (error) {
-        // Upstash geçici olarak çökerse form gönderimini engellememek (fail-open) iyi bir pratiktir
-        console.error("Rate limit hatası (Geçildi):", error);
+    } else {
+        console.warn("Upstash Redis env vars missing; rate limiting skipped.");
     }
 
     const supabaseUrl = process.env.SUPABASE_URL;
