@@ -1,6 +1,6 @@
 ---
 title: What is Tango? Why Tango? (Comprehensive Guide 2026)
-date: 'February 1, 2026'
+date: '2026-02-01'
 excerpt: >-
   What is tango? Is it just a dance or a language of communication? Discover
   everything from tango's benefits for brain health to its social impact in
