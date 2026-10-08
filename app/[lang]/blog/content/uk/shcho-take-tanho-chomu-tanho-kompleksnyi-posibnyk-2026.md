@@ -14,12 +14,7 @@ keywords: >-
   Що таке танго, для чого роблять танго, користь танго, курс танго фетхіє,
   аргентинське танго, що таке мілонга
 originSlug: tango-nedir
-slugs:
-  tr: tango-nedir
-  en: what-is-tango-why-tango-comprehensive-guide-2026
-  ru: chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g
-  uk: shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026
-  es: que-es-el-tango-por-que-tango-guia-integral-2026
+slug: shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026
 ---
 Коли згадується танго, першими образами, які спадають на думку, зазвичай є червона троянда, суворий погляд, чорний костюм і драматичні рухи ніг. Але ці голлівудські кліше являють собою лише дуже поверхневу, а часом і оманливу поверхню того, чим насправді є танго. танго; Насправді це не танець, а мова спілкування, біологічна потреба та емоційна медитація серед шуму сучасного світу. 
 
