@@ -26,12 +26,6 @@ export async function generateMetadata({
   const lang = rawLang as Locale;
   const dict = await getDictionary(lang);
 
-  // Hreflang alternates: Bütün diller için ana sayfa linklerini oluşturuyoruz.
-  const languages: Record<string, string> = {};
-  i18n.locales.forEach((locale) => {
-    languages[locale] = `/${locale}`;
-  });
-
   return {
     metadataBase: new URL("https://fethiyetango.com"),
     title: {
@@ -39,10 +33,6 @@ export async function generateMetadata({
       template: `%s | ${dict.seo.title}`,
     },
     description: dict.seo.description,
-    alternates: {
-      canonical: `/${lang}`,
-      languages: languages,
-    },
     icons: {
       icon: [
         { url: "/icon.svg", type: "image/svg+xml" },
@@ -51,12 +41,16 @@ export async function generateMetadata({
       apple: "/apple-icon.png",
     },
     openGraph: {
-      title: dict.seo.title,
-      description: dict.seo.description,
-      url: `https://fethiyetango.com/${lang}`,
-      siteName: "Fethiye Tango",
-      locale: lang === 'en' ? 'en_US' : lang === 'tr' ? 'tr_TR' : lang === 'ru' ? 'ru_RU' : lang === 'uk' ? 'uk_UA' : 'es_ES',
-      type: "website",
+      siteName: "Fethiye Tango Kulübü",
+      locale: lang === "en"
+        ? "en_US"
+        : lang === "tr"
+          ? "tr_TR"
+          : lang === "ru"
+            ? "ru_RU"
+            : lang === "uk"
+              ? "uk_UA"
+              : "es_ES",
     },
   };
 }
