@@ -14,12 +14,7 @@ keywords: >-
   Что такое танго, зачем занимаются танго, преимущества танго, курс танго в
   Фетхие, аргентинское танго, что такое милонга
 originSlug: tango-nedir
-slugs:
-  tr: tango-nedir
-  en: what-is-tango-why-tango-comprehensive-guide-2026
-  ru: chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g
-  uk: shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026
-  es: que-es-el-tango-por-que-tango-guia-integral-2026
+slug: chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g
 ---
 При упоминании танго первые образы, которые обычно приходят на ум, — это красная роза, строгий взгляд, черный костюм и драматические движения ног. Но эти голливудские клише представляют собой лишь очень поверхностную и иногда вводящую в заблуждение поверхность того, чем на самом деле является танго. Танго; Фактически, это не танец, а язык общения, биологическая потребность и эмоциональная медитация в шуме современного мира. 
 
