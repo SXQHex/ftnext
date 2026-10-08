@@ -5,6 +5,7 @@ import Image from "next/image";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { usePathname } from 'next/navigation';
 import { sendGTMEvent } from '@next/third-parties/google';
+import { hasOptionalConsent } from "@/components/AnalyticsConsent";
 
 export interface ContactFormDictionary {
     nameLabel: string;
@@ -20,6 +21,7 @@ export interface ContactFormDictionary {
         intermediate: string;
     };
     consent?: string;
+    marketingConsent?: string;
     submitting: string;
     systemError: string;
     submit: string;
@@ -50,6 +52,7 @@ export default function ContactForm({
         phone: "",
         level: "zero",
         consent: false,
+        marketingConsent: false,
     });
 
     const validatePhone = (number: string) => {
