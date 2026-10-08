@@ -3,6 +3,11 @@ import { FeatureSection } from "@/components/home/FeatureSection";
 import { CTASection } from "@/components/home/CTASection";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/" });
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
