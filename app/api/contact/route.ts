@@ -83,6 +83,12 @@ export async function POST(req: Request) {
     const phoneInput = String(body.phone ?? "").trim();
     const levelValue = body.level;
     const consent = body.consent;
+    const marketingConsentValue = body.marketingConsent;
+    const marketingConsent = marketingConsentValue === undefined ? false : marketingConsentValue;
+
+    if (typeof marketingConsent !== "boolean") {
+        return NextResponse.json({ success: false, error: "Geçersiz iletişim tercihi." }, { status: 400 });
+    }
 
     if (name.length < 3 || name.length > 100) {
         return NextResponse.json({ success: false, error: "Geçerli bir isim giriniz." }, { status: 400 });
@@ -111,7 +117,7 @@ export async function POST(req: Request) {
     try {
         const { error: dbError } = await supabase
             .from('leads')
-            .insert([{ name, phone: standardizedPhone, level }]);
+            .insert([{ name, phone: standardizedPhone, level, marketing_consent: marketingConsent }]);
 
         if (dbError) {
             if (dbError.code === '23505') {
