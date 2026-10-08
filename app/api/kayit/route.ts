@@ -6,6 +6,7 @@ import { Ratelimit } from "@upstash/ratelimit";
 
 const LEVELS = ["zero", "beginner", "intermediate"] as const;
 type Level = (typeof LEVELS)[number];
+type Mode = 0 | 1;
 
 const LEVEL_LABELS: Record<Level, string> = {
     zero: "Hiç dans etmedim",
@@ -66,9 +67,24 @@ export async function POST(req: Request) {
 
     const fullName = String(body.fullName ?? "").trim();
     const phone = String(body.phone ?? "").trim();
-    const mode = body.mode === "partnerli" ? "partnerli" : "tek";
+    const modeValue = body.mode;
     const partnerName = String(body.partnerName ?? "").trim();
-    const level: Level = LEVELS.includes(body.level as Level) ? (body.level as Level) : "zero";
+    const levelValue = body.level;
+    const consent = body.consent;
+
+    if (modeValue !== 0 && modeValue !== 1) {
+        return NextResponse.json({ error: "Geçersiz katılım şekli." }, { status: 400 });
+    }
+    const mode: Mode = modeValue;
+
+    if (!LEVELS.includes(levelValue as Level)) {
+        return NextResponse.json({ error: "Geçersiz seviye seçimi." }, { status: 400 });
+    }
+    const level = levelValue as Level;
+
+    if (consent !== true) {
+        return NextResponse.json({ error: "Aydınlatma ve veri işleme onayı gereklidir." }, { status: 400 });
+    }
 
     if (fullName.length < 3 || fullName.length > 100) {
         return NextResponse.json({ error: "Lütfen isim soyisim girin." }, { status: 400 });
@@ -81,7 +97,7 @@ export async function POST(req: Request) {
     }
     const e164Phone = parsedPhone.number; // E.164 formatında telefon numarası
 
-    if (mode === "partnerli" && (partnerName.length < 3 || partnerName.length > 100)) {
+    if (mode === 1 && (partnerName.length < 3 || partnerName.length > 100)) {
         return NextResponse.json({ error: "Lütfen partner isim soyisim girin. Ya da tek kayıt yapın." }, { status: 400 });
     }
 
@@ -94,7 +110,7 @@ export async function POST(req: Request) {
                 phone: e164Phone,
                 level,
                 mode,
-                partner_name: mode === "partnerli" ? partnerName : null,
+                partner_name: mode === 1 ? partnerName : null,
             },
         ]);
         if (dbError) throw dbError;
@@ -106,7 +122,7 @@ export async function POST(req: Request) {
                 `👤 <b>Ad:</b> ${escapeHtml(fullName)}\n` +
                 `📱 <b>Tel:</b> ${escapeHtml(phone)}\n` +
                 `💃 <b>Seviye:</b> ${LEVEL_LABELS[level]}\n` +
-                (mode === "partnerli"
+                (mode === 1
                     ? `👫 <b>Partnerli:</b> ${escapeHtml(partnerName)}\n`
                     : `🕺 <b>Tek</b>\n`) +
                 `━━━━━━━━━━━━━━`;
