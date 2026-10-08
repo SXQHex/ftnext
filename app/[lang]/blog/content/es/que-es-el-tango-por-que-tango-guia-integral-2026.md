@@ -15,12 +15,7 @@ keywords: >-
   Que es el tango, por que se hace el tango, beneficios del tango, curso de
   tango fethiye, tango argentino, que es la milonga
 originSlug: tango-nedir
-slugs:
-  tr: tango-nedir
-  en: what-is-tango-why-tango-comprehensive-guide-2026
-  ru: chto-takoe-tango-pochemu-tango-kompleksnoe-rukovodstvo-2026-g
-  uk: shcho-take-tanho-chomu-tanho-kompleksnyi-posibnyk-2026
-  es: que-es-el-tango-por-que-tango-guia-integral-2026
+slug: que-es-el-tango-por-que-tango-guia-integral-2026
 ---
 Cuando se menciona el tango, las primeras imágenes que nos vienen a la mente suelen ser una rosa roja, una mirada severa, un traje negro y movimientos dramáticos de piernas. Pero estos clichés de Hollywood representan sólo una superficie muy superficial y a veces engañosa de lo que realmente es el tango. Tango; De hecho, más que una danza, es un lenguaje de comunicación, una necesidad biológica y una meditación emocional en el ruido del mundo moderno. 
 
