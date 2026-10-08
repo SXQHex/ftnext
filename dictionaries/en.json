@@ -228,7 +228,8 @@
         "successTitle": "Registration received!",
         "successMessage": "Thank you! We've received your registration and will call you as soon as possible. If you have any questions, you can also reach us on WhatsApp.",
         "whatsappConfirm": "Message us on WhatsApp",
-        "whatsappMessage": "Hi, I'm {name}. I've just completed the registration form and would like to ask a few questions."
+        "whatsappMessage": "Hi, I'm {name}. I've just completed the registration form and would like to ask a few questions.",
+        "newRegistration": "Start a new registration"
     },
     "registrationPage": {
         "eyebrow": "Registration",
