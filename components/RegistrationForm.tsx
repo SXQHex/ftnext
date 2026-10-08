@@ -34,6 +34,7 @@ export interface RegistrationFormDictionary {
     successMessage: string;
     whatsappConfirm?: string;
     whatsappMessage?: string;
+    newRegistration: string;
 }
 
 interface RegistrationFormProps {
