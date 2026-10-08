@@ -69,7 +69,7 @@ export default function Footer({ content, navigation, lang }: FooterProps) {
                             <Link href={`/${lang}/atolye`} className="hover:text-tango-red transition-colors">{navigation.atolye}</Link>
                             <Link href={`/${lang}/blog`} className="hover:text-tango-red transition-colors">{navigation.blog}</Link>
                             <Link href={`/${lang}/iletisim`} className="hover:text-tango-red transition-colors">{navigation.contact}</Link>
-                            <Link href={`/${lang}/login`} className="hover:text-tango-red transition-colors text-tango-red/80 font-black italic">{navigation.login}</Link>
+                            {/* <Link href={`/${lang}/login`} className="hover:text-tango-red transition-colors text-tango-red/80 font-black italic">{navigation.login}</Link> */}
                         </div>
                     </div>
 
