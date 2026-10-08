@@ -105,7 +105,8 @@
             }
         ],
         "button": "Yerini Ayırt",
-        "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. \"{title}\" etkinliği için bilgi almak ve yer ayırtmak istiyorum."
+        "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. \"{title}\" etkinliği için bilgi almak ve yer ayırtmak istiyorum.",
+        "seoDescription": "Fethiye Tango Kulübü'nün haftalık Arjantin tango derslerini, başlangıç ve teknik çalışmalarını, pratik ve milonga akışını keşfedin."
     },
     "trainers": {
         "eyebrow": "EĞİTMENLER",
@@ -163,7 +164,8 @@
                     "desc": "100’lerce öğrencinin mirası ve 20 yıllık tecrübenin kurumsallaşması. Tangonun doğru metodoloji ile yaygınlaştırıldığı yeni merkez."
                 }
             ]
-        }
+        },
+        "seoDescription": "Fethiye Tango Kulübü'nün kurucusu ve baş eğitmeni Erkin Kunbuk'un tango yolculuğunu, eğitim metodunu ve Buenos Aires ekolüne dayalı yaklaşımını keşfedin."
     },
     "atolye": {
         "eyebrow": "ATÖLYELER",
@@ -187,7 +189,8 @@
             "bookGeneral": "Merhaba, atölye çalışması için yer ayırtmak istiyorum.",
             "ask": "Merhaba, \"{title}\" başlıklı atölye programı hakkında detaylı bilgi alabilir miyim?",
             "askGeneral": "Merhaba, atölye programı hakkında detaylı bilgi alabilir miyim?"
-        }
+        },
+        "seoDescription": "Fethiye Tango atölyelerinde beden farkındalığı, partner iletişimi, niyet ve müzikalite üzerine derinlemesine çalışmalarla tangonuzu geliştirin."
     },
     "formCommon": {
         "nameLabel": "Adınız ve Soyadınız",
@@ -244,7 +247,8 @@
             ],
             "whatsappButtonTitle": "+90 544 641 5745",
             "whatsappButtonLabel": "Hemen Mesaj Gönder"
-        }
+        },
+        "seoDescription": "Fethiye Tango Kulübü'ne ulaşın, deneme dersi ve kayıt hakkında bilgi alın; stüdyo, dersler ve WhatsApp iletişim seçeneklerini keşfedin."
     },
     "blog": {
         "eyebrow": "ARŞİV",
@@ -261,7 +265,8 @@
                 "description": "Şimdi ilk adımını atma zamanı. Fethiye'nin en tutkulu topluluğuna katıl.",
                 "button": "Hemen Başla"
             }
-        }
+        },
+        "seoDescription": "Arjantin tango, abrazo, müzikalite, teknik ve tango kültürü üzerine Fethiye Tango Kulübü'nün rehberlerini ve yazılarını keşfedin."
     },
     "trialFormHeader": {
         "label": "Katılım",
