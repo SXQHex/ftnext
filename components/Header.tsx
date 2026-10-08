@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'; // Aktif sayfa takibi için
 
-import { useI18n } from "@/components/I18nContext";
 import { TangoButton } from "./ui/TangoButton";
+import rawBlogManifest from "@/app/[lang]/blog/posts-manifest.json";
 
 interface Navigation {
     home: string;
@@ -24,14 +24,19 @@ interface HeaderProps {
     lang: string;
 }
 
+type BlogManifestEntry = {
+    slug: string;
+    slugs: Record<string, string>;
+};
+
+const blogManifest = rawBlogManifest as Record<string, BlogManifestEntry[] | undefined>;
+
 export default function Header({ navigation, lang }: HeaderProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false); // Dil menüsü kontrolü
     const [isScrolled, setIsScrolled] = useState(false); // Scroll durumu
     const { openModal } = useModal();
     const pathname = usePathname();
-    const { routeTranslations } = useI18n();
-
     // Dil listesi
     const languages = [
         { code: 'tr', label: 'TR', full: 'Türkçe' },
@@ -43,12 +48,23 @@ export default function Header({ navigation, lang }: HeaderProps) {
 
     // Dil değiştirme linkini oluşturur
     const getTargetHref = (targetLang: string) => {
-        if (pathname.includes('/blog/') && routeTranslations[targetLang]) {
-            return `/${targetLang}/blog/${routeTranslations[targetLang]}`;
+        const blogPrefix = `/${lang}/blog/`;
+
+        if (pathname.startsWith(blogPrefix)) {
+            const currentSlug = decodeURIComponent(pathname.slice(blogPrefix.length));
+            const currentPost = blogManifest[lang]?.find((post) => post.slug === currentSlug);
+            const targetSlug = currentPost?.slugs[targetLang];
+
+            if (targetSlug) {
+                return `/${targetLang}/blog/${targetSlug}`;
+            }
         }
-        if (pathname.startsWith(`/${lang}`)) {
-            return pathname.replace(`/${lang}`, `/${targetLang}`);
+
+        const langPrefix = `/${lang}`;
+        if (pathname === langPrefix || pathname.startsWith(`${langPrefix}/`)) {
+            return pathname.replace(langPrefix, `/${targetLang}`);
         }
+
         return `/${targetLang}`;
     };
 
