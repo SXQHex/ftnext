@@ -12,7 +12,6 @@ type Props = {
     params: Promise<{ slug: string, lang: Locale }>;
 };
 
-import { RouteTranslator } from '@/components/I18nContext';
 import JsonLd from '@/components/JsonLd';
 
 export async function generateStaticParams() {
@@ -97,7 +96,6 @@ export default async function BlogPostPage({ params }: Props) {
     return (
         <main className="min-h-screen pt-32 pb-20">
             {/* SEO Slug Köprüsü */}
-            <RouteTranslator slugs={post.slugs} />
             <JsonLd type="Article" data={post} lang={lang} />
             <JsonLd
                 type="BreadcrumbList"
