@@ -116,6 +116,7 @@ export default async function BlogPostPage({ params }: Props) {
                     alt={post.title}
                     fill
                     priority
+                    sizes="100vw"
                     className="object-cover grayscale opacity-50"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-tango-black via-tango-black/20 to-transparent" />
