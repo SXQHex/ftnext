@@ -84,7 +84,6 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-tango-red selection:text-white`}
       >
-        <I18nProvider>
           <ModalProvider dict={{
             header: dict.trialFormHeader,
             form: {
@@ -105,7 +104,6 @@ export default async function RootLayout({
             </div>
             <JsonLd lang={lang} />
           </ModalProvider>
-        </I18nProvider>
       </body>
     </html>
   );
