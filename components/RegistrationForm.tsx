@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { hasOptionalConsent } from "@/components/AnalyticsConsent";
 
 export interface RegistrationFormDictionary {
     nameLabel: string;
@@ -27,6 +28,7 @@ export interface RegistrationFormDictionary {
     partnerNameLabel: string;
     partnerNamePlaceholder: string;
     consent?: string;
+    marketingConsent?: string;
     submitting: string;
     systemError: string;
     submit: string;
@@ -65,6 +67,7 @@ export default function RegistrationForm({
         level: "zero" as Level,
         partnerName: "",
         consent: false,
+        marketingConsent: false,
     });
 
     const levelOptions: { value: Level; label: string }[] = [
@@ -101,17 +104,20 @@ export default function RegistrationForm({
                     mode,
                     partnerName: mode === 1 ? formData.partnerName : "",
                     consent: formData.consent,
+                    marketingConsent: formData.marketingConsent,
                 }),
             });
             const data = await res.json().catch(() => ({}));
             if (!res.ok) throw new Error(data.error || dict.systemError);
 
-            sendGTMEvent({
-                event: "registration_submit_success",
-                user_level: formData.level,
-                registration_mode: mode,
-                page_location: pathname,
-            });
+            if (hasOptionalConsent()) {
+                sendGTMEvent({
+                    event: "registration_submit_success",
+                    user_level: formData.level,
+                    registration_mode: mode,
+                    page_location: pathname,
+                });
+            }
 
             setStatus("success");
         } catch (err) {
@@ -121,7 +127,7 @@ export default function RegistrationForm({
     }
 
     function resetForm() {
-        setFormData({ name: "", phone: "", level: "zero", partnerName: "", consent: false });
+        setFormData({ name: "", phone: "", level: "zero", partnerName: "", consent: false, marketingConsent: false });
         setMode(0);
         setStatus("idle");
         setPhoneError("");
@@ -313,6 +319,17 @@ export default function RegistrationForm({
                         className="accent-tango-red w-4 h-4"
                     />
                     <span className="group-hover:text-tango-text transition-colors leading-tight">{dict.consent}</span>
+                </label>
+            )}
+            {dict.marketingConsent && (
+                <label className="flex items-start gap-3 text-[12px] text-tango-text/60 cursor-pointer group py-2">
+                    <input
+                        type="checkbox"
+                        checked={formData.marketingConsent}
+                        onChange={(e) => setFormData({ ...formData, marketingConsent: e.target.checked })}
+                        className="accent-tango-red mt-0.5 w-4 h-4"
+                    />
+                    <span className="group-hover:text-tango-text transition-colors leading-tight">{dict.marketingConsent}</span>
                 </label>
             )}
 
