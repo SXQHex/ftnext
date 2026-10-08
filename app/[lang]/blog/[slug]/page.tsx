@@ -80,6 +80,32 @@ export default async function BlogPostPage({ params }: Props) {
     // Başlıkları ayıklama
     const h2Regex = /^##\s+(.*$)/gm;
     const headings: { id: string; text: string }[] = [];
+    const usedIds = new Set<string>();
+    let match;
+    while ((match = h2Regex.exec(post.content)) !== null) {
+        const text = match[1].trim();
+        const baseId = text
+            .normalize("NFKD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLocaleLowerCase()
+            .replace(/[^\p{L}\p{N}\s-]/gu, "")
+            .trim()
+            .replace(/\s+/g, "-");
+
+        let id = baseId || "section";
+        let suffix = 2;
+        while (usedIds.has(id)) {
+            id = `${baseId || "section"}-${suffix++}`;
+        }
+
+        usedIds.add(id);
+        headings.push({ id, text });
+    }
+
+    let processedHtml = htmlContent;
+    headings.forEach(h => {
+        const escapedText = h.text.replace(/[.*+?^$\{\}()|[\]\\]/g, "\\    const h2Regex = /^##\s+(.*$)/gm;
+    const headings: { id: string; text: string }[] = [];
     let match;
     while ((match = h2Regex.exec(post.content)) !== null) {
         const text = match[1];
@@ -91,6 +117,9 @@ export default async function BlogPostPage({ params }: Props) {
     headings.forEach(h => {
         const pattern = new RegExp(`<h2>${h.text}</h2>`, 'g');
         processedHtml = processedHtml.replace(pattern, `<h2 id="${h.id}">${h.text}</h2>`);
+    });");
+        const pattern = new RegExp("<h2>" + escapedText + "</h2>", "g");
+        processedHtml = processedHtml.replace(pattern, '<h2 id="' + h.id + '">' + h.text + "</h2>");
     });
 
     return (
