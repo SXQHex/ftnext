@@ -10,32 +10,54 @@ type Level = (typeof LEVELS)[number];
 const escapeHtml = (s: string) =>
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-// Upstash Redis İstemcisi
-const redis = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL || "",
-    token: process.env.UPSTASH_REDIS_REST_TOKEN || "",
-});
+// Upstash Redis istemcisini lazily oluşturuyoruz; build sırasında env eksik olsa bile modül yüklenebilir.
+const getRatelimit = (() => {
+    let instance: Ratelimit | null = null;
 
-// Rate limit: 1 dakikada max 5 lead gönderimi
-const ratelimit = new Ratelimit({
-    redis: redis,
-    limiter: Ratelimit.slidingWindow(5, "1 m"),
-    analytics: true,
-});
+    return () => {
+        const url = process.env.UPSTASH_REDIS_REST_URL;
+        const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+        if (!url || !token) {
+            return null;
+        }
+
+        if (!instance) {
+            instance = new Ratelimit({
+                redis: new Redis({ url, token }),
+                limiter: Ratelimit.slidingWindow(5, "1 m"),
+                prefix: "ftnext:contact",
+                timeout: 1000,
+                analytics: true,
+            });
+        }
+
+        return instance;
+    };
+})();
 
 export async function POST(req: Request) {
     // RATE LIMIT KONTROLÜ
-    const ip = req.headers.get("x-forwarded-for") ?? req.headers.get("x-real-ip") ?? "127.0.0.1";
-    try {
-        const { success } = await ratelimit.limit(ip);
-        if (!success) {
-            return NextResponse.json(
-                { success: false, error: "Çok fazla istek gönderdiniz. Lütfen biraz bekleyip tekrar deneyin." },
-                { status: 429 }
-            );
+    const ip =
+        req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+        req.headers.get("x-real-ip")?.trim() ??
+        "unknown";
+    const ratelimit = getRatelimit();
+
+    if (ratelimit) {
+        try {
+            const { success } = await ratelimit.limit(ip);
+            if (!success) {
+                return NextResponse.json(
+                    { success: false, error: "Çok fazla istek gönderdiniz. Lütfen biraz bekleyip tekrar deneyin." },
+                    { status: 429 }
+                );
+            }
+        } catch (error) {
+            console.error("Rate limit bypass:", error);
         }
-    } catch (error) {
-        console.error("Rate limit bypass:", error);
+    } else {
+        console.warn("Upstash Redis env vars missing; rate limiting skipped.");
     }
 
     const supabaseUrl = process.env.SUPABASE_URL;
@@ -75,7 +97,6 @@ export async function POST(req: Request) {
         return NextResponse.json({ success: false, error: "Aydınlatma ve veri işleme onayı gereklidir." }, { status: 400 });
     }
 
-    // Backend Telefon Validasyonu (Güvenlik için şarttır)
     const parsedPhone = parsePhoneNumberFromString(phoneInput, "TR");
     if (!parsedPhone?.isValid() || phoneInput.length > 25) {
         return NextResponse.json({ 
@@ -84,17 +105,14 @@ export async function POST(req: Request) {
         }, { status: 400 });
     }
 
-    // Uluslararası formata çevir (+90544...)
     const standardizedPhone = parsedPhone.number;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     try {
-        // A. SUPABASE'E KAYDET (Leads tablosu)
         const { error: dbError } = await supabase
             .from('leads')
             .insert([{ name, phone: standardizedPhone, level }]);
 
-        // Mükerrer kayıt hatası (PostgreSQL unique violation)
         if (dbError) {
             if (dbError.code === '23505') {
                  return NextResponse.json({ success: false, error: "Bu numarayla daha önce bilgi talebinde bulunulmuş." }, { status: 400 });
@@ -102,14 +120,13 @@ export async function POST(req: Request) {
             throw dbError;
         }
 
-        // B. TELEGRAM'A BİLDİR (Markdown yerine HTML kullanıldı)
         if (telegramToken && telegramChatId) {
             const message = 
-                `🔥 <b>YENİ ADAY DÜŞTÜ!</b> 🔥\n━━━━━━━━━━━━━━\n` +
-                `👤 <b>Ad:</b> ${escapeHtml(name)}\n` +
-                `📱 <b>Tel:</b> ${escapeHtml(standardizedPhone)}\n` +
-                `💃 <b>Seviye:</b> ${escapeHtml(level)}\n` +
-                `━━━━━━━━━━━━━━\n<i>Veri Supabase'e güvenle kaydedildi.</i>`;
+                `🔥 <b>YENİ ADAY DÜŞTÜ!</b> 🔥\\n━━━━━━━━━━━━━━\\n` +
+                `👤 <b>Ad:</b> ${escapeHtml(name)}\\n` +
+                `📱 <b>Tel:</b> ${escapeHtml(standardizedPhone)}\\n` +
+                `💃 <b>Seviye:</b> ${escapeHtml(level)}\\n` +
+                `━━━━━━━━━━━━━━\\n<i>Veri Supabase'e güvenle kaydedildi.</i>`;
 
             try {
                 const response = await fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
