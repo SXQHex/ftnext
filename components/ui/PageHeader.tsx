@@ -38,7 +38,7 @@ export function PageHeader({ eyebrow, title, className, fullWidth = false, fitTi
                     </span>
 
                     {/* Alttaki Amber/Kırmızı bindirme satırı */}
-                    <span className=cn("relative z-20 block max-w-full break-words text-transparent bg-clip-text bg-linear-to-r from-tango-gold via-tango-red to-tango-gold", fitTitle ? "pr-1" : "-mt-4.5 md:-mt-4 lg:-mt-5 pr-4 pt-4")>
+                    <span className={cn("relative z-20 block max-w-full break-words text-transparent bg-clip-text bg-linear-to-r from-tango-gold via-tango-red to-tango-gold", fitTitle ? "pr-1" : "-mt-4.5 md:-mt-4 lg:-mt-5 pr-4 pt-4")}>
                         {rest}
                     </span>
                 </h1>
