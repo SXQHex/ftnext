@@ -1,18 +1,14 @@
 ---
 title: 'Tango’ya İlk Adım: Neden Şimdi Başlamalısınız?'
-date: 1 Şubat 2026
+date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Ertelediğiniz o ilk adım aslında bir dansın değil, yeni bir hayatın
   başlangıcıdır. Tangonun büyüleyici dünyasına girmek için neden en doğru
   zamanın bugün olduğunu keşfedin.
-image: /images/blog/tango-ilk-adim.jpg
+image: /images/workshop-atolye.webp
 originSlug: ilk-adim
-slugs:
-  tr: ilk-adim
-  en: first-step-to-tango-why-should-you-start-now
-  ru: pervyi-shag-k-tango-pochemu-stoit-nachat-seichas
-  uk: pershyy-krok-do-tango-chomu-varto-pochaty-zaraz
-  es: primer-paso-al-tango-por-que-deberia-empezar-ahora
+slug: ilk-adim
 ---
 
 Hayatımız genellikle "bir gün yapacağım" dediğimiz hayallerle doludur. "Bir gün spora başlayacağım", "bir gün o enstrümanı çalacağım" ve en popüleri: "Bir gün tango öğreneceğim." Ancak o meşhur "bir gün", takvimde asla karşımıza çıkmaz. Oysa tango, sadece bir dans kursuna yazılmak değil; kendinizi, müziği ve bir başkasını bambaşka bir boyutta keşfetme yolculuğudur. Fethiye’nin gün batımında milonga ezgileri yükselirken, neden daha fazla beklememeniz gerektiğini, tangonun fiziksel ve ruhsal anatomisi üzerinden inceleyelim.

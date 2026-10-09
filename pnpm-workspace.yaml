@@ -1,3 +1,12 @@
-ignoredBuiltDependencies:
-  - sharp
-  - unrs-resolver
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@supabase/auth-js@2.117.3'
+  - '@supabase/functions-js@2.117.3'
+  - '@supabase/postgrest-js@2.117.3'
+  - '@supabase/realtime-js@2.117.3'
+  - '@supabase/storage-js@2.117.3'
+  - '@supabase/supabase-js@2.117.3'
+  - libphonenumber-js@1.13.15
+  - lucide-react@1.53.0

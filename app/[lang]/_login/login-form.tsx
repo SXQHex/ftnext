@@ -1,3 +1,5 @@
+import type { getDictionary } from "@/get-dictionary"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -10,8 +12,10 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { TangoButton } from "@/components/ui/TangoButton"
 
+type LoginDictionary = Awaited<ReturnType<typeof getDictionary>>["login"]
+
 interface LoginFormProps extends React.ComponentProps<"div"> {
-  dict: any
+  dict: LoginDictionary
   lang: string
 }
 
@@ -75,9 +79,11 @@ export function LoginForm({
           </form>
           <div className="relative hidden md:block overflow-hidden">
             <div className="absolute inset-0 bg-linear-to-t from-tango-black via-tango-black/20 to-transparent z-10 opacity-80" />
-            <img
+            <Image
               src="/images/login-bg.webp"
               alt="Tango Login Background"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="absolute inset-0 h-full w-full object-cover select-none brightness-[0.6] sepia-[0.3] contrast-[1.1]"
             />
             <div className="absolute bottom-12 left-12 z-20">

@@ -4,6 +4,11 @@ import { IconCircleCheck, IconBrandWhatsapp } from "@tabler/icons-react";
 import { CONTACT_INFO } from "@/lib/constants";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/program" });
+}
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -15,7 +20,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ lang: 
     const content = dict.program;
 
     // JSON'dan gelen veriyi UI için zenginleştiriyoruz (accent bilgisi vb.)
-    const schedules = content.schedule.map((item: any, index: number) => ({
+    const schedules = content.schedule.map((item, index) => ({
         ...item,
         accent: index === 0 // İlk öğeyi vurgula
     }));
@@ -31,7 +36,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ lang: 
                 <PageHeader eyebrow={content.eyebrow} title={content.title} />
                 {/* Kartlar Grid */}
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    {schedules.map((course: any, index: number) => (
+                    {schedules.map((course, index) => (
                         <TangoCard
                             key={index}
                             index={index}

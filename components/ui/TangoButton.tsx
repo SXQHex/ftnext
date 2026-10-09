@@ -37,6 +37,7 @@ export function TangoButton({
         <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            type="button"
             className={cn(
                 "group relative overflow-hidden rounded-full font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2",
                 variants[variant],

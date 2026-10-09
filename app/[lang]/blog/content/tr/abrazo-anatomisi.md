@@ -1,18 +1,14 @@
 ---
 title: 'Abrazo''nun Anatomisi: Bir Sarılmanın Biyomekaniği ve Ruhu'
-date: 1 Şubat 2026
+date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Abrazo sadece bir tutuş değil, omurgadan parmak uçlarına uzanan bir
   mühendislik harikasıdır. Tangonun bu temel kolonunu anatomik ve felsefi olarak
   inceliyoruz.
 image: /images/blog/abrazo-anatomy.webp
 originSlug: abrazo-anatomisi
-slugs:
-  tr: abrazo-anatomisi
-  en: abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug
-  ru: anatomiya-abrazo-biomekhanika-i-dukh-obyatii
-  uk: anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv
-  es: anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo
+slug: abrazo-anatomisi
 ---
 
 Tango pistine adım atan her dansçının duyduğu o ilk komut şudur: "Partnerine sarıl." Ancak bu basit eylem, milonga ışıkları altında yerini karmaşık bir biyomekanik iş birliğine bırakır. **Abrazo**, iki bağımsız iskelet sisteminin, tek bir ağırlık merkezi etrafında senkronize olma sanatıdır. Bu yazıda, abrazoyu romantik bir güzelleme olmanın ötesine taşıyıp; kemiklerin diziliminden kasların tansiyonuna, enerjinin omurgadaki yolculuğuna kadar gerçek bir "anatomi" incelemesine tabi tutacağız.

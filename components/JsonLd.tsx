@@ -1,16 +1,31 @@
 import { type Locale } from "../i18n-config";
 import { getDictionary } from "../get-dictionary";
 
-type JsonLdProps = {
-    lang: Locale;
-    type?: 'DanceSchool' | 'Article' | 'BreadcrumbList';
-    data?: any;
+type ArticleData = {
+    title: string;
+    slug: string;
+    excerpt: string;
+    image: string;
+    date: string;
+    updatedAt?: string;
 };
+
+type BreadcrumbData = {
+    items: Array<{
+        name: string;
+        url: string;
+    }>;
+};
+
+type JsonLdProps =
+    | { lang: Locale; type?: 'DanceSchool'; data?: never }
+    | { lang: Locale; type: 'Article'; data: ArticleData }
+    | { lang: Locale; type: 'BreadcrumbList'; data: BreadcrumbData };
 
 export default async function JsonLd({ lang, type = 'DanceSchool', data }: JsonLdProps) {
     const dict = await getDictionary(lang);
 
-    let jsonLd: any = {};
+    let jsonLd: Record<string, unknown> = {};
 
     if (type === 'DanceSchool') {
         jsonLd = {
@@ -47,7 +62,7 @@ export default async function JsonLd({ lang, type = 'DanceSchool', data }: JsonL
                 'https://www.facebook.com/profile.php?id=61583589983881',
             ],
         };
-    } else if (type === 'Article' && data) {
+    } else if (type === 'Article' && data && 'title' in data) {
         jsonLd = {
             '@context': 'https://schema.org',
             '@type': 'Article',
@@ -73,11 +88,11 @@ export default async function JsonLd({ lang, type = 'DanceSchool', data }: JsonL
                 },
             },
         };
-    } else if (type === 'BreadcrumbList' && data) {
+    } else if (type === 'BreadcrumbList' && data && 'items' in data) {
         jsonLd = {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
-            itemListElement: data.items.map((item: any, index: number) => ({
+            itemListElement: data.items.map((item, index) => ({
                 '@type': 'ListItem',
                 position: index + 1,
                 name: item.name,

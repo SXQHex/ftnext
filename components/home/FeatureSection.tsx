@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import {
     IconCalendarEvent,
     IconHeart,
@@ -10,6 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { SectionHeader } from "../ui/SectionHeader";
 import { BentoCard } from "../ui/BentoCard";
+import type { getDictionary } from "@/get-dictionary";
 
 // Tip tanımı (TypeScript kullanıyorsan hayat kurtarır)
 interface Feature {
@@ -23,7 +23,7 @@ interface Feature {
     className: string;
 }
 
-export function FeatureSection({ content }: { content: any }) {
+export function FeatureSection({ content, lang }: { content: Awaited<ReturnType<typeof getDictionary>>["home"]["features"]; lang: string }) {
     return (
         <section className="py-24 px-8 relative overflow-hidden">
             <div className="mx-auto max-w-7xl"> {/* Container yerine max-w-7xl daha garantidir */}
@@ -39,7 +39,7 @@ export function FeatureSection({ content }: { content: any }) {
                     {features.map((feature, index) => (
                         <BentoCard
                             key={feature.title}
-                            feature={{ ...feature, ...content.items[index] }}
+                            feature={{ ...feature, ...content.items[index], slug: `/${lang}${feature.slug}` }}
                             index={index}
                         />
                     ))}

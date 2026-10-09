@@ -1,18 +1,14 @@
 ---
 title: 'Abrazo''s Anatomy: The Biomechanics and Spirit of a Hug'
-date: 'February 1, 2026'
+date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Abrazo is not just a grip, it is a marvel of engineering that extends from the
   spine to the fingertips. We examine this basic column of tango anatomically
   and philosophically.
 image: /images/blog/abrazo-anatomy.webp
 originSlug: abrazo-anatomisi
-slugs:
-  tr: abrazo-anatomisi
-  en: abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug
-  ru: anatomiya-abrazo-biomekhanika-i-dukh-obyatii
-  uk: anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv
-  es: anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo
+slug: abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug
 ---
 The first command every dancer hears when stepping onto the tango floor is: "Hug your partner." However, this simple action gives way to a complex biomechanical collaboration under the milonga lights. **Abrazo** is the art of synchronizing two independent skeletal systems around a single center of gravity. In this article, we take abrazo beyond being a romantic embellishment; We will subject you to a real "anatomy" examination, from the arrangement of the bones to the tension of the muscles and the journey of energy in the spine. 
 

@@ -1,8 +1,14 @@
+import Image from "next/image";
 import UnifiedContactForm from "@/components/ContactForm";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
 
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/iletisim" });
+}
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -12,6 +18,11 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.contact;
+
+    const formDict = {
+        ...dict.formCommon,
+        ...dict.contactForm,
+    };
 
     return (
         <main className="min-h-screen pt-32 pb-20 px-6 md:px-8">
@@ -26,7 +37,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                                 {content.intro.line1} <br />
                                 <span className="text-white font-bold italic underline decoration-tango-red/30">{content.intro.line2}</span>
                             </p>
-                            <UnifiedContactForm labels={content.form} variant="standard" />
+                            <UnifiedContactForm dict={formDict} variant="standard" showConsent={true} />
                         </div>
 
                         {/* Dekoratif Dengeleyici: Sol alt boşluğu doldurur */}
@@ -65,7 +76,13 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                         <section className="pt-6 border-t border-white/5">
                             <a href="https://wa.me/905446415745" className="group flex items-center justify-between bg-white/2 border border-white/5 p-4 rounded-3xl hover:bg-tango-gold transition-all duration-500">
                                 <div className="flex items-center gap-4">
-                                    <img src="/images/social/WhatsApp.svg" alt="WA" className="w-5 h-5" />
+                                <Image
+                                src="/images/social/WhatsApp.svg"
+                                alt="WA"
+                                width={20}
+                                height={20}
+                                className="w-5 h-5"
+                                />  
                                     <div className="flex flex-col">
                                         <span className="text-lg text-tango-text font-black tracking-tighter group-hover:text-black">{content.sidebar.whatsappButtonTitle}</span>
                                         <span className="text-[9px] uppercase font-bold text-tango-gold group-hover:text-black/60">{content.sidebar.whatsappButtonLabel}</span>

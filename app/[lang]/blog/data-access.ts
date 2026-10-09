@@ -2,9 +2,8 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { cache } from 'react';
-import rawManifest from '@/posts-manifest.json'; // 🚀 Manifesti en tepede içeri al
+import rawManifest from './posts-manifest.json'; // 🚀 Manifesti en tepede içeri al
 
-const POSTS_DIRECTORY = path.join(process.cwd(), 'app/[lang]/blog/content');
 const postsManifest = rawManifest as BlogManifest;
 // Tip tanımın aynı kalabilir
 
@@ -25,6 +24,7 @@ export interface BlogPost {
     slugs: Record<string, string>;
     title: string;
     date: string;
+    updatedAt: string;
     excerpt: string;
     image: string;
     content: string;
@@ -58,7 +58,7 @@ export const getAllPosts = cache(async (lang: string, readingTimeLabel: string =
         })
     );
 
-    return posts.sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
+    return posts.sort((a, b) => b.date.localeCompare(a.date));
 });
 
 /**

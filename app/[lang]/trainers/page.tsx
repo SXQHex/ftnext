@@ -2,6 +2,11 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { i18n, type Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 import Image from "next/image";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/trainers" });
+}
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -34,9 +39,9 @@ export default async function TrainersPage({ params }: { params: Promise<{ lang:
                         </div>
 
                         <div className="pl-4 border-l-2 border-tango-gold/40">
-                            <h1 className="text-3xl font-black uppercase italic tracking-tighter text-white leading-none">
+                            <h2 className="text-3xl font-black uppercase italic tracking-tighter text-white leading-none">
                                 {content.sidebar.name} <br /> {content.sidebar.surname}
-                            </h1>
+                            </h2>
                             <p className="text-tango-gold font-bold text-[10px] uppercase tracking-[0.4em] mt-2">
                                 {content.sidebar.role}
                             </p>
@@ -48,7 +53,7 @@ export default async function TrainersPage({ params }: { params: Promise<{ lang:
 
                         {/* SEVİYE 1: ÖZET VE VİZYON */}
                         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {content.vision.map((item: any, i: number) => (
+                            {content.vision.map((item, i: number) => (
                                 <div
                                     key={i}
                                     className="p-8 bg-white/3 border border-white/5 rounded-3xl group hover:border-tango-gold/50 transition-all duration-500"
@@ -110,7 +115,7 @@ export default async function TrainersPage({ params }: { params: Promise<{ lang:
 
                                 {/* DİĞER DÖNEMLER */}
                                 <div className="grid gap-2">
-                                    {content.career.timeline.map((item: any, i: number) => (
+                                    {content.career.timeline.map((item, i) => (
                                         <div
                                             key={i}
                                             className="group grid md:grid-cols-[200px_1fr] gap-10 p-8 hover:bg-white/3 rounded-[30px] transition-all border border-transparent hover:border-white/5"

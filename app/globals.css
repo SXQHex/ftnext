@@ -60,7 +60,7 @@
   --ring: oklch(0.55 0.01 285.823);
 }
 
-/* 3. BASE (Sarsılmaz Altyapı) */
+/* 3. BASE */
 @layer base {
   html {
     scrollbar-gutter: stable;
@@ -83,39 +83,26 @@
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1; /* Test bittikten sonra -1 yaparsın */
+    z-index: -1;
     pointer-events: none;
     will-change: transform;
 
     background-image: 
-      /* 1 & 2: Amber Işıltılar (Kırmızıyı Amber'e çevirdik) */
       radial-gradient(at 0% 0%, rgba(255, 180, 0, 0.08) 0px, transparent 45%),
       radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.1) 0px, transparent 45%),
-      
-      /* 3: EVCİLLEŞTİRİLMİŞ LİNEER ÇİZGİLER (Hata efekti) */
-      /* baseFrequency: İlk değer (0.001) yatayda genişletir, ikinci değer (0.06) dikey çizgi sıklığıdır */
-      /* Eski kodunda 0.15 olan dikey değeri 0.06'ya çekerek çizgileri seyreltip evcilleştirdik */
       url("data:image/svg+xml,%3Csvg viewBox='0 0 4000 4000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
-  
-    /* Boyutlandırma: 2000px yaparak çizgilerin çok sık tekrar etmesini ve 'dijital parazit' gibi durmasını engelledik */
     background-size: 100% 100%, 100% 100%, 2000px 2000px;
     background-repeat: no-repeat, no-repeat, repeat;
-    
-    /* Screen modu: Siyah zemin üzerinde sadece o ince çizgileri beyaz/gri lifler gibi gösterir */
     background-blend-mode: screen, screen, overlay;
-    
-    /* Vahşiliği buradan tamamen öldürüyoruz. 0.05 - 0.08 arası gerçek kağıt lifidir. */
     opacity: 0.08; 
     filter: contrast(1.1) brightness(1.1);
   }
 
-  /* İçerik katmanlarını dokunun üzerine ama dokudan bağımsız yerleştiriyoruz */
   main, header, footer, section {
     position: relative;
     z-index: 1;
   }
 
-  /* KARTLAR: Kendi dokusuna sahip bağımsız elemanlar */
   .card-base {
     background-color: var(--color-tango-dark); /* #111111 */
     z-index: 1;

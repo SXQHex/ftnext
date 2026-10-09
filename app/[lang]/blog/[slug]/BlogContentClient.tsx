@@ -1,8 +1,21 @@
 "use client";
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useModal } from "@/components/ModalContext";
 import { motion, useScroll, useSpring } from "motion/react";
 import BlogCTA from "@/components/BlogCTA";
+
+interface BlogCTAContent {
+    small: {
+        text: string;
+        button: string;
+    };
+    large: {
+        title: string;
+        highlight: string;
+        description: string;
+        button: string;
+    };
+}
 
 export default function BlogContentClient({
     htmlContent,
@@ -12,11 +25,11 @@ export default function BlogContentClient({
 }: {
     htmlContent: string;
     headings: { id: string, text: string }[];
-    ctaContent: any;
+    ctaContent: BlogCTAContent;
     slug: string;
 }) {
     const { openModal } = useModal();
-    const [activeId, setActiveId] = useState<string>("");
+    const [activeId, setActiveId] = useState<string>(() => headings[0]?.id ?? "");
     const containerRef = useRef<HTMLDivElement>(null);
 
     const { scrollYProgress } = useScroll({
@@ -25,53 +38,54 @@ export default function BlogContentClient({
     });
     const scaleY = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-    const handleScroll = useCallback(() => {
-        // Tüm başlıkları al ve diziye çevir
-        const h2Elements = Array.from(document.querySelectorAll(".tango-article h2[id]"));
 
-        // Scroll pozisyonuna göre "aktif" başlığı bul
-        // Ekranın tepesinden 200px aşağıyı "sınır çizgisi" kabul ediyoruz
-        const scrollOffset = 200;
-
-        const currentSection = h2Elements.reduce((selected, el) => {
-            const rect = el.getBoundingClientRect();
-
-            // Eğer başlık sınır çizgisinin üstündeyse, onu "şimdilik" seç
-            // Döngü bittiğinde en son (en aşağıda ama sınırın üstünde olan) başlık seçili kalacak
-            if (rect.top <= scrollOffset) {
-                return el;
-            }
-            return selected;
-        }, null as Element | null);
-
-        if (currentSection && currentSection.id !== activeId) {
-            setActiveId(currentSection.id);
-        }
-    }, [activeId]);
 
     useEffect(() => {
-        // Scroll dinleyicisi
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        const timer = setTimeout(handleScroll, 500);
+        const headingElements = Array.from(
+            document.querySelectorAll<HTMLElement>(".tango-article h2[id]")
+        );
 
-        // Link dinleyicisi (Modal için)
+        if (headingElements.length === 0) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const visibleHeadings = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort(
+                        (a, b) =>
+                            a.boundingClientRect.top - b.boundingClientRect.top
+                    );
+
+                const activeHeading = visibleHeadings[0];
+                if (activeHeading) {
+                    setActiveId(activeHeading.target.id);
+                }
+            },
+            {
+                rootMargin: "-140px 0px -65% 0px",
+                threshold: 0,
+            }
+        );
+
+        headingElements.forEach((heading) => observer.observe(heading));
+
         const handleLinkClick = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            const href = target.closest('a')?.getAttribute("href");
+            const href = target.closest("a")?.getAttribute("href");
+
             if (href === "#open-modal") {
                 e.preventDefault();
-                openModal(`blog_detail_${slug}`);
+                openModal("blog_detail_" + slug);
             }
         };
-        window.addEventListener("scroll", handleScroll, { passive: true });
+
         document.addEventListener("click", handleLinkClick);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            observer.disconnect();
             document.removeEventListener("click", handleLinkClick);
-            clearTimeout(timer);
         };
-    }, [handleScroll, openModal, slug]);
+    }, [openModal, slug]);
     // DİKKAT: htmlContent'i buraya koyma! 
     // İçerik değişirse zaten component rerender olur ve handleScroll içindeki querySelector yeni DOM'u bulur.
 
@@ -84,7 +98,7 @@ export default function BlogContentClient({
                         <motion.div style={{ scaleY }} className="absolute top-0 left-0 w-full bg-tango-gold origin-top h-full" />
                     </div>
                     <nav className="flex flex-col gap-6">
-                        {headings.map((h, index) => (
+                        {headings.map((h) => (
                             <a
                                 key={h.id}
                                 href={`#${h.id}`}
@@ -101,7 +115,6 @@ export default function BlogContentClient({
                                 className={`text-[10px] font-black uppercase tracking-widest transition-all duration-500
                                     ${activeId === h.id ? "text-tango-gold translate-x-2" : "text-white/20"}`}
                             >
-                                <span className="mr-2 opacity-30">0{index + 1}.</span>
                                 {h.text}
                             </a>
                         ))}

@@ -14,7 +14,7 @@
         "login": "Üye Girişi"
     },
     "footer": {
-        "slogan": "Güçlü Teknik, Samimi Topluluk. 20 yıllık tutku hikayesi.",
+        "slogan": "Güçlü Teknik, Samimi Topluluk. 20+ yıllık tutku hikayesi.",
         "linksTitle": "Navigasyon",
         "contactTitle": "İletişim",
         "socialTitle": "Bize Ulaşın",
@@ -76,7 +76,8 @@
             "subtitle": "Hazır mısınız?",
             "description": "Fethiye'nin en köklü dans topluluğuna katılın. Hiç dans etmemiş olsanız bile, ilk adımınızda yanınızdayız.",
             "button": "Hemen Bilgi Alın",
-            "response": "Genellikle 5 dakika içinde yanıtlıyoruz."
+            "response": "Genellikle 5 dakika içinde yanıtlıyoruz.",
+            "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. Bilgi almak istiyorum."
         }
     },
     "program": {
@@ -105,7 +106,8 @@
             }
         ],
         "button": "Yerini Ayırt",
-        "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. \"{title}\" etkinliği için bilgi almak ve yer ayırtmak istiyorum."
+        "whatsappMessage": "Merhaba! Fethiye Tango web sitesinden ulaşıyorum. \"{title}\" etkinliği için bilgi almak ve yer ayırtmak istiyorum.",
+        "seoDescription": "Fethiye Tango Kulübü'nün haftalık Arjantin tango derslerini, başlangıç ve teknik çalışmalarını, pratik ve milonga akışını keşfedin."
     },
     "trainers": {
         "eyebrow": "EĞİTMENLER",
@@ -163,7 +165,8 @@
                     "desc": "100’lerce öğrencinin mirası ve 20 yıllık tecrübenin kurumsallaşması. Tangonun doğru metodoloji ile yaygınlaştırıldığı yeni merkez."
                 }
             ]
-        }
+        },
+        "seoDescription": "Fethiye Tango Kulübü'nün kurucusu ve baş eğitmeni Erkin Kunbuk'un tango yolculuğunu, eğitim metodunu ve Buenos Aires ekolüne dayalı yaklaşımını keşfedin."
     },
     "atolye": {
         "eyebrow": "ATÖLYELER",
@@ -187,7 +190,53 @@
             "bookGeneral": "Merhaba, atölye çalışması için yer ayırtmak istiyorum.",
             "ask": "Merhaba, \"{title}\" başlıklı atölye programı hakkında detaylı bilgi alabilir miyim?",
             "askGeneral": "Merhaba, atölye programı hakkında detaylı bilgi alabilir miyim?"
-        }
+        },
+        "seoDescription": "Fethiye Tango atölyelerinde beden farkındalığı, partner iletişimi, niyet ve müzikalite üzerine derinlemesine çalışmalarla tangonuzu geliştirin."
+    },
+    "formCommon": {
+        "nameLabel": "Adınız ve Soyadınız",
+        "namePlaceholder": "Ahmet Yılmaz",
+        "phoneLabel": "Telefon / WhatsApp",
+        "phonePlaceholder": "05xx xxx xx xx veya +380 xx xxx xxxx",
+        "phoneHint": "Türkiye dışı numaralar için başına ülke kodunu (+) ekleyin.",
+        "phoneError": "Lütfen geçerli bir telefon numarası giriniz.",
+        "levelLabel": "Deneyim Düzeyi",
+        "levels": {
+            "zero": "Hiç dans etmedim",
+            "beginner": "Başlangıç Seviye",
+            "intermediate": "Orta / İleri Seviye"
+        },
+        "consent": "Kişisel verilerimin iletişim ve kayıt talebimin yürütülmesi amacıyla işlenmesine açık rıza veriyorum.",
+        "marketingConsent": "Kampanya, etkinlik ve tanıtımlardan haberdar edilmek için iletişim bilgilerimin kullanılmasına izin veriyorum.",
+        "submitting": "Gönderiliyor...",
+        "systemError": "Bir sorun oluştu. Lütfen WhatsApp üzerinden ulaşın."
+    },
+    "contactForm": {
+        "submit": "Bilgi Alın",
+        "successTitle": "Talebiniz Alındı!",
+        "successMessage": "Sizi en kısa sürede arayacağız. Sorularınız için WhatsApp'tan yazabilirsiniz.",
+        "whatsappConfirm": "WhatsApp ile Yazın",
+        "whatsappMessage": "Merhaba, ben {name}. İletişim formunu doldurdum, bir sorum olacaktı..."
+    },
+    "registrationForm": {
+        "partnerLabel": "Dans Partneriniz var mı?",
+        "partnerOptions": {
+            "no": "Hayır, partnerim yok",
+            "yes": "Evet, partnerim var"
+        },
+        "partnerNameLabel": "Partnerinizin Adı",
+        "partnerNamePlaceholder": "Ayşe Yılmaz",
+        "submit": "Kaydı Tamamla",
+        "successTitle": "Kaydınız Bize Ulaştı!",
+        "successMessage": "Harika bir adım attınız! Sizi en kısa sürede arayacağız.",
+        "whatsappConfirm": "WhatsApp ile Onayla",
+        "whatsappMessage": "Merhaba, ben {name}. Ön kayıt formunu doldurdum, detayları görüşebiliriz.",
+        "newRegistration": "Yeni kayıt"
+    },
+    "registrationPage": {
+        "eyebrow": "Kesin Kayıt",
+        "title": "Kayıt Formu",
+        "seoDescription": "Fethiye Tango Kulübü'ne kesin kayıt için bilgilerinizi iletin. Seviye ve partner bilgilerinizi paylaşarak kaydınızı tamamlayın."
     },
     "contact": {
         "eyebrow": "İletişim & Kayıt",
@@ -195,31 +244,6 @@
         "intro": {
             "line1": "Karmaşayı geride bırak.",
             "line2": "Abrazo seni bekliyor."
-        },
-        "form": {
-            "nameLabel": "Adınız ve Soyadınız",
-            "namePlaceholder": "Ahmet Yılmaz",
-            "phoneLabel": "Telefon",
-            "phonePlaceholder": "05xx xxx xx xx",
-            "phoneError": "Lütfen geçerli bir numara giriniz.",
-            "levelLabel": "Deneyim Düzeyi",
-            "levels": {
-                "zero": "Hiç dans etmedim",
-                "beginner": "Başlangıç Seviye",
-                "intermediate": "Orta / İleri Seviye"
-            },
-            "consent": "İletişim izinlerini ve KVKK metnini kabul ediyorum.",
-            "submit": "Kaydı Tamamla",
-            "submitting": "Gönderiliyor...",
-            "successTitle": "Kaydın Bize Ulaştı!",
-            "successMessage": "Sizi en kısa sürede arayacağız. Eğer sormak istediğiniz bir sorunuz varsa hemen WhatsApp'tan yazabilirsiniz.",
-            "whatsappConfirm": "WhatsApp ile Yazın",
-            "whatsappMessage": "Merhaba, iletişim formunu doldurdum, bir sorum olacaktı...",
-            "error": {
-                "system": "Hata:",
-                "alert": "Bir sorun oluştu. Lütfen WhatsApp üzerinden ulaşın.",
-                "submit": "Gönderim başarısız"
-            }
         },
         "sidebar": {
             "studioLabel": "Stüdyo",
@@ -231,7 +255,8 @@
             ],
             "whatsappButtonTitle": "+90 544 641 5745",
             "whatsappButtonLabel": "Hemen Mesaj Gönder"
-        }
+        },
+        "seoDescription": "Fethiye Tango Kulübü'ne ulaşın, deneme dersi ve kayıt hakkında bilgi alın; stüdyo, dersler ve WhatsApp iletişim seçeneklerini keşfedin."
     },
     "blog": {
         "eyebrow": "ARŞİV",
@@ -248,38 +273,12 @@
                 "description": "Şimdi ilk adımını atma zamanı. Fethiye'nin en tutkulu topluluğuna katıl.",
                 "button": "Hemen Başla"
             }
-        }
+        },
+        "seoDescription": "Arjantin tango, abrazo, müzikalite, teknik ve tango kültürü üzerine Fethiye Tango Kulübü'nün rehberlerini ve yazılarını keşfedin."
     },
-    "trialForm": {
-        "header": {
-            "label": "Katılım",
-            "title": "Pist Seni <br /> <span class=\"text-tango-red\">Bekliyor</span>"
-        },
-        "form": {
-            "nameLabel": "Ad Soyad",
-            "namePlaceholder": "Adınız Soyadınız",
-            "phoneLabel": "WhatsApp / Telefon",
-            "phonePlaceholder": "05...",
-            "phoneError": "Geçerli bir numara giriniz (Örn: 05xx...)",
-            "levelLabel": "Seviye",
-            "levels": {
-                "zero": "Hiç dans etmedim",
-                "beginner": "Başlangıç Seviye",
-                "intermediate": "Orta / İleri Seviye"
-            },
-            "submit": "Hemen Başla",
-            "initiate": "İşleniyor...",
-            "successTitle": "Harika Karar!",
-            "successMessage": "Kaydın alındı. Hemen yerini kesinleştirmek ister misin?",
-            "whatsappConfirm": "WhatsApp ile Onayla",
-            "whatsappMessage": "Merhaba, ücretsiz tanışma dersi için form doldurdum: {name}",
-            "consent": "İletişim izinlerini ve KVKK metnini kabul ediyorum."
-        },
-        "error": {
-            "system": "Sistem hatası:",
-            "alert": "Kayıt sırasında bir sorun oluştu. Lütfen doğrudan WhatsApp'tan ulaşın.",
-            "submit": "Gönderim başarısız"
-        }
+    "trialFormHeader": {
+        "label": "Katılım",
+        "title": "Pist Seni <br /> <span class=\"text-tango-red\">Bekliyor</span>"
     },
     "ui": {
         "readMore": "Okumaya Başla →",
@@ -287,6 +286,14 @@
         "readFullArticle": "Yazının Tamamını Oku",
         "bookSpot": "Yerini Ayırt",
         "close": "[ Kapat ]"
+    },
+    "cookieConsent": {
+        "title": "Çerez ve ölçüm tercihleri",
+        "description": "Siteyi geliştirmek için isteğe bağlı analiz ve pazarlama teknolojileri kullanabiliriz. Tercihinizi dilediğiniz zaman değiştirebilirsiniz.",
+        "accept": "Kabul et",
+        "reject": "Reddet",
+        "privacy": "Gizlilik Politikası",
+        "manage": "Tercihleri yönet"
     },
     "login": {
         "title": "Tekrar Hoş Geldiniz",

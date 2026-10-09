@@ -1,4 +1,4 @@
-import { LoginForm } from "@/app/[lang]/login/login-form"
+import { LoginForm } from "@/app/[lang]/_login/login-form"
 import { getDictionary } from "@/get-dictionary"
 import { Locale } from "@/i18n-config"
 

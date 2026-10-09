@@ -4,9 +4,9 @@ export const CONTACT_INFO = {
     wa: "905446415745",
     phone: "+90 544 641 57 45",
     email: "info@fethiyetango.com",
-    address: "Cumhuriyet Mah. No:1, Fethiye, Muğla",
-    ig: "https://instagram.com/fethiyetango",
-    fb: "https://facebook.com/fethiyetango",
+    address: "Foça, 1304. Sk. No:22, Fethiye/Muğla",
+    ig: "https://www.instagram.com/fethiyetangokulubu/",
+    fb: "https://www.facebook.com/61583589983881",
 
     getWaLink(msg: string) { return `https://wa.me/${this.wa}?text=${encodeURIComponent(msg)}`},
 };

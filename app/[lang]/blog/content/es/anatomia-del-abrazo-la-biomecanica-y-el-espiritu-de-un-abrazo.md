@@ -1,18 +1,14 @@
 ---
 title: 'Anatomía del abrazo: la biomecánica y el espíritu de un abrazo'
-date: 1 de febrero de 2026
+date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Abrazo no es sólo un agarre, es una maravilla de la ingeniería que se extiende
   desde la columna hasta la punta de los dedos. Examinamos anatómica y
   filosóficamente esta columna básica del tango.
 image: /images/blog/abrazo-anatomy.webp
 originSlug: abrazo-anatomisi
-slugs:
-  tr: abrazo-anatomisi
-  en: abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug
-  ru: anatomiya-abrazo-biomekhanika-i-dukh-obyatii
-  uk: anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv
-  es: anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo
+slug: anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo
 ---
 La primera orden que todo bailarín escucha al pisar la pista de tango es: "Abraza a tu pareja". Sin embargo, esta simple acción da paso a una compleja colaboración biomecánica bajo las luces de la milonga. **Abrazo** es el arte de sincronizar dos sistemas esqueléticos independientes alrededor de un único centro de gravedad. En este artículo, llevamos abrazo más allá de ser un adorno romántico; Te someteremos a un verdadero examen de "anatomía", desde la disposición de los huesos hasta la tensión de los músculos y el recorrido de la energía en la columna. 
 

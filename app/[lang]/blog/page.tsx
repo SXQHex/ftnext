@@ -3,7 +3,12 @@ import { getAllPosts } from "./data-access";
 import { ExpandableTangoCard } from "@/components/ui/ExpandableTangoCard";
 import { i18n, type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
+import { getPageMetadata, type PageParams } from "@/lib/metadata";
 import JsonLd from "@/components/JsonLd";
+
+export function generateMetadata({ params }: { params: PageParams }) {
+  return getPageMetadata({ params, section: "/blog" });
+}
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -31,13 +36,12 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: Loc
                 <PageHeader eyebrow={content.eyebrow} title={content.title} />
                 {/* Yeni Hibrit Grid */}
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-start">
-                    {posts.map((post, i) => (
+                    {posts.map((post) => (
                         <ExpandableTangoCard
                             key={post.slug}
                             item={post}
                             isBlog={true}
                             lang={lang}
-                            index={i}
                             labels={dict.ui}
                         />
                     ))}

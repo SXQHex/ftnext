@@ -1,18 +1,14 @@
 ---
 title: 'Анатомія Абразо: біомеханіка та дух обіймів'
-date: 1 лютого 2026 р
+date: '2026-02-01'
+updatedAt: '2026-02-01'
 excerpt: >-
   Abrazo — це не просто рукоятка, це чудо техніки, яке простягається від хребта
   до кінчиків пальців. Ми розглядаємо цю основну колонку танго анатомічно та
   філософськи.
 image: /images/blog/abrazo-anatomy.webp
 originSlug: abrazo-anatomisi
-slugs:
-  tr: abrazo-anatomisi
-  en: abrazos-anatomy-the-biomechanics-and-spirit-of-a-hug
-  ru: anatomiya-abrazo-biomekhanika-i-dukh-obyatii
-  uk: anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv
-  es: anatomia-del-abrazo-la-biomecanica-y-el-espiritu-de-un-abrazo
+slug: anatomiia-abrazo-biomekhanika-ta-dukh-obiimiv
 ---
 Перша команда, яку чує кожен танцюрист, виходячи на паркет для танго, це: «Обійми свого партнера». Однак ця проста дія поступається місцем складній біомеханічній співпраці під світлом мілонги. **Abrazo** — це мистецтво синхронізації двох незалежних скелетних систем навколо одного центру тяжіння. У цій статті ми розглядаємо абразо не тільки як романтичну прикрасу; Ми піддамо вам справжню «анатомічну» експертизу, від розташування кісток до напруги м'язів і подорожі енергії в хребті. 
 
