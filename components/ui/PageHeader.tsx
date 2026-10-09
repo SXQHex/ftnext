@@ -27,20 +27,25 @@ export function PageHeader({ eyebrow, title, className, fullWidth = false, fitTi
                 </div>
                 {/* Ana Başlık */}
                 <h1 className={cn(
-                    "relative font-black italic tracking-tighter text-tango-text uppercase flex flex-col max-w-full",
+                    "relative max-w-full font-black italic tracking-tighter text-tango-text uppercase",
                     fitTitle
-                        ? "text-[clamp(1.75rem,11cqw,4.5rem)] leading-[0.9] gap-0"
-                        : "text-5xl md:text-7xl lg:text-8xl leading-[0.8]",
+                        ? "text-[clamp(1.5rem,8cqw,3.25rem)] leading-[0.96] text-balance break-words"
+                        : "flex flex-col text-5xl md:text-7xl lg:text-8xl leading-[0.8]",
                 )}>
-                    {/* Üstteki beyaz satır */}
-                    <span className="relative z-10 block max-w-full break-normal">
-                        {firstPart}
-                    </span>
-
-                    {/* Alttaki Amber/Kırmızı bindirme satırı */}
-                    <span className={cn("relative z-20 block max-w-full break-words text-transparent bg-clip-text bg-linear-to-r from-tango-gold via-tango-red to-tango-gold", fitTitle ? "pr-1" : "-mt-4.5 md:-mt-4 lg:-mt-5 pr-4 pt-4")}>
-                        {rest}
-                    </span>
+                    {fitTitle ? (
+                        <span className="block max-w-full break-words">
+                            {title}
+                        </span>
+                    ) : (
+                        <>
+                            <span className="relative z-10 block max-w-full break-normal">
+                                {firstPart}
+                            </span>
+                            <span className="relative z-20 block max-w-full break-words text-transparent bg-clip-text bg-linear-to-r from-tango-gold via-tango-red to-tango-gold -mt-4.5 md:-mt-4 lg:-mt-5 pr-4 pt-4">
+                                {rest}
+                            </span>
+                        </>
+                    )}
                 </h1>
             </div>
         </header>
